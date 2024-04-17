@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php include_once("nav.inc.php"); ?>
     <div class="header">
         <a href="#">Politiek</a>
         <a href="#">Economie</a>
         <a href="#">Gezondheid</a>
         <a href="#">Klimaat</a>
     </div>
-    
+
     <h1 class="title">Actueel in het nieuws</h1>
     <div class="slider-container">
         
@@ -43,5 +44,6 @@
     </div>
 
     <script src="index.js"></script>
+    <?php include_once("footer.inc.php"); ?>
 </body>
 </html>
