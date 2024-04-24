@@ -23,8 +23,8 @@ function receiveMessage() {
             case 'wat is een begroting?':
                 sendMessage('Een begroting is een plan van de verwachte inkomsten en uitgaven van een organisatie voor een bepaalde periode, meestal een jaar.', 'Jill');
                 break;
-            case 'hoe werkt belastingheffing?':
-                sendMessage('Belastingheffing is het proces waarbij de overheid belastingen oplegt aan individuen en bedrijven om inkomsten te genereren voor openbare voorzieningen en diensten.', 'Jill');
+            case 'hoe kan ik bijdragen tot een klimaatvriendelijk huis':
+                sendMessage('De Vlaamse overheid ondersteunt duurzamer leven door middel van verschillende initiatieven, waaronder investeringen in energiezuinige woningen, het verstrekken van leningen en premies voor renovaties, en het stimuleren van de transitie naar elektrisch rijden. Daarnaast richt ze zich op de renovatie van sociale huurwoningen, de uitbreiding van het fietsnetwerk en het aanpakken van wateroverlast en overstromingsgevaar. Deze maatregelen dragen bij aan het behalen van de Vlaamse klimaat- en energiedoelstellingen en het bevorderen van een duurzamere leefomgeving.', 'Jill');
                 break;
             default:
                 sendMessage('Sorry, ik begrijp niet wat je bedoelt.', 'Jill');
