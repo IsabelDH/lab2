@@ -1,0 +1,59 @@
+/* werkt nog niet */
+#logo{
+  height: 50px;
+  width: auto;
+}
+
+#slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 1000px; /* Pas dit aan aan je eigen wensen */
+  margin: 0 auto;
+}
+
+#slide {
+  position: relative;
+  width: 100%; /* Maak de slide container 100% breedte */
+}
+
+#slide img {
+  width: auto; /* Laat de breedte automatisch schalen om de verhoudingen te behouden */
+  height: 600px; /* Geef een vaste hoogte aan de afbeelding */
+  object-fit: cover; /* Behoud de verhoudingen van de afbeelding en knip indien nodig bij */
+  object-position: center; /* Centreer de afbeelding in de container */
+}
+
+.slider-text {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: black;
+  padding: 5px 0;
+  margin: 0;
+  box-sizing: border-box; /* Voeg deze regel toe */
+}
+
+.slider-text h2 {
+  margin: 0;
+}
+
+#slider-nav {
+  margin-top: 35px;
+  margin-left: 40%;
+}
+
+.slider-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #333;
+}

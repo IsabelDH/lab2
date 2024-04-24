@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php include_once("nav.inc.php")?>
@@ -17,39 +17,19 @@
 
     
     <h1>Actueel in het nieuws</h1>
+    <div id="slider-container">
+        <div id="slide">
+            <img src="images/begroting.jpg" alt="">
+            <div class="slider-text">
+                <h2>Begroting</h2>
+            </div>
+        </div>
 
-<div class="slideshow-container">
+        <div id="slider-nav"></div>
+    </div>
 
-<div class="mySlides fade">
 
-<img src="images/begroting.jpg" style="width:100%">
-<div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-
-<img src="images/verkiezingen.jpg" style="width:100%">
-<div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-
-<img src="images/klimaatvriendelijk_wonen.jpg" style="width:100%">
-<div class="text">Caption Three</div>
-</div>
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-<span class="dot"></span> 
-<span class="dot"></span> 
-<span class="dot"></span> 
-</div>
-
-<script src="index.js"></script>
+<script src="js/index.js"></script>
  <?php include_once("footer.inc.php")?>
 </body>
 </html>
