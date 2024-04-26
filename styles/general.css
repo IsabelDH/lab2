@@ -1,0 +1,99 @@
+@import url("https://use.typekit.net/vzx3eow.css");
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(147, 172, 194, 0.25);
+    padding: 10px;
+}
+
+.navbar a {
+    color: #00263D;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: normal;
+    margin-right: 12px;
+    
+}
+
+.navbar a:nth-last-child(1) {
+    background-color: #CBB391;
+    color: #00263D;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.navbar a:nth-last-child(1):hover {
+    background-color: #00263D;
+    color: #CBB391;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.melding img {
+    margin-right: 10px;
+}
+
+
+#searchIcon img{
+    margin-right: 25px;
+}
+
+
+.search-bar {
+    display: none;
+    align-items: center;
+    padding-top: -30px;
+    padding-bottom: -30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #93ACC2;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    flex-grow: 0;
+    padding: 9px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: normal;
+    border-radius: 20px;
+    border: none !important;
+    
+    color: white;
+
+}
+input{
+    border: none !important;
+    background-color: #93ACC2;
+    color: white;
+}
+
+#closeSearch {
+    cursor: pointer;
+    border: none !important;
+    background-color: transparent;
+    margin-right: -10px;
+}
+
+#searchIconInBar {
+    cursor: pointer;
+}
+
+#searchIconInBar img {
+    transition: transform 0.3s ease; /* Voeg overgangseffect toe voor animatie */
+}
+
+#searchBar.active #searchIconInBar img {
+    transform: translateX(-20px); /* Verschuif het vergrootglaspictogram naar links */
+}

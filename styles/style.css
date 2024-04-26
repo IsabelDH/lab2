@@ -11,12 +11,13 @@
 
 .header {
   background-color: #00263D;
-  height: 65vh;
+  height: 35vh;
   display: flex;
   justify-content: space-around;
   padding: 0px 20%;
   position: relative; /* Toegevoegd */
-  z-index: -1;
+
+  
 }
 
 .line1,
@@ -24,36 +25,91 @@
   position: absolute; /* Toegevoegd */
   width: 100%; /* Toegevoegd */
   height: 7px;
-  margin: 5px 0;
+  margin: 18px 0;
   z-index: 0;
 }
 
 .line1 {
-  background-color: #93ACC2; /* Kleur van de eerste lijn */
-  top: 58px; /* Plaats de eerste lijn bovenaan de header */
+  background-color: #93ACC2; 
+  top: 65px;
+  z-index: 2;
 }
 
 .line2 {
-  background-color: #F6F6F6; /* Kleur van de tweede lijn */
-  top: 75px; /* Plaats de tweede lijn onderaan de header */
+  background-color: #F6F6F6; 
+  top: 80px;
+  z-index: 2;
 }
 
-.header_icons {
-  margin-top: 165px;
-  text-decoration: none;
+.flex{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: -70px;
 }
 
 .header_icons h3 {
   text-align: center;
-  text-decoration: none;
+ 
   color: #F6F6F6;
+  margin-top: 10px;
+}
+
+
+
+.politiek {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+
+}
+
+
+.economie{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+
+}
+
+.gezondheid{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+
+}
+
+.klimaat{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+
+}
+.header_icon:hover{
+  background-color: #93ACC2;
+}
+
+.header_icons {
+  margin-top: 95px;
+  text-decoration: none;
+  
 }
 
 .header_icon {
-  padding: 20px;
-  background-color: #CBB391;
-  border-radius: 40px;
+  width: 60px;
+  height: 60px;
 }
+
+.header_icon {
+  padding: 10px;
+  background-color: #CBB391;
+  border-radius: 25px;
+}
+
 
 
 .chat-container {
@@ -192,4 +248,75 @@ h1 {
 
 p footer {
   text-align: center;
+}
+
+@media(min-width:600px){
+
+  .flex{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin-left: -40px;
+  }
+  
+  .header_icons {
+    margin-top: 95px;
+    text-decoration: none;
+   
+  }
+
+  .header_icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .header_icon {
+    padding: 15px;
+    background-color: #CBB391;
+    border-radius: 25px;
+  }
+
+  .header_icons h3 {
+    text-align: center;
+    text-decoration: none;
+    color: #F6F6F6;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+@media(min-width:1000px){
+  .flex{
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+    justify-content: center;
+    
+  }
+
+  
+  .header_icons {
+    margin-top: 95px;
+    text-decoration: none;
+   
+  }
+
+  .header_icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .header_icon {
+    padding: 20px;
+    background-color: #CBB391;
+    border-radius: 25px;
+  }
+
+  .header_icons h3 {
+    text-align: center;
+    text-decoration: none;
+    color: #F6F6F6;
+    margin-top: 10px;
+    font-size: 22px;
+  }
 }
