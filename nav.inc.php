@@ -1,4 +1,23 @@
-<nav class="navbar">
+<?php
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Db.php");
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Artikel.php");
+    
+    // $search = new Artikel();
+    // $results = $search->search(); // Perform a general search without specifying a name
+    // echo json_encode($results);
+    
+
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><nav class="navbar">
     <a href="index.php" class="logo">
         <img src="images/logo_lab_2-07.png" alt="" height="60px" width="auto">
     </a>

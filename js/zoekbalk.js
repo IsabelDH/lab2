@@ -6,17 +6,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Toon de zoekbalk wanneer op het vergrootglaspictogram wordt geklikt
     searchIcon.addEventListener("click", function() {
-        searchBar.style.display = "flex";
-        searchIcon.style.display = "none";
-        input.style.border = "none !important";
-        input.style.borderColor = "#93ACC2";
-        input.style.color = "#F6F6F6";
-  
+        searchBar.style.display = "flex"; // Toon de zoekbalk
+        searchIcon.style.display = "none"; // Verberg het vergrootglaspictogram
+        input.focus(); // Zet de focus op het zoekveld
     });
 
     // Verberg de zoekbalk wanneer op de sluitknop (X) wordt geklikt
     closeSearch.addEventListener("click", function() {
-        searchBar.style.display = "none";
-        searchIcon.style.display = "inline";
+        searchBar.style.display = "none"; // Verberg de zoekbalk
+        searchIcon.style.display = "inline"; // Toon het vergrootglaspictogram weer
+        input.value = ""; // Wis de inhoud van het zoekveld
     });
 });

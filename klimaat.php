@@ -61,5 +61,6 @@
 
     <script src="js/chatbot.js"></script>
     <script src="js/zoekbalk.js"></script>
+    <script src="js/like.js"></script>
 </body>
 </html>
