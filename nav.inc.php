@@ -1,6 +1,6 @@
 <nav class="navbar">
-    <a href="#" class="logo">
-        <img src="images/logo_lab_2-07.png" alt="" height="50px" width="auto">
+    <a href="index.php" class="logo">
+        <img src="images/logo_lab_2-07.png" alt="" height="60px" width="auto">
     </a>
     <div class="menu">
 
