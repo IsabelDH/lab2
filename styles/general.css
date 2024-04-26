@@ -19,6 +19,12 @@
     margin-right: 12px;
     
 }
+p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: normal;
+}
 
 .navbar a:nth-last-child(1) {
     background-color: #CBB391;
@@ -91,9 +97,39 @@ input{
 }
 
 #searchIconInBar img {
-    transition: transform 0.3s ease; /* Voeg overgangseffect toe voor animatie */
+    transition: transform 0.3s ease; 
 }
 
 #searchBar.active #searchIconInBar img {
-    transform: translateX(-20px); /* Verschuif het vergrootglaspictogram naar links */
+    transform: translateX(-20px); 
 }
+
+
+.footer{
+    background-color: rgba(147, 172, 194, 0.25);
+    border-top: 6px solid #00263D;
+    padding-top: 20px;
+    
+}
+
+.logos{
+    margin-left: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.logos a{
+    margin-right: 20px;
+}
+
+.end{
+    text-align: center;
+    font-size: 16px;
+    color: #00263D ;
+    padding-top: -20px;
+
+    font-weight: 400;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: normal;
+}
+
