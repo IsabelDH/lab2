@@ -30,7 +30,7 @@
                     bij het Grondwettelijk Hof, waarbij verzoekschriften en stukken elektronisch kunnen worden ingediend via een platform op de website van het Hof.
                 </p>
             </div>
-                <a href="begroting.php">Bekijk</a>
+                <a href="#">Bekijk</a>
             </div>
         </div>
 
@@ -51,7 +51,7 @@
                      worden de stemmen omgezet in zetels. In het federaal parlement zijn er bijvoorbeeld 150 zetels, in het Vlaams 124, in het Brussels 89.
                 </p>
             </div>
-                <a href="begroting.php">Bekijk</a>
+                <a href="federaleverkiezingen.php">Bekijk</a>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
                      Deze verkiezingen markeren het begin van de 56ste zittingsperiode van het Federaal Parlement van België.
                 </p>
             </div>
-                <a href="begroting.php">Bekijk</a>
+                <a href="#">Bekijk</a>
             </div>
         </div>
 
