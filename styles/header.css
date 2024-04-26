@@ -236,8 +236,8 @@
     }
   
     .header_icon {
-      width: 65px;
-      height: 65px;
+      width: 45px;
+      height: 45px;
     }
   
     .header_icon {
@@ -253,4 +253,5 @@
       margin-top: 10px;
       font-size: 22px;
     }
+
   }
