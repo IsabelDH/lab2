@@ -1,0 +1,67 @@
+@import url("https://use.typekit.net/vzx3eow.css");
+* {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+}
+.kader {
+  border: 1px #b95927 solid;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.kader-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Optioneel, voeg marges toe naar keuze */
+}
+
+.bewerken {
+  align-items: center;
+  border: 1px #b95927 solid;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.bewerken a {
+  text-decoration: none;
+  color: #b95927;
+}
+
+h2 {
+  color: #00263d;
+}
+
+.kader-inhoud {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+#profiel_foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin-right: 10px; /* Optioneel, voeg marges toe naar keuze */
+}
+
+.button {
+  padding: 7px 14px;
+  display: inline-block;
+  background-color: #cbb391;
+  border-radius: 7px;
+  margin: 10px 0;
+}
+.button a {
+  text-decoration: none;
+  color: #00263d;
+  font-size: 14px;
+}
+.uitloggen {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}

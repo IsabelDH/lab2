@@ -5,6 +5,7 @@ class User
     private string $lastname;
     private string $email;
     private string $hashedPassword;
+    private ?string $profilePhoto; // Profielfoto wordt als optioneel beschouwd
 
     //firstname
     public function setFirstname($pFirstname)
@@ -61,7 +62,17 @@ class User
     {
         return $this->hashedPassword;
     }
+    
+    public function setProfilePhoto($photoFileName)
+    {
+        $this->profilePhoto = $photoFileName;
+    }
 
+    // Profielfoto ophalen
+    public function getProfilePhoto()
+    {
+        return $this->profilePhoto;
+    }
 
     //save
     public function save()
@@ -74,6 +85,8 @@ class User
         $statement->bindValue(":password", $this->hashedPassword); // Gebruik hier de gehashte versie van het wachtwoord
         return $statement->execute();
     }
+
+
 
     // public static function getUserByEmail($email)
     // {

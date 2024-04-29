@@ -1,87 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politiek</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/detailpagina.css">
-    
+    <link rel="stylesheet" href="styles/detailpagina2.css">
+    <link rel="stylesheet" href="styles/profiel.css">
+    <title>politiek</title>
 </head>
+
 <body>
     <?php include_once("nav.inc.php") ?>
     <?php include_once("header.inc.php") ?>
+
     <div class="artikels">
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/image1Politiek.png" alt="">
-                <div class="like-button" onclick="toggleLike()">
-                    <img id="heart-icon" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>Invoering elektronische procesvoering voor het Grondwettelijk Hof</h2>
-                    <p>22/03/2024</p> 
-                </div>
-            <div class="text">
-                <p>De ministerraad keurt een ontwerp van koninklijk besluit goed voor de eerste fase van elektronische procesvoering 
-                    bij het Grondwettelijk Hof, waarbij verzoekschriften en stukken elektronisch kunnen worden ingediend via een platform op de website van het Hof.
-                </p>
-            </div>
-                <a href="#">Bekijk</a>
-            </div>
-        </div>
+        <?php
+        // Importeer de Artikel-klasse
+        include_once("classes/Artikel.php");
 
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/image2Politiek.png" alt="">
-                <div class="like-button2" onclick="toggleLike2()">
-                    <img id="heart-icon2" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>Federale verkiezingen</h2>
-                    <p>06/04/2024</p> 
-                </div>
-            <div class="text">
-                <p>Jouw stem telt. Met die drie woorden zullen heel wat politieke partijen jou proberen te overtuigen om op hen te stemmen bij de verkiezingen van 9 juni. Eens iedereen gestemd heeft,
-                     worden de stemmen omgezet in zetels. In het federaal parlement zijn er bijvoorbeeld 150 zetels, in het Vlaams 124, in het Brussels 89.
-                </p>
-            </div>
-                <a href="federaleverkiezingen.php">Bekijk</a>
-            </div>
-        </div>
+        // Maak een instantie van de Artikel-klasse
+        $artikel = new Artikel();
 
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/image3Politiek.png" alt="">
-                <div class="like-button3" onclick="toggleLike3()">
-                    <img id="heart-icon3" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>Europese verkiezingen</h2>
-                    <p>06/04/2024</p> 
-                </div>
-            <div class="text">
-                <p>Op 9 juni 2024 worden 150 leden van de Kamer van Volksvertegenwoordigers verkozen in elf kieskringen, één per provincie en de kieskring Brussel-Hoofdstad. De 60 leden van de Senaat worden niet rechtstreeks gekozen, maar via de deelstaatparlementen.
-                     Deze verkiezingen markeren het begin van de 56ste zittingsperiode van het Federaal Parlement van België.
-                </p>
-            </div>
-                <a href="#">Bekijk</a>
-            </div>
-        </div>
+        // Haal de artikelen op met het thema "politiek"
+        $artikel->setThema("politiek");
+        $politiek_artikelen = $artikel->searchByThema();
+        // Loop door de artikelen
+        foreach ($politiek_artikelen as $artikel) {
+            // Haal de benodigde gegevens op
+            $naam = $artikel['naam'];
+            $inhoud = $artikel['inhoud'];
+            $datum = $artikel['datum'];
+            $fotoBestandsnaam = $artikel['foto'];
+            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
+            $link = $artikel['link'];
 
+            // Toon het artikel
+            echo "<div class='artikel_div'>";
+            echo "<div class='image'>"; ?>
+            <img src="images\artikel_foto\<?php echo $artikel['foto']; ?>" alt="Afbeelding">
+            <?php echo "<div class='like-button' onclick='toggleLike()'>";
+            echo "<img id='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
+            echo "</div>";
+            echo "</div>";
+            echo "<div class='article-content'>";
+            echo "<div class='title'>";
+            echo "<h2>$naam</h2>";
+            echo "<p>$datum</p>";
+            echo "</div>";
+            echo "<div class='text'>";
+            echo "<p>$inhoud</p>";
+            echo "</div>";
+            echo "<a href='$link'>Bekijk</a>";
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
-    
+
     <?php include_once("footer.inc.php") ?>
 
     <script src="js/chatbot.js"></script>
     <script src="js/zoekbalk.js"></script>
     <script src="js/like.js"></script>
 </body>
+
 </html>

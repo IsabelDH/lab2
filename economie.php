@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,78 +9,57 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/detailpagina2.css">
-    <title>Economie</title>
+    <link rel="stylesheet" href="styles/profiel.css">
+    <title>economie</title>
 </head>
+
 <body>
-    <?php include_once("nav.inc.php") ?> 
+    <?php include_once("nav.inc.php") ?>
     <?php include_once("header.inc.php") ?>
 
     <div class="artikels">
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/imageEconomie1.png" alt="">
-                <div class="like-button" onclick="toggleLike()">
-                    <img id="heart-icon" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>Begroting</h2>
-                    <p>04/02/2024</p> 
-                </div>
-            <div class="text">
-                <p>België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei,
-                    maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.
-                </p>
-            </div>
-                <a href="begroting.php">Bekijk</a>
-            </div>
-        </div>
+        <?php
+        // Importeer de Artikel-klasse
+        include_once("classes/Artikel.php");
 
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/imageEconomie2.png" alt="">
-                <div class="like-button2" onclick="toggleLike2()">
-                    <img id="heart-icon2" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>De pensioenhervorming is gestemd</h2>
-                    <p>05/04/2024</p> 
-                </div>
-            <div class="text">
-                <p>RSVZ en de Pensioendienst lanceren proactieve campagne 
-                    voor pensioenbonus met slogan 'En jij, hoeveel doe jij erbij?'
-                </p>
-            </div>
-                <a href="#">Bekijk</a>
-            </div>
-        </div>
+        // Maak een instantie van de Artikel-klasse
+        $artikel = new Artikel();
 
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/imageEconomie3.png" alt="">
-                <div class="like-button3" onclick="toggleLike3()">
-                    <img id="heart-icon3" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>Faillissement Van Hool</h2>
-                    <p>02/04/2024</p> 
-                </div>
-            <div class="text">
-                <p>Faillissement van busbouwer Van Hool dreigt Vlaanderen 18 tot 20 miljoen euro te kosten.
-                </p>
-            </div>
-                <a href="#">Bekijk</a>
-            </div>
-        </div>
+        // Haal de artikelen op met het thema "economie"
+        $artikel->setThema("economie");
+        $economie_artikelen = $artikel->searchByThema();
+        // Loop door de artikelen
+        foreach ($economie_artikelen as $artikel) {
+            // Haal de benodigde gegevens op
+            $naam = $artikel['naam'];
+            $inhoud = $artikel['inhoud'];
+            $datum = $artikel['datum'];
+            $fotoBestandsnaam = $artikel['foto'];
+            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
+            $link = $artikel['link'];
 
+            // Toon het artikel
+            echo "<div class='artikel_div'>";
+            echo "<div class='image'>"; ?>
+            <img src="images\artikel_foto\<?php echo $artikel['foto']; ?>" alt="Afbeelding">
+        <?php echo "<div class='like-button' onclick='toggleLike()'>";
+            echo "<img id='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
+            echo "</div>";
+            echo "</div>";
+            echo "<div class='article-content'>";
+            echo "<div class='title'>";
+            echo "<h2>$naam</h2>";
+            echo "<p>$datum</p>";
+            echo "</div>";
+            echo "<div class='text'>";
+            echo "<p>$inhoud</p>";
+            echo "</div>";
+            echo "<a href='$link'>Bekijk</a>";
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
-
-
 
     <?php include_once("footer.inc.php") ?>
 
@@ -87,4 +67,5 @@
     <script src="js/zoekbalk.js"></script>
     <script src="js/like.js"></script>
 </body>
+
 </html>

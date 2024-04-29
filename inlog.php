@@ -12,7 +12,6 @@ include_once(__DIR__ . "/classes/Users.php"); // Inclusief het bestand met de Us
 //         return false;
 //     }
 // }
-
 function canLogin($pEmail, $pPassword) {
     $conn = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
     $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
@@ -20,27 +19,30 @@ function canLogin($pEmail, $pPassword) {
     $statement->execute();
     $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if($user && password_verify($pPassword, $user['password'])){ // Voer wachtwoordverificatie alleen uit als de gebruiker is gevonden
-        return true;
+    if($user && password_verify($pPassword, $user['password'])){
+        return $user; // Geef de gebruikersgegevens terug
     }
     else{
         return false;
     }
 }
 
-
 if(!empty($_POST)) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if (canLogin ($email, $password)) {
+    $user = canLogin($email, $password); // Haal de gebruikersgegevens op
+
+    if ($user) {
         session_start();
         $_SESSION['loggedin'] = true;
-        header("location: index.php");
+        $_SESSION['user'] = $user; // Sla de gebruikersgegevens op in de sessie
+        header("location: profiel.php");
     } else {
         $error = true;
     }
 }
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +51,7 @@ if(!empty($_POST)) {
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/profiel.css">
  
     <title>Inlog</title>
 </head>

@@ -80,7 +80,8 @@ p{
 }
 input{
     border: none !important;
-    background-color: #93ACC2;
+    /* background-color: #93ACC2; */
+    background-color: #F6F6F6;
     color: white;
 }
 

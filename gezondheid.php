@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,58 +8,65 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/detailpagina3.css">
-    <title>Gezondheid</title>
+    <link rel="stylesheet" href="styles/detailpagina2.css">
+    <link rel="stylesheet" href="styles/profiel.css">
+    <title>gezondheid</title>
 </head>
+
 <body>
-    <?php include_once("nav.inc.php") ?> 
+    <?php include_once("nav.inc.php") ?>
     <?php include_once("header.inc.php") ?>
+
     <div class="artikels">
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/imageGzondheid1.png" alt="">
-                <div class="like-button" onclick="toggleLike()">
-                    <img id="heart-icon" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>Betaalbare psychologische zorg</h2>
-                    <p>09/03/2024</p> 
-                </div>
-            <div class="text">
-                <p>Toegankelijke psychologische zorg: een stap naar welzijn voor iedereen.
-                </p>
-            </div>
-                <a href="#">Bekijk</a>
-            </div>
-        </div>
+        <?php
+        // Importeer de Artikel-klasse
+        include_once("classes/Artikel.php");
 
-        <div class="artikel_div">
-            <div class="image">
-                <img src="images/imageGezondheid2.png" alt="">
-                <div class="like-button2" onclick="toggleLike2()">
-                    <img id="heart-icon2" src="images/unlikeheart.png" alt="unlike">
-                </div>
-            </div>
-            <div class="article-content">
-                <div class="title">
-                <h2>De jungle van de medische platformen </h2>
-                    <p>11/04/2024</p> 
-                </div>
-            <div class="text">
-                <p>Ontdek de weg naar jouw medische gegevens - helder, veilig en eenvoudig.
-                </p>
-            </div>
-                <a href="#">Bekijk</a>
-            </div>
-        </div>
+        // Maak een instantie van de Artikel-klasse
+        $artikel = new Artikel();
 
+        // Haal de artikelen op met het thema "gezondheid"
+        $artikel->setThema("gezondheid");
+        $gezondheid_artikelen = $artikel->searchByThema();
+        // Loop door de artikelen
+        foreach ($gezondheid_artikelen as $artikel) {
+            // Haal de benodigde gegevens op
+            $naam = $artikel['naam'];
+            $inhoud = $artikel['inhoud'];
+            $datum = $artikel['datum'];
+            $fotoBestandsnaam = $artikel['foto'];
+            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
+            $link = $artikel['link'];
+
+            // Toon het artikel
+            echo "<div class='artikel_div'>";
+            echo "<div class='image'>"; ?>
+            <img src="images\artikel_foto\<?php echo $artikel['foto']; ?>" alt="Afbeelding">
+
+        <?php echo "<div class='like-button' onclick='toggleLike()'>";
+            echo "<img id='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
+            echo "</div>";
+            echo "</div>";
+            echo "<div class='article-content'>";
+            echo "<div class='title'>";
+            echo "<h2>$naam</h2>";
+            echo "<p>$datum</p>";
+            echo "</div>";
+            echo "<div class='text'>";
+            echo "<p>$inhoud</p>";
+            echo "</div>";
+            echo "<a href='$link'>Bekijk</a>";
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
+
     <?php include_once("footer.inc.php") ?>
 
     <script src="js/chatbot.js"></script>
     <script src="js/zoekbalk.js"></script>
     <script src="js/like.js"></script>
 </body>
+
 </html>
