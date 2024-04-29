@@ -37,14 +37,13 @@
             $fotoBestandsnaam = $artikel['foto'];
             $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
+            $favoriet = $artikel['favoriet'];
 
             // Toon het artikel
             echo "<div class='artikel_div'>";
             echo "<div class='image'>"; ?>
             <img src="images\artikel_foto\<?php echo $artikel['foto']; ?>" alt="Afbeelding">
-        <?php echo "<div class='like-button' onclick='toggleLike()'>";
-            echo "<img id='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
-            echo "</div>";
+            <?php      
             echo "</div>";
             echo "<div class='article-content'>";
             echo "<div class='title'>";
@@ -54,6 +53,14 @@
             echo "<div class='text'>";
             echo "<p>$inhoud</p>";
             echo "</div>";
+            // Voeg de knop toe voor het markeren van favorieten
+            if ($favoriet == 1) {
+                // Als het artikel al als favoriet is gemarkeerd, toon een knop om het te verwijderen uit favorieten
+                echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='remove'>Verwijder uit favorieten</button>";
+            } else {
+                // Als het artikel niet als favoriet is gemarkeerd, toon een knop om het toe te voegen aan favorieten
+                echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='add'>Voeg toe aan favorieten</button>";
+            }
             echo "<a href='$link'>Bekijk</a>";
             echo "</div>";
             echo "</div>";

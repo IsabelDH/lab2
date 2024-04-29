@@ -79,18 +79,16 @@ h1 {
   background-color: #00263D;
 }
 
-@media(min-width:400px){
+@media(min-width:600px){
   #slider-container{
-    /* background-color: aquamarine; */
+    /* background-color: aqua; */
+    width: 95%;
   }
-  /* #slide img {
-    width: 75%;
-    height: 75vh;
-    object-fit: cover;
-    object-position: center;
-  } */
 }
 
 @media(min-width: 1000px){
-
+  #slider-container{
+    /* background-color: aqua; */
+    width: 75%;
+  }
 }
