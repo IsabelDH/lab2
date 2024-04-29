@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Federlae verkiezing</h1>
+    <h1>Federale verkiezing</h1>
 </body>
 </html>

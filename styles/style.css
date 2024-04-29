@@ -27,11 +27,13 @@ h1 {
   overflow: hidden;
   width: 100vw-10px;
   margin: 0 auto;
+  z-index: -1;
 }
 
 #slide {
   position: relative;
   width: 100%;
+  z-index: -1;
 }
 
 #slide img {
@@ -39,6 +41,7 @@ h1 {
   height: 75vh;
   object-fit: cover;
   object-position: center;
+  z-index: -1;
 }
 
 .slider-text {

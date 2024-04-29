@@ -29,7 +29,33 @@
         $artikel->setThema("economie");
         $economie_artikelen = $artikel->searchByThema();
         // Loop door de artikelen
-        foreach ($economie_artikelen as $artikel) {
+        // foreach ($economie_artikelen as $artikel) {
+        //     // Haal de benodigde gegevens op
+        //     $naam = $artikel['naam'];
+        //     $inhoud = $artikel['inhoud'];
+        //     $datum = $artikel['datum'];
+        //     $fotoBestandsnaam = $artikel['foto'];
+        //     $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
+        //     $link = $artikel['link'];
+        //     // $favoriet = $artikel['favoriet'];
+
+        //     // Toon het artikel
+        //     // echo "<div class='artikel_div'>";
+        //     // echo "<div class='image'>";
+        //     <!-- <img src="images\artikel_foto\ //echo $artikel['foto']; " alt="Afbeelding">
+        //     //  //echo "<div class='like-button' onclick='toggleLike()'>";
+        //     // echo "<img class='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
+        //     // echo "</div>";     
+        //     // echo "</div>";
+        //     // echo "<div class='article-content'>";
+        //     // echo "<div class='title'>";
+        //     // echo "<h2>$naam</h2>";
+        //     // echo "<p>$datum</p>";
+        //     // echo "</div>";
+        //     // echo "<div class='text'>";
+        //     // echo "<p>$inhoud</p>";
+        //     // echo "</div>";
+        foreach ($economie_artikelen as $artikel) :
             // Haal de benodigde gegevens op
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
@@ -37,34 +63,43 @@
             $fotoBestandsnaam = $artikel['foto'];
             $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
-            $favoriet = $artikel['favoriet'];
+        ?>
+            <div class="artikel_div">
+                <div class="image" style="position: relative;">
+                    <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                </div>
+                <div class="article-content">
+                    <div class="title">
+                        <h2><?= $naam ?></h2>
+                        <p><?= $datum ?></p>
+                    </div>
+                    <div class="text">
+                        <p><?= $inhoud ?></p>
+                    </div>
+                    <div class="bekijk">
+                        <a href="<?= $link ?>">Bekijk</a>
+                        <img class="heart-icon" src="images/unlikeheart.png" alt="unlike" onclick="toggleLike()">
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
 
-            // Toon het artikel
-            echo "<div class='artikel_div'>";
-            echo "<div class='image'>"; ?>
-            <img src="images\artikel_foto\<?php echo $artikel['foto']; ?>" alt="Afbeelding">
-            <?php      
-            echo "</div>";
-            echo "<div class='article-content'>";
-            echo "<div class='title'>";
-            echo "<h2>$naam</h2>";
-            echo "<p>$datum</p>";
-            echo "</div>";
-            echo "<div class='text'>";
-            echo "<p>$inhoud</p>";
-            echo "</div>";
-            // Voeg de knop toe voor het markeren van favorieten
-            if ($favoriet == 1) {
-                // Als het artikel al als favoriet is gemarkeerd, toon een knop om het te verwijderen uit favorieten
-                echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='remove'>Verwijder uit favorieten</button>";
-            } else {
-                // Als het artikel niet als favoriet is gemarkeerd, toon een knop om het toe te voegen aan favorieten
-                echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='add'>Voeg toe aan favorieten</button>";
-            }
-            echo "<a href='$link'>Bekijk</a>";
-            echo "</div>";
-            echo "</div>";
-        }
+
+
+        <?php
+        //     // Voeg de knop toe voor het markeren van favorieten
+        //     // if ($favoriet == 1) {
+        //     //     // Als het artikel al als favoriet is gemarkeerd, toon een knop om het te verwijderen uit favorieten
+        //     //     echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='remove'>Verwijder uit favorieten</button>";
+        //     // } else {
+        //     //     // Als het artikel niet als favoriet is gemarkeerd, toon een knop om het toe te voegen aan favorieten
+        //     //     echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='add'>Voeg toe aan favorieten</button>";
+        //     // }
+        //     echo "<a href='$link'>Bekijk</a>";
+        //     echo "</div>";
+        //     echo "</div>";
+        // }
+        // 
         ?>
     </div>
 

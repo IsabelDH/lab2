@@ -27,8 +27,7 @@ $artikel = new Artikel();
 // Haal de favoriete artikelen op
 $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
 
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>

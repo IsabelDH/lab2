@@ -1,7 +1,7 @@
 <?php
 include_once(__DIR__ . "/classes/Users.php");
 
-if(!empty($_POST)){
+if (!empty($_POST)) {
     // Verwerk het formulier
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
@@ -28,43 +28,61 @@ if(!empty($_POST)){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Registreer</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/profiel.css">
+    <link rel="stylesheet" href="styles/inlog.css">
+
+    <title>Registreren</title>
 </head>
+
 <body>
-    <div class="netflixLogin">
-        <div class="form form--login">
-            <form action="" method="post">
-                <h2 form__title>Sign up</h2>
-                <?php if(isset($error)) : ?> 
-                    <div class="form__error">
-                        <p>
-                            Sorry, we can't log you in with that email address and password. Can you try again?
-                        </p>
-                    </div>
-                <?php endif; ?>
-                <div class="form__field">
-                    <label for="firstname">Firstname</label>
-                    <input type="text" name="firstname">
-                </div>
-                <div class="form__field">
-                    <label for="lastname">Lastname</label>
-                    <input type="text" name="lastname">
-                </div>
-                <div class="form__field">
-                    <label for="email">Email</label>
-                    <input type="text" name="email">
-                </div>
-                <div class="form__field">
-                    <label for="password">Password</label>
-                    <input type="password" name="password">
-                </div>
-                <div class="form__field">
-                    <input type="submit" value="Sign up" class="btn btn--primary">    
-                </div>
-            </form>
-        </div>
+    <?php include_once("nav.inc.php") ?>
+
+    <div class="form__field">
+        <input type="submit" value="Sign up" class="btn btn--primary">
     </div>
+    </form>
+    </div>
+    </div>
+
+    <h1>Registreren</h1>
+    <div class="login-form">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input type="text" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+
+            <?php if (isset($error)) : ?>
+                <div class="form__error">
+                    <p>
+                        Sorry, we can't registrer you with that email address and password. Can you try again?
+                    </p>
+                </div>
+            <?php endif; ?>
+            <a class="button" href="profiel.php">Login</a>
+            <a class="registreer" href="registreer.php">Heb je al een account? <strong> Log hier in </strong></a>
+        </form>
+    </div>
+    <?php include_once("footer.inc.php") ?>
 </body>
+
 </html>

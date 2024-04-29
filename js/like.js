@@ -1,3 +1,42 @@
+let isLiked = false;
+
+function toggleLike() {
+    const heartIcon = document.getElementById('heart-icon');
+    if (isLiked) {
+        heartIcon.src = 'images/unlikeheart.png';
+        isLiked = false;
+    } else {
+        heartIcon.src = 'images/likeheart.png';
+        isLiked = true;
+    }
+
+}
+function toggleLike2() {
+    
+    const heartIcon2 = document.getElementById('heart-icon2');
+    if (isLiked) {
+        heartIcon2.src = 'images/unlikeheart.png';
+        isLiked = false;
+    } else {
+        heartIcon2.src = 'images/likeheart.png';
+        isLiked = true;
+    }
+
+}
+
+function toggleLike3() {
+    
+    const heartIcon3 = document.getElementById('heart-icon3');
+    if (isLiked) {
+        heartIcon3.src = 'images/unlikeheart.png';
+        isLiked = false;
+    } else {
+        heartIcon3.src = 'images/likeheart.png';
+        isLiked = true;
+    }
+
+}
+
 // function toggleLike(artikelId, currentStatus) {
 //     // Verstuur de status naar de server met AJAX
 //     var xhr = new XMLHttpRequest();
@@ -82,26 +121,26 @@
 
 // like.js
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Selecteer alle knoppen met de class 'favorite-button'
-    const favoriteButtons = document.querySelectorAll('.favorite-button');
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Selecteer alle knoppen met de class 'favorite-button'
+//     const favoriteButtons = document.querySelectorAll('.favorite-button');
 
-    // Voeg klikgebeurtenissen toe aan deze knoppen om AJAX-verzoeken te verzenden
-    favoriteButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const articleId = button.getAttribute('data-article-id');
-            const action = button.getAttribute('data-action');
+//     // Voeg klikgebeurtenissen toe aan deze knoppen om AJAX-verzoeken te verzenden
+//     favoriteButtons.forEach(button => {
+//         button.addEventListener('click', function () {
+//             const articleId = button.getAttribute('data-article-id');
+//             const action = button.getAttribute('data-action');
 
-            // Stuur een AJAX-verzoek naar favorite.php met de juiste parameters
-            fetch(`favorite.php?action=${action}&article_id=${articleId}`)
-                .then(response => {
-                    // Handel de respons af (bijvoorbeeld: controleer of het verzoek succesvol was)
-                })
-                .catch(error => {
-                    // Handel eventuele fouten af
-                });
-        });
-    });
-});
+//             // Stuur een AJAX-verzoek naar favorite.php met de juiste parameters
+//             fetch(`favorite.php?action=${action}&article_id=${articleId}`)
+//                 .then(response => {
+//                     // Handel de respons af (bijvoorbeeld: controleer of het verzoek succesvol was)
+//                 })
+//                 .catch(error => {
+//                     // Handel eventuele fouten af
+//                 });
+//         });
+//     });
+// });
 
 

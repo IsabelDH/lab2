@@ -109,6 +109,10 @@ input{
     background-color: rgba(147, 172, 194, 0.25);
     border-top: 6px solid #00263D;
     padding-top: 20px;
+    /* position: fixed; */
+    /* bottom: 0;
+    width: 100%; */
+
     
 }
 

@@ -19,17 +19,15 @@
 
     <div class="artikels">
         <?php
-        // Importeer de Artikel-klasse
+
         include_once("classes/Artikel.php");
 
-        // Maak een instantie van de Artikel-klasse
         $artikel = new Artikel();
 
-        // Haal de artikelen op met het thema "gezondheid"
         $artikel->setThema("gezondheid");
         $gezondheid_artikelen = $artikel->searchByThema();
-        // Loop door de artikelen
-        foreach ($gezondheid_artikelen as $artikel) {
+
+        foreach ($gezondheid_artikelen as $artikel) :
             // Haal de benodigde gegevens op
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
@@ -37,29 +35,26 @@
             $fotoBestandsnaam = $artikel['foto'];
             $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
-
-            // Toon het artikel
-            echo "<div class='artikel_div'>";
-            echo "<div class='image'>"; ?>
-            <img src="images\artikel_foto\<?php echo $artikel['foto']; ?>" alt="Afbeelding">
-
-        <?php echo "<div class='like-button' onclick='toggleLike()'>";
-            echo "<img id='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
-            echo "</div>";
-            echo "</div>";
-            echo "<div class='article-content'>";
-            echo "<div class='title'>";
-            echo "<h2>$naam</h2>";
-            echo "<p>$datum</p>";
-            echo "</div>";
-            echo "<div class='text'>";
-            echo "<p>$inhoud</p>";
-            echo "</div>";
-            echo "<a href='$link'>Bekijk</a>";
-            echo "</div>";
-            echo "</div>";
-        }
         ?>
+            <div class="artikel_div">
+                <div class="image" style="position: relative;">
+                    <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                </div>
+                <div class="article-content">
+                    <div class="title">
+                        <h2><?= $naam ?></h2>
+                        <p><?= $datum ?></p>
+                    </div>
+                    <div class="text">
+                        <p><?= $inhoud ?></p>
+                    </div>
+                    <div class="bekijk">
+                        <a href="<?= $link ?>">Bekijk</a>
+                        <img class="heart-icon" src="images/unlikeheart.png" alt="unlike" onclick="toggleLike()">
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 
     <?php include_once("footer.inc.php") ?>
