@@ -85,6 +85,41 @@ h1 {
   background-color: #00263D;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.flex1 {
+  flex: 1;
+  margin-right: 20px; /* Ruimte tussen de eerste afbeelding en de volgende kolommen */
+}
+.title {
+  color: #00263D;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: 14px;
+}
+
+µ
+.flex2 div {
+  margin-bottom: 20px; /* Ruimte tussen de twee kolommen van afbeeldingen */
+}
+
+.image{
+  width: 220px;
+}
+
+.image1{
+  width: 230px;
+}
+
+.image2{
+  width: 230px;
+}
+
+
 
 @media(min-width:600px){
   #slider-container{
@@ -94,6 +129,31 @@ h1 {
 
   #slide img{
     height: 40vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex1 {
+    flex: 1;
+    margin-right: 20px; /* Ruimte tussen de eerste afbeelding en de volgende kolommen */
+  }
+  
+  .flex2 {
+    display: flex;
+    flex-direction: column;
+    flex: 2; /* Neem twee keer zoveel ruimte in beslag als flex1 */
+  }
+  
+  .flex2 div {
+    margin-bottom: 20px; /* Ruimte tussen de twee kolommen van afbeeldingen */
+  }
+  
+  .image{
+    width: 240px;
+    height: 400px;
   }
 }
 

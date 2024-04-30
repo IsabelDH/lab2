@@ -14,12 +14,14 @@
         }
 
         .chat-container {
+            position: absolute;
             width: 300px;
             margin: 20px auto;
             background-color: #93ACC2;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            
         }
 
         .chat-header {

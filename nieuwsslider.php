@@ -79,7 +79,7 @@
         let slides = [
             { image: "begroting.jpg", text: "Begroting" },
             { image: "verkiezingen.jpg", text: "Verkiezingen" },
-            { image: "klimaatvriendelijk_wonen.jpg", text: "Klimaatvriendelijk Wonen" }
+            { image: "klimaatvriendelijk_wonen.jpg", text: "Duurzaamheid in jouw huis" }
         ];
 
         let currentSlide = 0;
