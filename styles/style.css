@@ -93,18 +93,22 @@ h1 {
 
 .flex1 {
   flex: 1;
-  margin-right: 20px; /* Ruimte tussen de eerste afbeelding en de volgende kolommen */
+  margin-right: 10px; /* Ruimte tussen de eerste afbeelding en de volgende kolommen */
 }
 .title {
   color: #00263D;
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;
-  font-style: 14px;
+  font-style: 12px;
 }
 
-µ
 .flex2 div {
   margin-bottom: 20px; /* Ruimte tussen de twee kolommen van afbeeldingen */
+  
+}
+
+.flex2{
+  margin-right: 9000px;
 }
 
 .image{
@@ -117,6 +121,13 @@ h1 {
 
 .image2{
   width: 230px;
+}
+
+p{
+  color: #00263D;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: 10px;
 }
 
 
