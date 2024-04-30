@@ -29,11 +29,10 @@
         <div id="slider-nav"></div>
     </div>
 
-    <div class="line3"></div>
-    <div class="line4"></div>
-
-    <div class="line5"></div>
-    <div class="line6"></div>
+    <div class="containerbalk">
+        <div class="balk balkje1"></div>
+        <div class="balk balkje2"></div>
+    </div>
 
     <div class="container">
         <div class="flex1">
@@ -55,8 +54,10 @@
         </div>
     </div>
 
-    <div class="line7"></div>
-    <div class="line8"></div>
+    <div class="containerbalk">
+        <div class="balk balkje1"></div>
+        <div class="balk balkje2"></div>
+    </div>
 
     <div class="container">
         <div class="flex3">

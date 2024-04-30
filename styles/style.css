@@ -130,7 +130,25 @@ p{
   font-style: 10px;
 }
 
+/*balkjes*/
+.containerbalk{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
+.balk{
+  height: 5px; /* Hoogte van de balken */
+  width: 100%;
+}
+
+.balkje1{
+  background-color: #B95927;
+}
+
+.balkje2{
+  background-color: #CBB391;
+}
 
 @media(min-width:600px){
   #slider-container{
