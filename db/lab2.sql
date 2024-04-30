@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Gegenereerd op: 29 apr 2024 om 09:27
+-- Gegenereerd op: 30 apr 2024 om 07:37
 -- Serverversie: 5.7.24
 -- PHP-versie: 8.0.1
 
@@ -46,13 +46,25 @@ INSERT INTO `artikel` (`id`, `naam`, `inhoud`, `datum`, `foto`, `favoriet`, `the
 (1, 'Invoering elektronische procesvoering voor het Grondwettelijk Hof', 'De ministerraad keurt een ontwerp van koninklijk besluit goed voor de eerste fase van elektronische procesvoering bij het Grondwettelijk Hof, waarbij verzoekschriften en stukken elektronisch kunnen worden ingediend via een platform op de website van het Hof.', '2024-03-29', 'image1Politiek.png', 0, 'politiek', ''),
 (2, 'Federale verkiezingen', 'Jouw stem telt. Met die drie woorden zullen heel wat politieke partijen jou proberen te overtuigen om op hen te stemmen bij de verkiezingen van 9 juni. Eens iedereen gestemd heeft, worden de stemmen omgezet in zetels. In het federaal parlement zijn er bijvoorbeeld 150 zetels, in het Vlaams 124, in het Brussels 89.', '2024-04-06', 'image2politiek.png', 1, 'politiek', 'federaleverkiezingen.php'),
 (3, 'Europese verkiezingen', 'Op 9 juni 2024 worden 150 leden van de Kamer van Volksvertegenwoordigers verkozen in elf kieskringen, één per provincie en de kieskring Brussel-Hoofdstad. De 60 leden van de Senaat worden niet rechtstreeks gekozen, maar via de deelstaatparlementen. Deze verkiezingen markeren het begin van de 56ste zittingsperiode van het Federaal Parlement van België.', '2024-04-06', 'image3Politiek.png', 0, 'politiek', ''),
-(4, 'Begroting ', 'België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.', '2024-02-04', 'begroting.jpg', 1, 'economie', ''),
+(4, 'Begroting ', 'België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.', '2024-02-04', 'imageEconomie1.png', 1, 'economie', ''),
 (5, 'De pensioenhervorming is gestemd', 'RSVZ en de Pensioendienst lanceren proactieve campagne voor pensioenbonus met slogan \'En jij, hoeveel doe jij erbij?\'', '2024-04-05', 'imageEconomie2.png', 0, 'economie', ''),
 (6, 'Faillissement Van Hool', 'Faillissement van busbouwer Van Hool dreigt Vlaanderen 18 tot 20 miljoen euro te kosten.', '2024-04-02', 'imageEconomie3.png', 0, 'economie', ''),
 (7, 'Betaalbare psychologische zorg', 'Toegankelijke psychologische zorg: een stap naar welzijn voor iedereen.', '2024-03-09', 'imageGzondheid1.png', 0, 'gezondheid', ''),
 (8, 'De jungle van de medische platformen', 'Ontdek de weg naar jouw medische gegevens - helder, veilig en eenvoudig.', '2024-04-11', 'imageGezondheid2.png', 0, 'gezondheid', ''),
 (9, 'Duurzaamheid in jouw huis', 'Maak van je (ver)bouwproject een klimaatvriendelijke missie met deze tips voor duurzame keuzes en praktische oplossingen.', '2024-04-22', 'imageklimaat1.png', 1, 'klimaat', ''),
 (10, 'Oprichting van de Wetenschappelijke Klimaatraad', 'Het ontwerp van koninklijk besluit introduceert een onafhankelijke Wetenschappelijke Klimaatraad voor evaluatie en opvolging van het federale klimaatbeleid, met bevoegdheid tot deskundigenraadpleging en onderzoeksrichtlijnen.', '2024-04-05', 'imageKlimaat2.png', 0, 'klimaat', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `favorieten`
+--
+
+CREATE TABLE `favorieten` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `artikel_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -88,6 +100,14 @@ ALTER TABLE `artikel`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexen voor tabel `favorieten`
+--
+ALTER TABLE `favorieten`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `artikel_id` (`artikel_id`);
+
+--
 -- Indexen voor tabel `users`
 --
 ALTER TABLE `users`
@@ -108,6 +128,17 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Beperkingen voor geëxporteerde tabellen
+--
+
+--
+-- Beperkingen voor tabel `favorieten`
+--
+ALTER TABLE `favorieten`
+  ADD CONSTRAINT `favorieten_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `favorieten_ibfk_2` FOREIGN KEY (`artikel_id`) REFERENCES `artikel` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
