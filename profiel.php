@@ -55,8 +55,9 @@ $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
         </div>
         <div class="kader-inhoud">
             <img id="profiel_foto" src="images/profiel_foto/profile_picture_leeg.png" alt="profiel foto">
-            <div>
+            <div class="info">
                 <h3><?php echo $user['firstname'] . " " . $user['lastname']; ?></h3>
+                <h5 class="email">E-mail:</h5>
                 <h4><?php echo $user['email']; ?></h4>
                 <div class="button"><a href="#">Wachtwoord veranderen</a></div>
             </div>
@@ -90,10 +91,15 @@ $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
                 <a href="#">Bewerken</a>
             </div>
         </div>
-        <?php foreach ($favoriete_artikelen as $artikel) : ?>
+
+        <div class="kader-inhoud">
+            <p>Like jouw artikel, die je wilt bijhouden door op het hartje te klikken.</p>
+        </div>
+
+        <!-- <?php foreach ($favoriete_artikelen as $artikel) : ?>
             <div class="kader-inhoud">
                 <div class="image">
-                    <!-- Voeg hier de code toe om de afbeelding van het artikel weer te geven -->
+                  
                     <img src="http://localhost/lab2/images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
                 </div>
                 <div class="article-content">
@@ -104,10 +110,10 @@ $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
                     <div class="text">
                         <p><?php echo $artikel['inhoud']; ?></p>
                     </div>
-                    <!-- Voeg hier eventueel extra informatie toe zoals de auteur of categorie -->
+                   
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php endforeach; ?> -->
     </div>
 
     <div class="uitloggen">
