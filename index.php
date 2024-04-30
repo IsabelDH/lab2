@@ -37,7 +37,7 @@
 
     <div class="container">
         <div class="flex1">
-            <img class="image" src="images/image2.png" alt="">
+            <img class="image3" src="images/image2.png" alt="">
             <h3 class="title">De pensioenhervorming is gestemd</h3>
             <p>RSVZ en de Pensioendienst lanceren proactieve campagne voor pensioenbonus met slogan 'En jij, hoeveel doe jij erbij?'</p>
         </div>
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="flex4">
-            <img class="image" src="images/image7.png" alt="">
+            <img class="image3" src="images/image7.png" alt="">
             <h3  class="title">Invoering elektronische procesvoering voor het Grondwettelijk Hof</h3>
             <p>De ministerraad keurt een ontwerp van koninklijk besluit goed voor de eerste fase van elektronische procesvoering bij het Grondwettelijk Hof, waarbij verzoekschriften en stukken elektronisch kunnen worden ingediend via een platform op de website van het Hof.</p>
         </div>

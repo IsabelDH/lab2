@@ -111,7 +111,7 @@ h1 {
   margin-right: 9000px;
 }
 
-.image{
+.image3{
   width: 220px;
 }
 
@@ -162,10 +162,10 @@ p{
     margin-bottom: 20px; /* Ruimte tussen de twee kolommen van afbeeldingen */
   }
   
-  .image{
+  /* .image3{
     width: 240px;
     height: 400px;
-  }
+  } */
 }
 
 @media(min-width: 1000px){
