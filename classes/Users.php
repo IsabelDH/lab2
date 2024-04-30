@@ -5,7 +5,7 @@ class User
     private string $lastname;
     private string $email;
     private string $hashedPassword;
-    private ?string $profilePhoto; // Profielfoto wordt als optioneel beschouwd
+    private string $profilePhoto; // Profielfoto wordt als optioneel beschouwd
 
     //firstname
     public function setFirstname($pFirstname)
@@ -76,15 +76,27 @@ class User
 
     //save
     public function save()
-    {
-        $conn = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
-        $statement = $conn->prepare("INSERT INTO users (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)");
-        $statement->bindValue(":firstname", $this->firstname);
-        $statement->bindValue(":lastname", $this->lastname);
-        $statement->bindValue(":email", $this->email);
-        $statement->bindValue(":password", $this->hashedPassword); // Gebruik hier de gehashte versie van het wachtwoord
-        return $statement->execute();
+{
+    $conn = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
+    $statement = $conn->prepare("INSERT INTO users (firstname, lastname, email, password, profiel_foto) 
+                                 VALUES (:firstname, :lastname, :email, :password, :profiel_foto)");
+
+    // Bind values including profiel_foto or provide a default value
+    $statement->bindValue(":firstname", $this->firstname);
+    $statement->bindValue(":lastname", $this->lastname);
+    $statement->bindValue(":email", $this->email);
+    $statement->bindValue(":password", $this->hashedPassword);
+    
+    // Check if profiel_foto is set, otherwise provide a default value
+    if (isset($this->profilePhoto)) {
+        $statement->bindValue(":profiel_foto", $this->profilePhoto);
+    } else {
+        $statement->bindValue(":profiel_foto", 'profiel_picture_leeg.png'); // Default placeholder image
     }
+
+    return $statement->execute();
+}
+
 
 
 

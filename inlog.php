@@ -1,17 +1,8 @@
 <?php
-session_start(); // Start de PHP-sessie
+session_start();
 
-include_once(__DIR__ . "/classes/Users.php"); // Inclusief het bestand met de User-klasse
+include_once(__DIR__ . "/classes/Users.php");
 
-// function canLogin($pEmail, $pPassword) {
-//     $user = User::getUserByEmail($pEmail); 
-
-//     if ($user && password_verify($pPassword, $user['password'])) { 
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
 function canLogin($pEmail, $pPassword)
 {
     $conn = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
@@ -21,7 +12,7 @@ function canLogin($pEmail, $pPassword)
     $user = $statement->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($pPassword, $user['password'])) {
-        return $user; // Geef de gebruikersgegevens terug
+        return $user; // Return user data
     } else {
         return false;
     }
@@ -31,31 +22,31 @@ if (!empty($_POST)) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $user = canLogin($email, $password); // Haal de gebruikersgegevens op
+    $user = canLogin($email, $password);
 
     if ($user) {
-        session_start();
         $_SESSION['loggedin'] = true;
-        $_SESSION['user'] = $user; // Sla de gebruikersgegevens op in de sessie
+        $_SESSION['user'] = $user;
         header("location: profiel.php");
+        exit(); // Ensure script stops after redirect
     } else {
         $error = true;
     }
 }
+?>
 
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlog</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/profiel.css">
     <link rel="stylesheet" href="styles/inlog.css">
-
-    <title>Inlog</title>
 </head>
 
 <body>
@@ -74,19 +65,15 @@ if (!empty($_POST)) {
             </div>
             <?php if (isset($error)) : ?>
                 <div class="error">
-                    <p> Sorry, we can't log you in with that email address and password. Can you try again?</p>
+                    <p>Sorry, we can't log you in with that email address and password. Can you try again?</p>
                 </div>
             <?php endif; ?>
-            <a class="button" href="profiel.php">Login</a>
-            <a class="registreer"href="registreer.php">Heb je nog geen account? <strong> Registreer hier</strong></a>
+            <button type="submit" class="button">Login</button>
+            <a href="registreer.php" class="registreer">Heb je nog geen account? <strong>Registreer hier</strong></a>
         </form>
     </div>
-    
-    <?php header("Location: profiel.php")?>
+
     <?php include_once("footer.inc.php") ?>
-
-
-
     <script src="js/zoekbalk.js"></script>
 </body>
 

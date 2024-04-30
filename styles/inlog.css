@@ -6,6 +6,17 @@
   margin: 0 auto;
   border-radius: 10px;
   padding: 5px 0 30px 0;
+  margin-bottom: 235px;
+}
+
+.registreer-form{
+  background-color: #93acc2;
+  width: 95%;
+  /* height: 300px; */
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5px 0 30px 0;
+  margin-bottom: 81px;
 }
 
 /* .form-group input{
@@ -41,6 +52,7 @@ form p {
   text-decoration: none;
   color: #00263d;
   margin-top: 15px;
+  border: none;
 }
 
 form {
@@ -54,6 +66,15 @@ form {
 }
 .registreer {
   display: block;
+}
+
+.registreer-form a{
+  color: #00263d;
+  text-decoration: none;
+}
+
+input{
+  color: #00263d;
 }
 
 @media (min-width: 600px) {

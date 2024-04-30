@@ -1,5 +1,4 @@
 <?php
-session_start(); // Start de PHP-sessie
 
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Artikel.php");
@@ -29,9 +28,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
         echo "<a href='meldingen.php' class='melding'>";
         echo "<img width='22px' src='images/medlingen.png' alt='meldingen'>";
         echo "</a>";
-        echo "<a href='profiel.php' style='padding: 0;'>";
+        echo "<a href='profiel.php' style='background-color: rgba(147, 172, 194, 0);' style='padding: 0px;'>";
         // Toon de profielfoto
-        echo "<img src='images/profiel_foto/{$user['profiel_foto']}' alt='Profielfoto' class='profiel_foto' style='height: 50px; width: auto; border-radius:100%;'>";
+        echo "<img src='images/profiel_foto/profile_picture_leeg.png' alt='Profielfoto' class='profiel_foto' style='height: 50px; width: auto; border-radius:100%;'>";
         echo "</a>";
         echo "</div>";
         echo "</nav>";
