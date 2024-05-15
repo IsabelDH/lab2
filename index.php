@@ -16,8 +16,6 @@
 <body>
     <?php include_once("nav.inc.php") ?>
     <?php include_once("header.inc.php") ?>
-
-    <h1>Actueel in het nieuws</h1>
     <div id="slider-container">
         <div id="slide">
             <img src="images/begroting.jpg" alt="">

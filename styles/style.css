@@ -33,8 +33,9 @@ h3{
   position: relative;
   overflow: hidden;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 40px auto;
   z-index: -1;
+  
 }
 
 #slide {
@@ -50,6 +51,7 @@ h3{
   object-fit: cover;
   object-position: center;
   z-index: -1;
+  border-radius: 50px;
 }
 
 .slider-text {
@@ -195,10 +197,10 @@ p{
 @media(min-width: 1000px){
   #slider-container{
     /* background-color: aqua; */
-    width: 75%;
+    width: 55%;
   }
 
   #slide img{
-    height: 80vh;
+    height: 45vh;
   }
 }
