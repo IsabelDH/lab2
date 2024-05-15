@@ -1,3 +1,14 @@
+<?php
+include_once("chatbot.php");
+
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <div class="line1"></div>
     <div class="line2"></div>
 
@@ -52,22 +63,6 @@
         </div>
     </div>
 
-    <div class="chat-container">
-        <div class="chat-header">
-            <h3>Chatbot Jill 👋</h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36" onclick="resetChat()">
-                <path fill="currentColor" stroke="currentColor" stroke-width="1" d="m19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29l-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29l8.29 8.29a1 1 0 0 0 1.41-1.41Z" class="clr-i-outline clr-i-outline-path-1" />
-                <path fill="none" stroke="none" d="M0 0h36v36H0z" />
-            </svg>
-
-        </div>
-        <div class="chat-messages" id="chat-messages"></div>
-        <div class="chat-input-container">
-            <input type="text" class="chat-input" id="user-input" placeholder="Waarmee kan ik je helpen?">
-            <div class="send-icon" onclick="receiveMessage()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M22 12L3 20l3.563-8L3 4zM6.5 12H22" />
-                </svg>
-            </div>
-        </div>
-    </div>
+    
+</body>
+</html>

@@ -5,87 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Chatbot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+    <link rel="stylesheet" href="styles/chatbot.css">
 
-        .chat-container {
-            position: absolute;
-            width: 300px;
-            margin: 20px auto;
-            background-color: #93ACC2;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            
-        }
-
-        .chat-header {
-            background-color: #93ACC2;
-            color: #00263D;
-            /* padding: 5px 10px; */
-            text-align: center;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .chat-header svg {
-            margin-right: -75px;
-            margin-left: 25px;
-            cursor: pointer;
-            /* Toegevoegd om een cursor te tonen wanneer je erop klikt */
-        }
-
-        .chat-messages {
-            padding: 0 10px;
-            overflow-y: auto;
-            max-height: 200px;
-            /* Aangepaste hoogte voor de berichten */
-        }
-
-        .message {
-            margin-bottom: 10px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: inline-block;
-            max-width: 80%;
-        }
-
-        .user-message {
-            background-color: #f6f6f6;
-            float: right;
-        }
-
-        .bot-message {
-            background-color: #fff;
-            float: left;
-        }
-
-        .chat-input-container {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-
-        .chat-input {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            outline: none;
-        }
-
-        .send-icon {
-            padding: 10px;
-            background-color: #93ACC2;
-            color: #00263D;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
@@ -110,8 +31,8 @@
     </div>
 
     <script>
-        const chatMessages = document.getElementById('chat-messages');
-        const userInput = document.getElementById('user-input');
+        const chatMessages = document.querySelector('#chat-messages');
+        const userInput = document.querySelector('#user-input');
 
         function sendMessage(message, sender) {
             const chatMessage = document.createElement('div');
@@ -129,7 +50,7 @@
                 sendMessage(question, 'user');
                 // Voeg hier de logica toe om te reageren op verschillende vragen
                 switch (question) {
-                    case 'Hallo':
+                    case 'hallo':
                         sendMessage('Hallo, ik ben Jill, waarmee kan ik je helpen?', 'Jill');
                         break;
                     case 'wat is een begroting?':
