@@ -68,7 +68,7 @@
         <div id="slide">
             <img src="images/begroting.jpg" alt="">
             <div class="slider-text">
-                <h2>Begroting</h2>
+                <h2>Hoe komt begroting tot stand?</h2>
             </div>
         </div>
 
@@ -77,9 +77,9 @@
 
     <script>
         let slides = [
-            { image: "begroting.jpg", text: "Begroting" },
-            { image: "verkiezingen.jpg", text: "Verkiezingen" },
-            { image: "klimaatvriendelijk_wonen.jpg", text: "Duurzaamheid in jouw huis" }
+            { image: "begroting.jpg", text: "Hoe komt begroting tot stand?" },
+            { image: "verkiezingen.jpg", text: "Waarom moeten we dit jaar voor Europees en federaal stemmen?" },
+            { image: "klimaatvriendelijk_wonen.jpg", text: "Welke subsidies krijg ik bij het renoveren van mijn huis?" }
         ];
 
         let currentSlide = 0;

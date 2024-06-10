@@ -171,17 +171,17 @@ p{
   
   .flex1 {
     flex: 1;
-    margin-right: 20px; /* Ruimte tussen de eerste afbeelding en de volgende kolommen */
+    margin-right: 20px; 
   }
   
   .flex2 {
     display: flex;
     flex-direction: column;
-    flex: 2; /* Neem twee keer zoveel ruimte in beslag als flex1 */
+    flex: 2;
   }
   
   .flex2 div {
-    margin-bottom: 20px; /* Ruimte tussen de twee kolommen van afbeeldingen */
+    margin-bottom: 20px; 
   }
   
   /* .image3{
@@ -192,7 +192,7 @@ p{
 
 @media(min-width: 1000px){
   #slider-container{
-    /* background-color: aqua; */
+
     width: 55%;
   }
 

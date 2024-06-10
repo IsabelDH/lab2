@@ -38,5 +38,14 @@ class Artikel {
         return $result;
     }
 
+    public static function getArtikelName($nameId)
+    {
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT naam FROM artikel WHERE id = :id");
+        $statement->execute([":id" => $nameId]);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
 }
 ?>

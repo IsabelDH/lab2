@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,7 +24,7 @@
         <div id="slide">
             <img src="images/begroting.jpg" alt="">
             <div class="slider-text">
-                <h2>Begroting</h2>
+                <h2>Hoe komt begroting tot stand?</h2>
             </div>
         </div>
 

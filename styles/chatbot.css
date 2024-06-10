@@ -8,20 +8,22 @@ body {
 }
 
 .chat-container {
-    width: 250px;
+    width: 270px;
     margin-top: 120px;
     background-color: #93ACC2;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: fixed ;
+    position: fixed;
+    right: 20px; 
+    top: 200px; 
+    z-index: 1000; 
 }
 
-h3{
+h3 {
     color: #00263D;
     font-size: 16px;
-  }
-  
+}
 
 .chat-header {
     background-color: #93ACC2;
@@ -31,18 +33,20 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px; 
+    position: relative; 
 }
 
 .chat-header svg {
-    margin-right: -75px;
-    margin-left: 25px;
+    position: absolute;
+    left: 10px; 
     cursor: pointer;
 }
 
 .chat-messages {
-    padding: 0 10px;
+    padding: 0 30px;
     overflow-y: auto;
-    max-height: 200px;
+    max-height: 250px; 
 }
 
 .message {
@@ -69,8 +73,8 @@ h3{
 }
 
 .chat-input {
-    flex: 1;
-    padding: 5%;
+    flex: 1; /* Make the input take up available space */
+    padding: 10px; /* Add padding for better appearance */
     border: none;
     outline: none;
 }
