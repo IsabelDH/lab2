@@ -4,72 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nieuws Slider</title>
-<style>
-    body {
-        text-align: center;
-    }
-
-    #slider-container {
-        position: relative;
-        overflow: hidden;
-        width: 1000px; /* Pas dit aan aan je eigen wensen */
-        margin: 0 auto;
-    }
-
-    #slide {
-        position: relative;
-        width: 100%; /* Maak de slide container 100% breedte */
-    }
-
-    #slide img {
-        width: auto; /* Laat de breedte automatisch schalen om de verhoudingen te behouden */
-        height: 600px; /* Geef een vaste hoogte aan de afbeelding */
-        object-fit: cover; /* Behoud de verhoudingen van de afbeelding en knip indien nodig bij */
-        object-position: center; /* Centreer de afbeelding in de container */
-    }
-
-    .slider-text {
-        position: absolute;
-        bottom: -35px;
-        left: 0;
-        width: 100%;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        color: black;
-        padding: 5px 0;
-        margin: 0;
-        box-sizing: border-box; /* Voeg deze regel toe */
-    }
-
-    .slider-text h2 {
-        margin: 0;
-    }
-
-    #slider-nav {
-        margin-top: 35px;
-    }
-
-    .slider-dot {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: #ccc;
-        border-radius: 50%;
-        margin: 0 5px;
-        cursor: pointer;
-    }
-
-    .slider-dot.active {
-        background-color: #333;
-    }
-</style>
 </head>
 <body>
-    <div id="slider-container">
+
+<div id="slider-container">
         <div id="slide">
-            <img src="images/begroting.jpg" alt="">
-            <div class="slider-text">
-                <h2>Hoe komt begroting tot stand?</h2>
-            </div>
+            <a href="begroting.php">
+                <img src="images/begroting.jpg" alt="">
+                <div class="slider-text">
+                    <h2>Hoe komt begroting tot stand?</h2>
+                </div>
+            </a>
         </div>
 
         <div id="slider-nav"></div>
@@ -77,9 +22,9 @@
 
     <script>
         let slides = [
-            { image: "begroting.jpg", text: "Hoe komt begroting tot stand?" },
-            { image: "verkiezingen.jpg", text: "Waarom moeten we dit jaar voor Europees en federaal stemmen?" },
-            { image: "klimaatvriendelijk_wonen.jpg", text: "Welke subsidies krijg ik bij het renoveren van mijn huis?" }
+            { image: "begroting.jpg", text: "Hoe komt begroting tot stand?", link: "begroting.php" },
+            { image: "verkiezingen.jpg", text: "Waarom moeten we dit jaar voor Europees en federaal stemmen?", link: "verkiezingen.php" },
+            { image: "klimaatvriendelijk_wonen.jpg", text: "Welke subsidies krijg ik bij het renoveren van mijn huis?", link: "renovatie.php" }
         ];
 
         let currentSlide = 0;
@@ -99,12 +44,14 @@
         let slideElement = document.getElementById('slide');
         let imageElement = slideElement.querySelector('img');
         let textElement = slideElement.querySelector('.slider-text h2');
+        let linkElement = slideElement.querySelector('a');
 
         // Functie om de huidige slide te tonen
         function showSlide(index) {
             let slide = slides[index];
             imageElement.src = "images/" + slide.image;
             textElement.textContent = slide.text;
+            linkElement.href = slide.link;
 
             // Update de actieve dot in de slider-navigatie
             let dots = sliderNav.querySelectorAll('.slider-dot');

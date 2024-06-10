@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/meldingen.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/profiel.css">
   
     <title>Meldingen</title>
 </head>

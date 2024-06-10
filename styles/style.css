@@ -29,8 +29,9 @@ h1 {
   position: relative;
   overflow: hidden;
   max-width: 90%;
-  margin: 40px auto;
+  margin: 20px auto;
   z-index: -1;
+  margin-top: 110px;
   
 }
 
@@ -81,42 +82,52 @@ h1 {
   height: 10px;
   background-color: #ccc;
   border-radius: 50%;
-  margin: 0 5px 25px 5px;
+  margin: 0 5px;
   cursor: pointer;
 }
 
 .slider-dot.active {
-  background-color: #00263D;
+  background-color: #333;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   margin-left: 20px;
+  margin-top: 40px;
 }
 
 .flex1 {
   flex: 1;
-  margin-right: 10px; /* Ruimte tussen de eerste afbeelding en de volgende kolommen */
+  margin-right: 10px; 
 }
-.title {
+.title h3 {
   color: #00263D;
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;
-  font-style: 12px;
+  font-style: 13px;
+  margin-top: 90px;
+}
+p{
+  color: #00263D;
+  font-weight: 100;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: 8px;
+  margin-top: 10px;
+}
+
+img{
+  margin-bottom: 10px;
 }
 
 .flex2 div {
-  margin-bottom: 20px; /* Ruimte tussen de twee kolommen van afbeeldingen */
+  margin-bottom: 20px; 
   
-}
-
-.flex2{
-  margin-right: 9000px;
 }
 
 .image3{
   width: 220px;
+  height: 400px;
 }
 
 .image1{
@@ -127,11 +138,29 @@ h1 {
   width: 230px;
 }
 
-p{
-  color: #00263D;
-  font-weight: 400;
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  font-style: 10px;
+.image4{
+  width: 220px;
+  height: 280px;
+}
+
+.flex4 {
+  flex: 4;
+  margin-right: 10px; 
+}
+.flex3 div {
+  margin-bottom: 20px; 
+}
+
+.flex3{
+  margin-right: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: #CBB391;
 }
 
 /*balkjes*/
@@ -142,7 +171,7 @@ p{
 }
 
 .balk{
-  height: 5px; /* Hoogte van de balken */
+  height: 5px;
   width: 100%;
 }
 
@@ -156,7 +185,6 @@ p{
 
 @media(min-width:600px){
   #slider-container{
-    /* background-color: aqua; */
     width: 95%;
   }
 
@@ -177,26 +205,91 @@ p{
   .flex2 {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 1;
+    margin-right: 30px;
   }
   
   .flex2 div {
     margin-bottom: 20px; 
   }
+
+  .image3{
+    width: 320px;
+    height: 460px;
+  }
   
-  /* .image3{
-    width: 240px;
+  .image1{
+    width: 400px;
+  }
+  
+  .image2{
+    width: 400px;
+  }
+  
+  .image4{
+    width: 320px;
     height: 400px;
-  } */
+  }
+  
 }
 
-@media(min-width: 1000px){
+@media(min-width: 900px){
   #slider-container{
-
+    margin-top: 60px;
     width: 55%;
   }
 
   #slide img{
     height: 45vh;
+  }
+
+  .flex1 {
+    flex: 1;
+    margin-right: 20px; 
+    margin-left: 80px;
+  }
+  
+  .flex2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 80px;
+  }
+  
+  .flex2 div {
+    margin-bottom: 20px; 
+  }
+
+  .image3{
+    width: 520px;
+    height: 460px;
+  }
+  
+  .image1{
+    width: 700px;
+  }
+  
+  .image2{
+    width: 700px;
+  }
+  
+  .image4{
+    width: 420px;
+    height: 400px;
+  }
+
+  .title h3 {
+    color: #00263D;
+    font-weight: 700;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: 24px;
+    margin-top: 90px;
+  }
+  p{
+    color: #00263D;
+    font-weight: 100;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: 13px;
+    margin-top: 10px;
   }
 }
