@@ -1,12 +1,11 @@
 let slides = [
     { image: "begroting.jpg", text: "Begroting", page: "begroting.php" },
     { image: "verkiezingen.jpg", text: "Verkiezingen", page: "verkiezingen.php" },
-    { image: "klimaatvriendelijk_wonen.jpg", text: "Klimaatvriendelijk Wonen", page: "#" }
+    { image: "klimaatvriendelijk_wonen.jpg", text: "Klimaatvriendelijk Wonen", page: "klimaatvriendelijk_wonen.php" }
 ];
 
 let currentSlide = 0;
 let sliderNav = document.getElementById('slider-nav');
-let slideElements = document.querySelectorAll('.slide');
 
 // Laad de slider-navigatie
 for (let i = 0; i < slides.length; i++) {
@@ -28,6 +27,7 @@ function showSlide(index) {
     let slide = slides[index];
     imageElement.src = "images/" + slide.image;
     textElement.textContent = slide.text;
+    slideElement.setAttribute('data-page', slide.page);
 
     // Update de actieve dot in de slider-navigatie
     let dots = sliderNav.querySelectorAll('.slider-dot');
@@ -55,10 +55,8 @@ sliderNav.addEventListener('click', function(event) {
     }
 });
 
-// Voeg een event listener toe aan elke slide
-slideElements.forEach((slide, index) => {
-    slide.addEventListener('click', () => {
-        // Navigeer naar de bijbehorende pagina voor de huidige slide
-        window.location.href = slides[index].page;
-    });
+// Voeg een event listener toe aan de huidige slide voor klikken
+slideElement.addEventListener('click', () => {
+    let page = slideElement.getAttribute('data-page');
+    window.location.href = page;
 });
