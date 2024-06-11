@@ -20,73 +20,209 @@
         <div>
             <h2>Europees niveau</h2>
             <p>
-                Europese verkiezingen zijn een krachtig instrument voor burgerparticipatie.
-                Ze bieden jou, als burger van de Europese Unie (EU), de kans om vertegenwoordigers te kiezen die jouw belangen zullen behartigen in het Europees Parlement, het hart van de EU-wetgeving.
-                Deze verkiezingen, bekend als de EU-verkiezingen, vinden plaats in alle 27 EU-landen en geven jou de mogelijkheid om elke vijf jaar jouw stem te laten horen.
-                De laatste verkiezingen vonden plaats in mei 2019, en de volgende worden verwacht van 6 tot 9 juni 2024, afhankelijk van je locatie.
-
-                Het is van cruciaal belang om deel te nemen aan deze verkiezingen omdat jouw stem directe invloed heeft op de besluitvorming in het Europees Parlement.
-                Beslissingen over onderwerpen als werkgelegenheid, gezondheidszorg en milieu worden daar genomen en hebben een directe impact op jouw dagelijks leven.
-                Om te kunnen stemmen, moet je mogelijk registreren en je hebt slechts één kans om jouw stem uit te brengen.
-                Dit democratische recht is echter voorbehouden aan EU-burgers, dus je moet de nationaliteit hebben van een EU-land.
-
-                Je hebt het recht om te stemmen in het land waarvan je de nationaliteit hebt, maar als je in een ander EU-land woont, heb je ook het recht om daar te stemmen.
-                Het is belangrijk op te merken dat je slechts in één EU-land kandidaat kunt zijn, hetzij in het land van jouw nationaliteit of in het land waar je woont.
-                Dit stelt je in staat om actief deel te nemen aan het politieke proces, ongeacht je locatie binnen de EU.
+                Het Europese Parlement heeft een cruciale rol in de vaststelling van EU-wetgeving en de EU-begroting, die de komende jaren de basis vormt voor belangrijke investeringen in verschillende sectoren zoals duurzaamheid, digitale transformatie en sociaal-economische cohesie. Bij de Europese verkiezingen kunnen we onze vertegenwoordigers kiezen die zullen meebeslissen over deze zaken, en die onze belangen op het Europese toneel zullen verdedigen.
+                Daarnaast behandelt het Europees Parlement belangrijke kwesties zoals de klimaatverandering, grensoverschrijdende criminaliteit en de versterking van de interne markt. Door te stemmen voor het Europees Parlement kunnen we bijdragen aan beslissingen die een directe impact hebben op onze veiligheid, economie en levenskwaliteit. Het Parlement speelt ook een essentiële rol in de bescherming van democratische waarden en mensenrechten binnen de EU.
             </p>
         </div>
 
         <div>
             <h2>Federaal niveau</h2>
-            <p>
-                De federale regering is het hoogste bestuursorgaan op nationaal niveau in België, verantwoordelijk voor het leiden en uitvoeren van het nationale beleid.
-                Het Belgische federale parlement, bestaande uit de Kamer van Volksvertegenwoordigers en de Senaat, vormt de wetgevende tak van de federale regering.
-                Verkiezingen voor de Kamer van Volksvertegenwoordigers vinden om de vier jaar plaats, waardoor burgers de kans krijgen om hun vertegenwoordigers te kiezen.
-
-                De federale regering, onder leiding van de premier, heeft de uitvoerende macht en is belast met het uitvoeren van wetten en het implementeren van beleid dat is aangenomen door het parlement.
-                Deze regering beheert cruciale aspecten van het land, zoals economie, buitenlands beleid, justitie, sociale zekerheid en defensie, en haar beslissingen hebben directe invloed op het dagelijks leven van de burgers.
-
-                De federale verkiezingen zijn van essentieel belang omdat ze de samenstelling van het parlement en bijgevolg de regering bepalen, waardoor de politieke richting van België wordt beïnvloed.
-                Politieke partijen presenteren tijdens verkiezingscampagnes hun visie op belangrijke nationale kwesties, zoals werkgelegenheid, sociale rechtvaardigheid, gezondheidszorg en onderwijs, om de steun van de kiezers te verwerven.
-
-                Stemmen bij federale verkiezingen is een democratisch recht dat burgers in staat stelt om actief deel te nemen aan het politieke proces en de toekomst van het land mede vorm te geven.
-                Om te kunnen stemmen, moeten burgers zich mogelijk registreren, en ze hebben slechts één kans om hun stem uit te brengen. Stemmen is alleen mogelijk voor burgers van België, wat betekent dat ze de Belgische nationaliteit moeten hebben.
-
-                Burgers hebben het recht om te stemmen in het kiesdistrict waarin ze zijn ingeschreven, en ze kunnen slechts één keer kandidaat zijn voor de federale verkiezingen.
-                Dit biedt de mogelijkheid om deel te nemen aan het politieke proces en bij te dragen aan de vorming van het nationale beleid, ongeacht hun achtergrond of locatie binnen België.
+            <p>De federale verkiezingen bepalen de samenstelling van de Kamer van Volksvertegenwoordigers, die vervolgens de federale regering vormt. Deze regering is verantwoordelijk voor belangrijke beleidsdomeinen zoals justitie, defensie, sociale zekerheid en nationale belastingen. Onze stem helpt bepalen wie beslissingen neemt over zaken die ons dagelijks leven rechtstreeks beïnvloeden, zoals gezondheidszorg, werkgelegenheid en pensioenen.
+                Daarnaast is de federale overheid verantwoordelijk voor het beheren van de nationale infrastructuur, het waarborgen van de binnenlandse veiligheid en het onderhouden van buitenlandse betrekkingen. Het federale beleid bepaalt ook de verdeling van financiële middelen tussen de verschillende regio's, wat cruciaal is voor het functioneren van België als federale staat.
             </p>
         </div>
         <div>
             <h2>Regionaal niveau</h2>
             <p>
-                Op regionaal niveau vinden verkiezingen plaats voor bestuursorganen die verantwoordelijk zijn voor specifieke regio's binnen België, zoals de gemeenschappen en gewesten.
-                België kent drie gemeenschappen: de Vlaamse Gemeenschap, de Franse Gemeenschap en de Duitstalige Gemeenschap.
-                Elke gemeenschap heeft wetgevende macht over onderwijs, cultuur en sommige aspecten van welzijn en gezondheidszorg.
-
-                Daarnaast zijn er drie gewesten in België: het Vlaams Gewest, het Waals Gewest en het Brussels Hoofdstedelijk Gewest.
-                Deze gewesten zijn verantwoordelijk voor regionale aangelegenheden zoals ruimtelijke ordening, milieu, economie en mobiliteit.
-
-                Verkiezingen op regionaal niveau variëren in frequentie en de manier waarop ze worden gehouden, afhankelijk van de wetgeving en de politieke structuur van het land.
-                Deze verkiezingen zijn van cruciaal belang omdat ze rechtstreeks van invloed zijn op het dagelijks leven en de ontwikkeling van lokale gemeenschappen en regio's.
-
-                Kandidaten voor regionale verkiezingen vertegenwoordigen verschillende politieke partijen en streven naar het behartigen van de belangen van hun respectieve regio's.
-                Regionale bestuursorganen spelen een cruciale rol bij het nemen van beslissingen op gebieden zoals onderwijs, infrastructuur en cultureel beleid.
-
-                Regionale verkiezingen brengen debatten op gang over belangrijke kwesties zoals regionalisme, culturele identiteit, economische ontwikkeling en sociale voorzieningen.
-                Ze bieden burgers de kans om actief deel te nemen aan het bestuur van hun regio en hun stem te laten gelden in zaken die hen direct aangaan.
+                De regionale verkiezingen in Vlaanderen bepalen de samenstelling van het Vlaams Parlement, dat bevoegd is voor een breed scala aan zaken, waaronder onderwijs, cultuur, milieu en mobiliteit. Het is belangrijk om te stemmen voor vertegenwoordigers die onze lokale en regionale belangen kunnen behartigen en beleid kunnen vormgeven dat aansluit bij de specifieke noden en prioriteiten van Vlaanderen.
+                Het regionale beleid heeft directe invloed op ons dagelijks leven, van de kwaliteit van ons onderwijs en de efficiëntie van onze gezondheidszorg tot de bereikbaarheid van openbaar vervoer en de bescherming van ons milieu. De Vlaamse regering speelt ook een sleutelrol in het stimuleren van de economische ontwikkeling en het creëren van werkgelegenheid binnen de regio.
+                Partijprogramma's voor 2024
             </p>
         </div>
 
         <div>
+            <h2>Partijprogramma's</h2>
+            <div>
+                <div>
+                    <img class="partij_logo" src="images/nva.png" alt="Partij Logo">
+                    <h3>N-VA (Nieuw-Vlaamse Alliantie)</h3>
+                    <ul>
+                        <li>Europees:
+                            <ul>
+                                <li>Meer bevoegdheden voor lidstaten en minder voor de EU.</li>
+                                <li>Strenger migratiebeleid met focus op grensbewaking.</li>
+                                <li>Economische groei stimuleren door minder regelgeving en meer vrijhandel.</li>
+                            </ul>
+                        </li>
+                        <li>Federaal:
+                            <ul>
+                                <li>Hervorming van de sociale zekerheid met meer verantwoordelijkheid voor de regio's.</li>
+                                <li>Strengere migratiewetgeving.</li>
+                                <li>Belastingsverlaging en administratieve vereenvoudiging.</li>
+                            </ul>
+                        </li>
+                        <li>Regionaal:
+                            <ul>
+                                <li>Verdere staatshervorming met meer bevoegdheden naar Vlaanderen.</li>
+                                <li>Focus op werkgelegenheid en onderwijs.</li>
+                                <li>Sterk inzetten op innovatie en duurzaamheid.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img class="partij_logo" src="images/vlaams_belang.png" alt="Partij Logo">
+                    <h3>Vlaams Belang</h3>
+                    <ul>
+                        <li>Europees:
+                            <ul>
+                                <li>Stoppen van verdere integratie van de EU.</li>
+                                <li>Strikte immigratiecontrole en terugsturen van illegale immigranten.</li>
+                                <li>Behoud van nationale soevereiniteit.</li>
+                            </ul>
+                        </li>
+                        <li>Federaal:
+                            <ul>
+                                <li>Invoering van een streng immigratiebeleid.</li>
+                                <li>Verlaging van belastingen voor werkende mensen.</li>
+                                <li>Meer geld voor veiligheid en justitie.</li>
+                            </ul>
+                        </li>
+                        <li>Regionaal:
+                            <ul>
+                                <li>Meer autonomie voor Vlaanderen.</li>
+                                <li>Versterking van de Vlaamse identiteit en cultuur.</li>
+                                <li>Investeren in lokale economie en infrastructuur.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img class="partij_logo" src="images/vooruit.png" alt="Partij Logo">
+                    <h3>Vooruit (voorheen sp.a)</h3>
+                    <ul>
+                        <li>Europees:
+                            <ul>
+                                <li>Meer sociale bescherming binnen de EU.</li>
+                                <li>Bevorderen van duurzame energie en milieubescherming.</li>
+                                <li>Versterking van de rechten van werknemers.</li>
+                            </ul>
+                        </li>
+                        <li>Federaal:
+                            <ul>
+                                <li>Uitbreiding van de sociale zekerheid.</li>
+                                <li>Hogere belastingen voor de rijken en grote bedrijven.</li>
+                                <li>Investeren in publieke diensten zoals onderwijs en gezondheidszorg.</li>
+                            </ul>
+                        </li>
+                        <li>Regionaal:
+                            <ul>
+                                <li>Meer middelen voor onderwijs en gezondheidszorg.</li>
+                                <li>Duurzame ontwikkeling en milieubeleid.</li>
+                                <li>Versterking van de sociale huisvesting.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img class="partij_logo" src="images/open_vld.png" alt="Partij Logo">
+                    <h3>Open VLD (Open Vlaamse Liberalen en Democraten)</h3>
+                    <ul>
+                        <li>Europees:
+                            <ul>
+                                <li>Stimuleren van innovatie en digitale economie.</li>
+                                <li>Verbeteren van de interne markt.</li>
+                                <li>Versterken van de EU-buitengrenzen.</li>
+                            </ul>
+                        </li>
+                        <li>Federaal:
+                            <ul>
+                                <li>Lagere belastingen en minder bureaucratie.</li>
+                                <li>Stimuleren van ondernemerschap.</li>
+                                <li>Investeren in veiligheid en defensie.</li>
+                            </ul>
+                        </li>
+                        <li>Regionaal:
+                            <ul>
+                                <li>Meer autonomie voor de regio's.</li>
+                                <li>Investeren in onderwijs en innovatie.</li>
+                                <li>Ondersteuning van lokale bedrijven.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div>
+                        <img class="partij_logo" src="images/groen.png" alt="Partij Logo">
+                        <h3>Groen</h3>
+                        <ul>
+                            <li>Europees:
+                                <ul>
+                                    <li>Bevorderen van duurzame ontwikkeling en milieubescherming.</li>
+                                    <li>Streven naar een groene en eerlijke economie.</li>
+                                    <li>Bestrijden van sociale ongelijkheid en armoede.</li>
+                                </ul>
+                            </li>
+                            <li>Federaal:
+                                <ul>
+                                    <li>Investeren in hernieuwbare energie en klimaatbeleid.</li>
+                                    <li>Verhogen van de minimumlonen en sociale uitkeringen.</li>
+                                    <li>Verbeteren van de gezondheidszorg en het onderwijs.</li>
+                                </ul>
+                            </li>
+                            <li>Regionaal:
+                                <ul>
+                                    <li>Bevorderen van duurzame mobiliteit en ruimtelijke ordening.</li>
+                                    <li>Ondersteunen van lokale voedselproductie en biodiversiteit.</li>
+                                    <li>Uitbreiden van groene ruimtes en natuurgebieden.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img class="partij_logo" src="images/pvda.webp" alt="Partij Logo">
+                        <h3>PVDA</h3>
+                        <ul>
+                            <ul>
+                                <li>Europees:
+                                    <ul>
+                                        <li>Streven naar een eerlijkere verdeling van welvaart binnen de Europese Unie.</li>
+                                        <li>Bestrijden van belastingontwijking en -ontduiking door grote bedrijven.</li>
+                                        <li>Bevorderen van sociale rechtvaardigheid en arbeidersrechten op Europees niveau.</li>
+                                    </ul>
+                                </li>
+                                <li>Federaal:
+                                    <ul>
+                                        <li>Verhogen van de minimumlonen en pensioenen.</li>
+                                        <li>Garanderen van betaalbare huisvesting en gezondheidszorg voor iedereen.</li>
+                                        <li>Investeren in openbaar vervoer en duurzame energie.</li>
+                                    </ul>
+                                </li>
+                                <li>Regionaal:
+                                    <ul>
+                                        <li>Stimuleren van lokale werkgelegenheid en kleine bedrijven.</li>
+                                        <li>Verbeteren van het onderwijs en de toegang tot cultuur voor alle inwoners.</li>
+                                        <li>Beschermen van het milieu en investeren in groene projecten.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <!-- Voeg hier meer partijen toe op dezelfde manier -->
+                </div>
+            </div>
+        </div>
+
+        <div>
             <h2>Video</h2>
-            <img class="video" src="images/video.png" alt="">
+            <img class="video" src="images/video_verkiezingen.png" alt="">
         </div>
 
         <div class="totstand">
-            <h2>Wil je weten hoe het tot stand komt?</h2>
+            <h2>Wil je weten voor wie je kan stemmen?</h2>
             <a href="#">Klik dan hier!</a>
             <div>
-                <!-- <img src="images/verkiezingenrekenen.png" alt=""> -->
+                <img src="images/voor_wie_stemmen.png" alt="">
             </div>
 
         </div>
