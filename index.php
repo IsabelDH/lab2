@@ -46,7 +46,6 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 } */
-
     </style>
 </head>
 
@@ -56,30 +55,49 @@ button {
 
     <div class="slider-container">
         <div class="slide" data-url="begroting.php">
-            <img src="images/begroting.jpg" alt="Image 1">
-            <div class="slider-text">
-                <h2>Hoe komt begroting tot stand?</h2>
-                <p>België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.</p>
+            <div class="slide-content">
+                <img src="images/begroting.jpg" alt="Image 1">
+                <div class="slider-controls">
+                    <img id="prev" src="images/previous.png" alt="">
+                    <img id="next" src="images/next.png" alt="">
+                </div>
+                <div class="slider-text">
+                    <h2>Hoe komt begroting tot stand?</h2>
+                    <p>België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.</p>
+                </div>
             </div>
         </div>
+
         <div class="slide" data-url="verkiezingen.php">
-            <img src="images/verkiezingen.jpg" alt="Image 2">
-            <div class="slider-text">
-                <h2>Waarom moeten we dit jaar voor Europees en federaal stemmen?</h2>
-                <p>Verkiezingen komen er weer aan. Maar hoe zijn deze allemaal aan elkaar verbonden.</p>
+            <div class="slide-content">
+                <img src="images/verkiezingen.jpg" alt="Image 2">
+                <div class="slider-controls">
+                    <img id="prev" src="images/previous.png" alt="">
+                    <img id="next" src="images/next.png" alt="">
+                </div>
+                <div class="slider-text">
+                    <h2>Waarom moeten we dit jaar voor Europees en federaal stemmen?</h2>
+                    <p>Verkiezingen komen er weer aan. Maar hoe zijn deze allemaal aan elkaar verbonden.</p>
+                </div>
             </div>
         </div>
+
         <div class="slide" data-url="klimaat.php">
-            <img src="images/klimaatvriendelijk_wonen.jpg" alt="Image 3">
-            <div class="slider-text">
-                <h2>Welke subsidies krijg ik bij het renoveren van mijn huis?</h2>
-                <p>Maak van je (ver)bouwproject een klimaatvriendelijke missie met deze tips voor duurzame keuzes en praktische oplossingen.</p>
+            <div class="slide-content">
+                <img src="images/klimaatvriendelijk_wonen.jpg" alt="Image 3">
+                <div class="slider-controls">
+                    <img id="prev" src="images/previous.png" alt="">
+                    <img id="next" src="images/next.png" alt="">
+                </div>
+                <div class="slider-text">
+                    <h2>Welke subsidies krijg ik bij het renoveren van mijn huis?</h2>
+                    <p>Maak van je (ver)bouwproject een klimaatvriendelijke missie met deze tips voor duurzame keuzes en praktische oplossingen.</p>
+                </div>
             </div>
         </div>
     </div>
-
-    <img id="prev" src="images/previous.png" alt="">
-    <img id="next" src="images/next.png" alt="">
+    <!-- <img id="prev" src="images/previous.png" alt="">
+    <img id="next" src="images/next.png" alt=""> -->
 
     <div class="containerbalk">
         <div class="balk balkje1"></div>
@@ -145,46 +163,45 @@ button {
 
     <script>
         let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const slideInterval = 3000; // Change this value to set the interval (in milliseconds)
+        const slides = document.querySelectorAll('.slide');
+        const slideInterval = 3000; // Change this value to set the interval (in milliseconds)
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-    });
-}
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
 
-function navigateSlide(direction) {
-    currentIndex = (currentIndex + direction + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
+        function navigateSlide(direction) {
+            currentIndex = (currentIndex + direction + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
 
-document.getElementById('prev').addEventListener('click', () => {
-    clearInterval(autoSlide);
-    navigateSlide(-1);
-    autoSlide = setInterval(() => navigateSlide(1), slideInterval);
-});
+        document.getElementById('prev').addEventListener('click', () => {
+            clearInterval(autoSlide);
+            navigateSlide(-1);
+            autoSlide = setInterval(() => navigateSlide(1), slideInterval);
+        });
 
-document.getElementById('next').addEventListener('click', () => {
-    clearInterval(autoSlide);
-    navigateSlide(1);
-    autoSlide = setInterval(() => navigateSlide(1), slideInterval);
-});
+        document.getElementById('next').addEventListener('click', () => {
+            clearInterval(autoSlide);
+            navigateSlide(1);
+            autoSlide = setInterval(() => navigateSlide(1), slideInterval);
+        });
 
-// Add click event to each slide
-slides.forEach(slide => {
-    slide.addEventListener('click', () => {
-        const url = slide.getAttribute('data-url');
-        window.location.href = url;
-    });
-});
+        // Add click event to each slide
+        slides.forEach(slide => {
+            slide.addEventListener('click', () => {
+                const url = slide.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
 
-// Show the first slide initially
-showSlide(currentIndex);
+        // Show the first slide initially
+        showSlide(currentIndex);
 
-// Set up the automatic slide change
-let autoSlide = setInterval(() => navigateSlide(1), slideInterval);
-
+        // Set up the automatic slide change
+        let autoSlide = setInterval(() => navigateSlide(1), slideInterval);
     </script>
 
     <script src="js/chatbot.js"></script>
