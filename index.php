@@ -82,7 +82,7 @@ button {
             </div>
         </div>
 
-        <div class="slide" data-url="klimaat.php">
+        <div class="slide" data-url="renovatie.php">
             <div class="slide-content">
                 <img src="images/klimaatvriendelijk_wonen.jpg" alt="Image 3">
                 <div class="slider-controls">
