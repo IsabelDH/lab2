@@ -1,11 +1,12 @@
 let slides = [
-    { image: "begroting.jpg", text: "Begroting" },
-    { image: "verkiezingen.jpg", text: "Verkiezingen" },
-    { image: "klimaatvriendelijk_wonen.jpg", text: "Klimaatvriendelijk Wonen" }
+    { image: "begroting.jpg", text: "Begroting", page: "begroting.php" },
+    { image: "verkiezingen.jpg", text: "Verkiezingen", page: "verkiezingen.php" },
+    { image: "klimaatvriendelijk_wonen.jpg", text: "Klimaatvriendelijk Wonen", page: "#" }
 ];
 
 let currentSlide = 0;
 let sliderNav = document.getElementById('slider-nav');
+let slideElements = document.querySelectorAll('.slide');
 
 // Laad de slider-navigatie
 for (let i = 0; i < slides.length; i++) {
@@ -52,4 +53,12 @@ sliderNav.addEventListener('click', function(event) {
             showSlide(currentSlide);
         }, 3000);
     }
+});
+
+// Voeg een event listener toe aan elke slide
+slideElements.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+        // Navigeer naar de bijbehorende pagina voor de huidige slide
+        window.location.href = slides[index].page;
+    });
 });

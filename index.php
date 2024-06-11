@@ -21,15 +21,15 @@
     <?php include_once("nav.inc.php") ?>
     <?php include_once("header.inc.php") ?>
     <div id="slider-container">
-        <div id="slide">
-            <img src="images/begroting.jpg" alt="">
-            <div class="slider-text">
-                <h2>Hoe komt begroting tot stand?</h2>
-            </div>
+    <div id="slide">
+        <img src="images/begroting.jpg" alt="">
+        <div class="slider-text">
+            <h2>Hoe komt begroting tot stand?</h2>
         </div>
-
-        <div id="slider-nav"></div>
     </div>
+
+    <div id="slider-nav"></div>
+</div>
 
     <div class="containerbalk">
         <div class="balk balkje1"></div>

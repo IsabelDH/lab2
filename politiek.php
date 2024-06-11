@@ -50,7 +50,8 @@
                     </div>
                     <div class="bekijk">
                         <a href="<?= $link ?>">Bekijk</a>
-                        <img class="heart-icon" src="images/unlikeheart.png" alt="unlike" onclick="toggleLike()">
+                        <img id="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon')">
+
                     </div>
                 </div>
             </div>
