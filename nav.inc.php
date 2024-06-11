@@ -14,12 +14,13 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
         </a>
         <div class='menu'>
             <div id='searchBar' class='search-bar'>
-                <a href='#' id='searchIconInBar'>
-                    <img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'>
-                </a>
-                <input type='text' placeholder='Zoeken...'>
+                <form id="searchForm" action="zoekresultaten.php" method="GET">
+                    <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
+                    <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>
+                </form>
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
             </div>
+
 
             <a href='#' id='searchIcon'>
                 <img width='24px' src='images/zoekvergrootglas.png' alt='vergrootglas voor zoeken'>

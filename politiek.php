@@ -19,21 +19,19 @@
 
     <div class="artikels">
         <?php
-
         include_once("classes/Artikel.php");
 
         $artikel = new Artikel();
-
         $artikel->setThema("politiek");
         $politiek_artikelen = $artikel->searchByThema();
 
         foreach ($politiek_artikelen as $artikel) :
             // Haal de benodigde gegevens op
+            $id = $artikel['id']; // Verondersteld dat elk artikel een unieke id heeft
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
             $datum = $artikel['datum'];
             $fotoBestandsnaam = $artikel['foto'];
-            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
         ?>
             <div class="artikel_div">
@@ -50,8 +48,7 @@
                     </div>
                     <div class="bekijk">
                         <a href="<?= $link ?>">Bekijk</a>
-                        <img id="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon')">
-
+                        <img id="heart-icon-<?= $id ?>" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                     </div>
                 </div>
             </div>

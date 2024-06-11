@@ -1,22 +1,11 @@
-let isLiked = false;
-
-function toggleLike(heartId) {
-    const heartIcon = document.getElementById(heartId);
-    console.log("Heart icon clicked:", heartId);
-
+function toggleLike(heartIcon) {
     const unlikeHeart = 'images/unlikeheart.png';
     const likeHeart = 'images/likeheart.png';
 
-    console.log("Current isLiked status:", isLiked);
-
-    if (isLiked) {
-        heartIcon.src = unlikeHeart;
-        isLiked = false;
-    } else {
+    if (heartIcon.src.includes('unlikeheart.png')) {
         heartIcon.src = likeHeart;
-        isLiked = true;
+    } else {
+        heartIcon.src = unlikeHeart;
     }
-
-    console.log("New isLiked status:", isLiked);
 }
 

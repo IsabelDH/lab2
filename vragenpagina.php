@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/vragenpagina.css">
 </head>
 
 <body>
