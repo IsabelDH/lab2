@@ -7,7 +7,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Artikel.php");
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SESSION['user'])) {
     // Gebruikersgegevens ophalen uit de sessie
     $user = $_SESSION['user'];
-    ?>
+?>
     <nav class='navbar'>
         <a href='index.php' class='logo'>
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
@@ -20,7 +20,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
                 <input type='text' placeholder='Zoeken...'>
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
             </div>
-            
+
             <a href='#' id='searchIcon'>
                 <img width='24px' src='images/zoekvergrootglas.png' alt='vergrootglas voor zoeken'>
             </a>
@@ -41,9 +41,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             </a>
         </div>
     </nav>
-    <?php
+<?php
 } else {
-    ?>
+?>
     <nav class='navbar'>
         <a href='index.php' class='logo'>
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
@@ -68,6 +68,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             <a href='inlog.php'>Login</a>
         </div>
     </nav>
-    <?php
+<?php
 }
 ?>

@@ -1,142 +1,132 @@
 @import url("https://use.typekit.net/vzx3eow.css");
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(147, 172, 194, 0.25);
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(147, 172, 194, 0.25);
+  padding: 10px;
 }
 
 .navbar a {
-    color: #00263D;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
-    margin-right: 12px;
-    
-    
+  color: #00263d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+  margin-right: 12px;
 }
-p{
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
+p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
 }
 
 .navbar a:nth-last-child(1) {
-    background-color: #CBB391;
-    color: #00263D;
-    padding: 10px 15px;
-    border-radius: 30px;
+  background-color: #cbb391;
+  color: #00263d;
+  padding: 10px 15px;
+  border-radius: 30px;
 }
 
 .navbar a:nth-last-child(1):hover {
-    background-color: #00263D;
-    color: #CBB391;
+  background-color: #00263d;
+  color: #cbb391;
 }
 
 .menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .melding img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
-
-#searchIcon img{
-    margin-right: 25px;
+#searchIcon img {
+  margin-right: 25px;
 }
-
 
 .search-bar {
-    display: none;
-    align-items: center;
-    padding-top: -30px;
-    padding-bottom: -30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #93ACC2;
-    border-radius: 20px;
-    border: none;
-    margin-right: 10px;
+  display: none;
+  align-items: center;
+  padding-top: -30px;
+  padding-bottom: -30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #93acc2;
+  border-radius: 20px;
+  border: none;
+  margin-right: 10px;
 }
 
 .search-bar input {
-    flex-grow: 0;
-    padding: 9px;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
-    border-radius: 20px;
-    border: none !important;
-    
-    color: white;
+  flex-grow: 0;
+  padding: 9px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+  border-radius: 20px;
+  border: none !important;
 
+  background-color: #93acc2;
 }
-input{
-    border: none !important;
-    background-color: #F6F6F6;
-    color: white;
+input {
+  border: none !important;
+  background-color: #f6f6f6;
+  color: white;
 }
 
 #closeSearch {
-    cursor: pointer;
-    border: none !important;
-    background-color: transparent;
-    margin-right: -10px;
+  cursor: pointer;
+  border: none !important;
+  background-color: transparent;
+  margin-right: -10px;
 }
 
 #searchIconInBar {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #searchIconInBar img {
-    transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 #searchBar.active #searchIconInBar img {
-    transform: translateX(-20px); 
+  transform: translateX(-20px);
 }
 
-
-.footer{
-    background-color: rgba(147, 172, 194, 0.25);
-    border-top: 6px solid #00263D;
-    padding-top: 20px;
-
-    
+.footer {
+  background-color: rgba(147, 172, 194, 0.25);
+  border-top: 6px solid #00263d;
+  padding-top: 20px;
 }
 
-.logos{
-    margin-left: 20px;
-    padding-bottom: 20px;
-    
+.logos {
+  margin-left: 20px;
+  padding-bottom: 20px;
 }
 
-.logos a{
-    margin-right: 20px;
+.logos a {
+  margin-right: 20px;
 }
-p{
-    font-weight: 400;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
-}
-
-.end{
-    text-align: center;
-    font-size: 16px;
-    color: #00263D ;
-    padding-top: -20px;
-    padding-bottom: 10px;
-
-    font-weight: 400;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
+p {
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
 }
 
+.end {
+  text-align: center;
+  font-size: 16px;
+  color: #00263d;
+  padding-top: -20px;
+  padding-bottom: 10px;
+
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+}
