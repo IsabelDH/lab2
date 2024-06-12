@@ -96,6 +96,19 @@ a {
 .partij_logo {
   width: 175px;
   height: auto;
+  margin: 7.5px 0;
+}
+.partij:first-child {
+  margin-top: 0;
+}
+.partij {
+  margin: 50px 20px;
+}
+.niveau {
+  /* margin-left: 50px; */
+}
+.niveau li {
+  margin-left: 20px;
 }
 @media (min-width: 768px) {
   /* Op tablet en grotere schermen */

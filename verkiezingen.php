@@ -43,10 +43,10 @@
         <div>
             <h2>Partijprogramma's</h2>
             <div>
-                <div>
-                    <img class="partij_logo" src="images/nva.png" alt="Partij Logo">
+                <div class="partij">
                     <h3>N-VA (Nieuw-Vlaamse Alliantie)</h3>
-                    <ul>
+                    <img class="partij_logo" src="images/nva.png" alt="Partij Logo">
+                    <ul class="niveau">
                         <li>Europees:
                             <ul>
                                 <li>Meer bevoegdheden voor lidstaten en minder voor de EU.</li>
@@ -70,10 +70,10 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <img class="partij_logo" src="images/vlaams_belang.png" alt="Partij Logo">
+                <div class="partij">
                     <h3>Vlaams Belang</h3>
-                    <ul>
+                    <img class="partij_logo" src="images/vlaams_belang.png" alt="Partij Logo">
+                    <ul class="niveau">
                         <li>Europees:
                             <ul>
                                 <li>Stoppen van verdere integratie van de EU.</li>
@@ -97,10 +97,10 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <img class="partij_logo" src="images/vooruit.png" alt="Partij Logo">
+                <div class="partij">
                     <h3>Vooruit (voorheen sp.a)</h3>
-                    <ul>
+                    <img class="partij_logo" src="images/vooruit.png" alt="Partij Logo">
+                    <ul class="niveau">
                         <li>Europees:
                             <ul>
                                 <li>Meer sociale bescherming binnen de EU.</li>
@@ -124,10 +124,10 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <img class="partij_logo" src="images/open_vld.png" alt="Partij Logo">
+                <div class="partij">
                     <h3>Open VLD (Open Vlaamse Liberalen en Democraten)</h3>
-                    <ul>
+                    <img class="partij_logo" src="images/open_vld.png" alt="Partij Logo">
+                    <ul class="niveau">
                         <li>Europees:
                             <ul>
                                 <li>Stimuleren van innovatie en digitale economie.</li>
@@ -151,11 +151,11 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="partij">
                     <div>
-                        <img class="partij_logo" src="images/groen.png" alt="Partij Logo">
                         <h3>Groen</h3>
-                        <ul>
+                        <img class="partij_logo" src="images/groen.png" alt="Partij Logo">
+                        <ul class="niveau">
                             <li>Europees:
                                 <ul>
                                     <li>Bevorderen van duurzame ontwikkeling en milieubescherming.</li>
@@ -179,11 +179,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="partij">
+                        <h3>PVDA (Partij van de arbeid)</h3>
                         <img class="partij_logo" src="images/pvda.webp" alt="Partij Logo">
-                        <h3>PVDA</h3>
-                        <ul>
-                            <ul>
+                        <ul class="niveau">
+                            <ul class="niveau">
                                 <li>Europees:
                                     <ul>
                                         <li>Streven naar een eerlijkere verdeling van welvaart binnen de Europese Unie.</li>
@@ -208,7 +208,6 @@
                             </ul>
                         </ul>
                     </div>
-                    <!-- Voeg hier meer partijen toe op dezelfde manier -->
                 </div>
             </div>
         </div>
