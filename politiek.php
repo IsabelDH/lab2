@@ -35,7 +35,7 @@
         ?>
             <div class="artikel_div">
                 <div class="image" style="position: relative;">
-                    <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                    <img class="artikel_foto" src="images/artikel_foto/<?= $fotoBestandsnaam ?>" alt="Afbeelding">
                 </div>
                 <div class="article-content">
                     <div class="title">
