@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Home</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Home</title>
+    
 </head>
 
 <body>
     <?php include_once("nav.inc.php") ?>
     <?php include_once("header.inc.php") ?>
 
+    <div class="slider-controls">
+        <img id="prev" src="images/previous.png" alt="">
+        <img id="next" src="images/next.png" alt="">
+    </div>
     <div class="slider-container">
         <div class="slide" data-url="begroting.php">
             <div class="slide-content">
                 <img src="images/begroting.jpg" alt="Image 1">
-                <div class="slider-controls">
-                    <img id="prev" src="images/previous.png" alt="">
-                    <img id="next" src="images/next.png" alt="">
-                </div>
+            
                 <div class="slider-text">
                     <h2>Hoe komt begroting tot stand?</h2>
                     <p>België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.</p>
@@ -33,10 +35,6 @@
         <div class="slide" data-url="verkiezingen.php">
             <div class="slide-content">
                 <img src="images/verkiezingen.jpg" alt="Image 2">
-                <div class="slider-controls">
-                    <img id="prev" src="images/previous.png" alt="">
-                    <img id="next" src="images/next.png" alt="">
-                </div>
                 <div class="slider-text">
                     <h2>Waarom moeten we dit jaar voor Europees en federaal stemmen?</h2>
                     <p>Verkiezingen komen er weer aan. Maar hoe zijn deze allemaal aan elkaar verbonden.</p>
@@ -47,10 +45,7 @@
         <div class="slide" data-url="renovatie.php">
             <div class="slide-content">
                 <img src="images/klimaatvriendelijk_wonen.jpg" alt="Image 3">
-                <div class="slider-controls">
-                    <img id="prev" src="images/previous.png" alt="">
-                    <img id="next" src="images/next.png" alt="">
-                </div>
+        
                 <div class="slider-text">
                     <h2>Welke subsidies krijg ik bij het renoveren van mijn huis?</h2>
                     <p>Maak van je (ver)bouwproject een klimaatvriendelijke missie met deze tips voor duurzame keuzes en praktische oplossingen.</p>
@@ -58,8 +53,7 @@
             </div>
         </div>
     </div>
-    <!-- <img id="prev" src="images/previous.png" alt="">
-    <img id="next" src="images/next.png" alt=""> -->
+
 
     <div class="containerbalk">
         <div class="balk balkje1"></div>

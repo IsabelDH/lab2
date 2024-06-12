@@ -28,21 +28,22 @@ h1 {
 .slider-container {
   position: relative;
   overflow: hidden;
-  max-width: 90%;
+  max-width: 80%;
   margin: 20px auto;
   margin-top: 110px;
 }
-.slider-controls {
+.slider-controls{
   position: absolute;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
+  gap: 420px; 
   width: 100%;
-  /* top: 50%;
-  transform: translateY(-50%); */
-  bottom: 10px;
-  left: 0;
+  top: 530px;
+  left: 2px;
+
 }
+
 .slide-content {
   display: flex;
   flex-direction: column;
@@ -61,11 +62,13 @@ h1 {
   object-fit: cover;
   object-position: center;
   border-radius: 50px;
+  margin-bottom: 20px;
 }
 
 .slider-text {
   width: 100%;
   color: #00263d;
+  font-size: 24px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -76,6 +79,16 @@ h1 {
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-size: 24px;
   margin-top: 0;
+  margin-left: 20px;
+}
+.slider-text p{
+  color: #00263d;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-size: 13px;
+  margin-top: 0;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .slider-nav {
@@ -250,9 +263,17 @@ a:hover {
     width: 320px;
     height: 400px;
   }
+
+  .slider-controls{
+    gap: 700px; 
+  }
 }
 
 @media (min-width: 900px) {
+
+  .slider-controls{
+    gap: 1000px; 
+  }
   .slider-container {
     margin-top: 60px;
     width: 55%;
@@ -311,5 +332,11 @@ a:hover {
     font-family: "neue-haas-grotesk-text", sans-serif;
     font-size: 13px;
     margin-top: 10px;
+  }
+
+  .slider-text p{
+    font-size: 16px;
+    margin-bottom: 30px;
+    
   }
 }
