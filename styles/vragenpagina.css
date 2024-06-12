@@ -72,3 +72,58 @@ h2{
     cursor: pointer;
     border: none;
 }
+
+@media (min-width: 768px) {
+    p{
+        color: #00263D;
+        font-weight: 400;
+        font-family: "neue-haas-grotesk-text", sans-serif;
+        font-style: normal;
+        font-size: 16px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    h2{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    li{
+        margin-left: 70px;
+        margin-right: 70px;
+        font-size: 16px;
+    }
+
+    #vraagForm {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (min-width: 1000px) {
+    p{
+        color: #00263D;
+        font-weight: 400;
+        font-family: "neue-haas-grotesk-text", sans-serif;
+        font-style: normal;
+        font-size: 18px;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+
+    h2{
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+
+    #vraagForm {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+
+    li{
+        margin-left: 110px;
+        margin-right: 110px;
+        font-size: 18px;
+    }
+}

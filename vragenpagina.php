@@ -1,12 +1,23 @@
 <?php
-
-include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Db.php");
-include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Vragen.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Vragen.php");
 
 $verwerker = new Vragen();
 $vragen = $verwerker->haalVragenOp();
+if (!empty($_POST['vraag'])) {
+    try {
+        $nieuwevraag = new Vragen();
+        $vraag = $_POST['vraag']; // Haal de vraag op uit het POST-verzoek
+        $nieuwevraag->verwerkVraag($vraag);
+    } catch (Exception $e) {
+        // Vang eventuele fouten op en toon ze
+        $error = $e->getMessage();
+    }
+} else {
+    $error = "Er is geen vraag ontvangen.";
+}
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,9 +46,9 @@ $vragen = $verwerker->haalVragenOp();
     <?php endforeach; ?>
     </ul>
 
-    <form id="vraagForm">
+    <form action="" method="post" id="vraagForm">
         <input type='text' id='vraagInput' placeholder='Stel hier uw vraag...' required>
-        <button type='button' class="send-icon" onclick="receiveMessage()">
+        <button type="submit" class="send-icon" onclick="receiveMessage()">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M22 12L3 20l3.563-8L3 4zM6.5 12H22" />
             </svg>
@@ -57,9 +68,14 @@ $vragen = $verwerker->haalVragenOp();
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
-                        alert("Uw vraag is verstuurd!");
-                        document.getElementById('vraagForm').reset();
-                        fetchQuestions(); // Fetch updated questions
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.success) {
+                            alert("Uw vraag is verstuurd!");
+                            document.getElementById('vraagForm').reset();
+                            fetchQuestions();
+                        } else {
+                            alert("Er is een fout opgetreden: " + response.message);
+                        }
                     }
                 };
                 xhr.send("vraag=" + encodeURIComponent(vraag));
@@ -68,13 +84,14 @@ $vragen = $verwerker->haalVragenOp();
             }
         }
 
+
         function fetchQuestions() {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "haal_vragen_op.php", true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var vragenLijst = document.getElementById('vragenLijst');
-                    vragenLijst.innerHTML = ''; // Clear the list before updating
+                    vragenLijst.innerHTML = '';
                     var vragen = JSON.parse(xhr.responseText);
                     vragen.forEach(function(vraag) {
                         var newVraagItem = document.createElement('li');
