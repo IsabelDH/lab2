@@ -23,11 +23,13 @@ class Vragen {
         return $this;
     }
 
-    public function verwerkVraag() {
+    public function verwerkVraag($vraag) {
         try {
+            $this->setVraag($vraag);
+            $this->setDatum(new DateTime()); // Stel de datum in op het huidige tijdstip
             $conn = Db::getConnection();
             $statement = $conn->prepare("INSERT INTO vragen (vraag, datum) VALUES (:vraag, :datum)");
-            $statement->bindParam( ':vraag', $this->vraag);
+            $statement->bindParam(':vraag', $this->vraag);
             $statement->bindParam(':datum', $this->datum->format('Y-m-d H:i:s'));
             return $statement->execute();
         } catch (PDOException $e) {

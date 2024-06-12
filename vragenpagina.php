@@ -1,20 +1,34 @@
 <?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "classes/Vragen.php");
 
-$verwerker = new Vragen();
-$vragen = $verwerker->haalVragenOp();
-if (!empty($_POST['vraag'])) {
+$response = array();
+
+
+if (isset($_POST['vraag'])) {
+    $vraag = $_POST['vraag'];
+    $verwerker = new Vragen();
+
     try {
-        $nieuwevraag = new Vragen();
-        $nieuwevraag->verwerkVraag($_POST['vraag']);
+        if ($verwerker->verwerkVraag($vraag)) {
+            $response['success'] = true;
+            $response['message'] = "Vraag succesvol verwerkt.";
+        } else {
+            $response['success'] = false;
+            $response['message'] = "Er is een probleem opgetreden bij het verwerken van de vraag.";
+        }
     } catch (Exception $e) {
-        // Vang eventuele fouten op en toon ze
-        $error = $e->getMessage();
+        $response['success'] = false;
+        $response['message'] = $e->getMessage();
     }
-} else {
-    $error = "Er is geen vraag ontvangen.";
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit;
 }
 
+// Ophalen van vragen
+$verwerker = new Vragen();
+$vragen = $verwerker->haalVragenOp();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,35 +54,40 @@ if (!empty($_POST['vraag'])) {
     </p>
     <h2>Vragen</h2>
     <ul id="vragenLijst">
-    <?php foreach($vragen as $vraag): ?>
+    <?php foreach ($vragen as $vraag): ?>
         <li class="vraag-item"><?php echo $vraag['vraag']; ?></li>
     <?php endforeach; ?>
     </ul>
 
     <form action="" method="post" id="vraagForm">
-        <input type='text' id='vraagInput' placeholder='Stel hier uw vraag...' required>
-        <button type="submit" class="send-icon" onclick="receiveMessage()">
+        <input type="text" id="vraagInput" name="vraag" placeholder="Stel hier uw vraag..." required>
+        <button type="submit" class="send-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M22 12L3 20l3.563-8L3 4zM6.5 12H22" />
             </svg>
-            
         </button>
-        
     </form>
 
+    <?php include_once("footer.inc.php") ?>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetchQuestions();
+         document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('vraagForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                receiveMessage();
+            });
+
+            fetchQuestions(); // Laad vragen bij het initiële laden van de pagina
         });
 
         function receiveMessage() {
             var vraag = document.getElementById('vraagInput').value;
-            if (vraag) {
+            if (vraag.trim() !== "") {
                 var xhr = new XMLHttpRequest();
-                xhr.open("POST", true);
+                xhr.open("POST", "<?php echo $_SERVER['PHP_SELF']; ?>", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
                         var response = JSON.parse(xhr.responseText);
                         if (response.success) {
                             alert("Uw vraag is verstuurd!");
@@ -84,11 +103,9 @@ if (!empty($_POST['vraag'])) {
                 alert("Vul een vraag in.");
             }
         }
-
-
         function fetchQuestions() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", true);
+            xhr.open("GET", "<?php echo $vraag['vraag']; ?>", true); // Haal vragen op in haal_vragen_op.php
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var vragenLijst = document.getElementById('vragenLijst');
@@ -105,7 +122,5 @@ if (!empty($_POST['vraag'])) {
             xhr.send();
         }
     </script>
-
-    <?php include_once("footer.inc.php") ?>
 </body>
 </html>
