@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/detailpagina2.css">
+    <link rel="stylesheet" href="styles/detailpagina.css">
     <title>Economie</title>
 </head>
 
@@ -18,42 +18,15 @@
 
     <div class="artikels">
         <?php
-        // Importeer de Artikel-klasse
+
         include_once("classes/Artikel.php");
 
-        // Maak een instantie van de Artikel-klasse
+    
         $artikel = new Artikel();
 
-        // Haal de artikelen op met het thema "economie"
         $artikel->setThema("economie");
         $economie_artikelen = $artikel->searchByThema();
-        // Loop door de artikelen
-        // foreach ($economie_artikelen as $artikel) {
-        //     // Haal de benodigde gegevens op
-        //     $naam = $artikel['naam'];
-        //     $inhoud = $artikel['inhoud'];
-        //     $datum = $artikel['datum'];
-        //     $fotoBestandsnaam = $artikel['foto'];
-        //     $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
-        //     $link = $artikel['link'];
-        //     // $favoriet = $artikel['favoriet'];
-
-        //     // Toon het artikel
-        //     // echo "<div class='artikel_div'>";
-        //     // echo "<div class='image'>";
-        //     <!-- <img src="images\artikel_foto\ //echo $artikel['foto']; " alt="Afbeelding">
-        //     //  //echo "<div class='like-button' onclick='toggleLike()'>";
-        //     // echo "<img class='heart-icon' src='images/unlikeheart.png' alt='unlike'>";
-        //     // echo "</div>";     
-        //     // echo "</div>";
-        //     // echo "<div class='article-content'>";
-        //     // echo "<div class='title'>";
-        //     // echo "<h2>$naam</h2>";
-        //     // echo "<p>$datum</p>";
-        //     // echo "</div>";
-        //     // echo "<div class='text'>";
-        //     // echo "<p>$inhoud</p>";
-        //     // echo "</div>";
+      
         foreach ($economie_artikelen as $artikel) :
             // Haal de benodigde gegevens op
             $naam = $artikel['naam'];

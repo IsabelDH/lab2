@@ -14,10 +14,16 @@ h1 {
   margin-bottom: 50px;
 }
 
+.renovatie {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; 
+}
+
 .renovatie img {
   width: 90%;
-  border-radius: 20px;
-  margin-left: 20px;
+    border-radius: 20px;
+
 }
 
 h2 {
@@ -31,17 +37,52 @@ h2 {
 }
 
 p {
-  color: #00263d;
+  color: #00263D;
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-style: normal;
   font-size: 14px;
   margin-left: 20px;
   margin-right: 20px;
+  line-height: 20px;
+}
+
+ul{
+
+  color: #00263d;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+li{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 a {
   color: #00263d;
+}
+
+.premie{
+  width: 80%;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+
+.kost{
+
+  width: 80%;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .flex {
@@ -55,14 +96,14 @@ a {
 
 .flex {
   display: flex;
-  flex-direction: column; /* Verticale weergave van items */
+  flex-direction: column; 
 }
 
 .item {
   display: flex;
   flex-direction: column;
-  align-items: left; /* Centreren van inhoud in elk item */
-  margin-bottom: 20px; /* Ruimte tussen items */
+  align-items: left; 
+  margin-bottom: 20px; 
   margin-left: 20px;
 }
 
@@ -76,20 +117,22 @@ a {
 }
 
 @media (min-width: 768px) {
-  /* Op tablet en grotere schermen */
+ 
   .flex {
-    flex-direction: row; /* Horizontale weergave van items */
-    justify-content: left; /* Centreren van items in de rij */
+    flex-direction: row; 
+    justify-content: left; 
     margin-bottom: 40px;
   }
 
   .item {
-    margin-right: 20px; /* Ruimte tussen items op tablet en grotere schermen */
+    margin-right: 20px; 
   }
 
-  .renovatie img {
+ 
+  .renovatie img{
+    width: 80%;
     margin-left: 40px;
-  }
+}
 
   .div {
     margin-left: 30px;
@@ -98,16 +141,115 @@ a {
   p {
     margin-right: 60px;
   }
+
+ 
+  .premie-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .premie{
+    width: 40%;
+    margin-top: 50px;
+  }
+
+  .premie-text {
+    margin-right: -20px;
+  }
+
+  
+  .kosten-content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .kost{
+    width: 40%;
+    margin-top: -10px;
+    margin-right: 20px;
+  }
+
+  .kosten-text {
+    margin-right: -50px;
+  }
+
+  
+  
 }
 
 @media (min-width: 1000px) {
   .renovatie img {
-    width: 60%;
+    width: 50%;
     height: 50%;
-    margin-left: 350px;
+ 
   }
+  
+  p{
+    margin-right: 80px;
+    margin-left: 60px;
+    font-size: 16px;
+    line-height: 22px;
+}
 
-  p {
-    margin-right: 180px;
-  }
+h2{
+    margin-left: 60px;
+}
+
+
+.item a{
+    margin-left: 60px;
+}
+
+
+li{
+  margin-left: 40px;
+  font-size: 16px;
+  
+}
+
+.imgrenovatie{
+  margin-left: 60px;
+}
+
+.premie-content {
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.premie{
+  width: 40%;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+.premie-text {
+  margin-top: 90px;
+  margin-right: 40px;
+}
+
+
+.kosten-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.kost{
+  width: 40%;
+  margin-top: -10px;
+  margin-right: 120px;
+}
+
+.kosten-text {
+  margin-top: 90px;
+  margin-right: -50px;
+}
+
+.kosten-section h2{
+  margin-top: 90px;
+  margin-bottom: -50px;
+}
+
+
 }

@@ -22,7 +22,7 @@
 
     <script>
         let slides = [
-            { image: "begroting.jpg", text: "Hoe komt begroting tot stand?", link: "begroting.php" },
+            { image: "begroting.jpg", text: "Wat is een begroting?", link: "begroting.php" },
             { image: "verkiezingen.jpg", text: "Waarom moeten we dit jaar voor Europees en federaal stemmen?", link: "verkiezingen.php" },
             { image: "klimaatvriendelijk_wonen.jpg", text: "Welke subsidies krijg ik bij het renoveren van mijn huis?", link: "renovatie.php" }
         ];

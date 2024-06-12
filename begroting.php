@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Begroting</title>
-    <link rel="stylesheet" href="styles/begroting.css">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/begroting.css">
 </head>
 <body>
 <?php include_once("nav.inc.php") ?>
-    <h1>Begroting</h1>
+    <h1>Wat is een begroting?</h1>
 
     <div class="begroting">
         <img src="images/begrotingpage.png" alt="">
@@ -53,7 +54,7 @@
 
     <div class="totstand">
         <h2>Wil je weten hoe het tot stand komt?</h2>
-        <a href="https://www.vlaanderen.be/hoe-komt-de-vlaamse-begroting-tot-stand">Klik dan hier!</a>
+        <a  href="https://www.vlaanderen.be/hoe-komt-de-vlaamse-begroting-tot-stand">Klik dan hier!</a>
         <div>
             <img src="images/begrotingrekenen.png" alt="">
         </div>
