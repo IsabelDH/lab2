@@ -93,11 +93,10 @@ a {
   font-style: normal;
   font-size: 19px;
 }
-.partij_logo img {
-  width: 20px;
+.partij_logo {
+  width: 175px;
   height: auto;
 }
-
 @media (min-width: 768px) {
   /* Op tablet en grotere schermen */
   .flex {
