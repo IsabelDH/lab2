@@ -40,9 +40,7 @@ if (!empty($_POST)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren</title>
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/profiel.css">
     <link rel="stylesheet" href="styles/inlog.css">
 </head>
 
@@ -69,7 +67,6 @@ if (!empty($_POST)) {
                 <input id="password" type="password" name="password">
             </div>
 
-            <!-- Display error message if registration fails -->
             <?php if (isset($error)) : ?>
                 <div class="form__error">
                     <p>Sorry, er is een probleem opgetreden bij de registratie. Probeer het opnieuw.</p>
@@ -77,7 +74,7 @@ if (!empty($_POST)) {
             <?php endif; ?>
 
             <button type="submit" class="button">Registreer</button>
-            <a href="profiel.php" class="registreer">Heb je al een account? <strong>Log hier in</strong></a>
+            <a href="inlog.php" class="registreer">Heb je al een account? <strong>Log hier in</strong></a>
         </form>
     </div>
 

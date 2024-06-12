@@ -1,8 +1,39 @@
 @import url("https://use.typekit.net/vzx3eow.css");
+* {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+}
+h1{
+  text-align: left;
+  color: #b95927;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+h2 {
+  color: #00263d;
+}
+
+.button {
+  padding: 7px 14px;
+  display: inline-block;
+  background-color: #cbb391;
+  border-radius: 7px;
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+.button a {
+  text-decoration: none;
+  color: #00263d;
+  font-size: 14px;
+}
+
 .login-form {
   background-color: #93acc2;
   width: 95%;
-  /* height: 300px; */
   margin: 0 auto;
   border-radius: 10px;
   padding: 5px 0 30px 0;
@@ -12,18 +43,12 @@
 .registreer-form{
   background-color: #93acc2;
   width: 95%;
-  /* height: 300px; */
   margin: 0 auto;
   border-radius: 10px;
   padding: 5px 0 30px 0;
   margin-bottom: 81px;
 }
 
-/* .form-group input{
-    padding: 10px;
-    border-radius: 10px;
-
-}  */
 
 .form-group {
   margin: 15px 0;
@@ -42,10 +67,7 @@
 }
 
 form p {
-  /* padding: 10px;
-    border-radius: 10px; */
   width: 95%;
-  /* color: #F6F6F6; */
 }
 
 .button {
@@ -81,10 +103,38 @@ input{
   .login-form {
     width: 75%;
   }
+  .kader-header{
+    margin-left: 40px; 
+   }
+
+   .registreer-form{
+    width: 75%;
+   }
+
+   h1{
+ 
+    margin-left: 110px;
+  }
 }
 
 @media (min-width: 1000px) {
   .login-form {
     width: 50%;
   }
+
+  .registreer-form{
+    width: 50%;
+   }
+  
+  .kader-inhoud{
+    margin-left: 50px;
+  }
+
+  h1{
+ 
+    margin-left: 430px;
+  }
 }
+
+
+  

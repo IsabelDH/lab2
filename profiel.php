@@ -1,30 +1,24 @@
 <?php
-session_start(); // Start de PHP-sessie
+session_start();
 
-// Controleer of de gebruiker is ingelogd, anders doorsturen naar de inlogpagina
+
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: inlog.php");
     exit;
 }
 
-// Controleer of de gebruikersgegevens zijn opgeslagen in de sessie en of deze niet leeg zijn
 if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-    // Gebruikersgegevens ophalen uit de sessie
     $user = $_SESSION['user'];
 } else {
-    // Gebruikersgegevens ontbreken, laat een foutmelding zien
     echo "Gebruikersgegevens niet beschikbaar.";
     exit;
 }
 
-// Inclusie van databaseconnectiebestand
 require_once "classes/Db.php";
 require_once "classes/Artikel.php";
 
-// Maak een instantie van de Artikel klasse
 $artikel = new Artikel();
 
-// Haal de favoriete artikelen op
 $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
 
 ?><!DOCTYPE html>

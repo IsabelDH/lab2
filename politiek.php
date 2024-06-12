@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/detailpagina2.css">
-    <link rel="stylesheet" href="styles/profiel.css">
     <title>politiek</title>
 </head>
 

@@ -1,4 +1,9 @@
 @import url("https://use.typekit.net/vzx3eow.css");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+}
 
 .navbar {
   display: flex;
@@ -124,7 +129,7 @@ p {
   font-size: 16px;
   color: #00263d;
   padding-top: -20px;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;

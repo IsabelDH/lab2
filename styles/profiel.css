@@ -8,7 +8,9 @@
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 20px;
 }
 
 .kader-header {
@@ -38,11 +40,16 @@ h1{
   font-style: normal;
   margin-top: 40px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 h2 {
   color: #00263d;
+  margin-bottom: 10px;
+}
+h3{
+  color: #00263d;
+  margin-bottom: 10px;
 }
 
 .kader-inhoud {
@@ -91,6 +98,7 @@ h2 {
 
 .email{
   color: rgb(0, 38, 61, 50%);
+  margin-bottom: 10px;
 }
 
 @media(min-width:1000px){
@@ -101,6 +109,15 @@ h2 {
 
   .kader-inhoud{
     margin-left: 50px;
+  }
+
+  .kader {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
+
+  h1{
+    margin-left: 85px;
   }
   
 }
