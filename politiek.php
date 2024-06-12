@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/detailpagina2.css">
-    <title>politiek</title>
+    <link rel="stylesheet" href="styles/detailpagina.css">
+    <title>Politiek</title>
 </head>
 
 <body>
@@ -34,8 +34,9 @@
             $link = $artikel['link'];
         ?>
             <div class="artikel_div">
-                <div class="image" style="position: relative;">
+                <div class="image">
                     <img class="artikel_foto" src="images/artikel_foto/<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                    <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                 </div>
                 <div class="article-content">
                     <div class="title">
@@ -47,7 +48,6 @@
                     </div>
                     <div class="bekijk">
                         <a href="<?= $link ?>">Bekijk</a>
-                        <img id="heart-icon-<?= $id ?>" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                     </div>
                 </div>
             </div>

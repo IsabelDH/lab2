@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/detailpagina2.css">
+    <link rel="stylesheet" href="styles/detailpagina.css">
     <link rel="stylesheet" href="styles/profiel.css">
     <title>gezondheid</title>
 </head>
@@ -39,6 +39,7 @@
             <div class="artikel_div">
                 <div class="image" style="position: relative;">
                     <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                    <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                 </div>
                 <div class="article-content">
                     <div class="title">
@@ -50,7 +51,6 @@
                     </div>
                     <div class="bekijk">
                         <a href="<?= $link ?>">Bekijk</a>
-                        <img class="heart-icon" src="images/unlikeheart.png" alt="unlike" onclick="toggleLike()">
                     </div>
                 </div>
             </div>

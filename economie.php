@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/detailpagina2.css">
-    <link rel="stylesheet" href="styles/profiel.css">
-    <title>economie</title>
+    <title>Economie</title>
 </head>
 
 <body>
@@ -67,6 +66,7 @@
             <div class="artikel_div">
                 <div class="image" style="position: relative;">
                     <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                    <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                 </div>
                 <div class="article-content">
                     <div class="title">
@@ -78,29 +78,11 @@
                     </div>
                     <div class="bekijk">
                         <a href="<?= $link ?>">Bekijk</a>
-                        <img class="heart-icon" src="images/unlikeheart.png" alt="unlike" onclick="toggleLike()">
+            
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
-
-
-
-        <?php
-        //     // Voeg de knop toe voor het markeren van favorieten
-        //     // if ($favoriet == 1) {
-        //     //     // Als het artikel al als favoriet is gemarkeerd, toon een knop om het te verwijderen uit favorieten
-        //     //     echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='remove'>Verwijder uit favorieten</button>";
-        //     // } else {
-        //     //     // Als het artikel niet als favoriet is gemarkeerd, toon een knop om het toe te voegen aan favorieten
-        //     //     echo "<button class='favorite-button' data-article-id='$artikel[id]' data-action='add'>Voeg toe aan favorieten</button>";
-        //     // }
-        //     echo "<a href='$link'>Bekijk</a>";
-        //     echo "</div>";
-        //     echo "</div>";
-        // }
-        // 
-        ?>
     </div>
 
     <?php include_once("footer.inc.php") ?>

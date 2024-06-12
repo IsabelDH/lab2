@@ -1,68 +1,70 @@
 @import url("https://use.typekit.net/vzx3eow.css");
+
 * {
-    margin: 0;
-    padding: 0;
-    
-  }
-
-  body{
-    overflow-x: hidden;
-  }
-
-  .artikels{
-    margin-bottom: 90px;
-  }
-
-  .artikel_div {
-    display: flex; 
-    align-items: center; 
-    margin-bottom: 20px; 
-    margin-top: 60px;
-    margin-right: 25px;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
 
+.artikels {
+  margin-bottom: 90px;
+  margin-top: 130px;
+}
 
-.article-content div {
-    flex: 1; 
-    margin-right: 40px;
+.artikel_div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
+.image {
+  position: relative; 
+  margin-right: 20px;
+}
+
+.artikel_foto {
+  width: 150px;
+  margin-left: 15px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px; 
+  height: auto;
+  cursor: pointer;
+  z-index: 1; 
+}
+
+.article-content {
+  flex: 1;
+  margin-right: 40px;
 }
 
 .text p {
-    margin-top: 15px;
-    font-size: 12px;
-    margin-bottom: 30px; 
-    font-weight: 300;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
-    color: #00263D;
+  margin-top: 15px;
+  font-size: 12px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+  color: #00263d;
 }
 
-
-.like-button  {
- 
+.like-button, .like-button2, .like-button3 {
   position: absolute;
-  top: 410px;
-  left: 120px;
 }
 
-.like-button img {
+.like-button img, .like-button2 img, .like-button3 img {
   max-width: 20px;
 }
-
-.like-button2 img {
-  max-width: 20px;
-}
-
-.like-button2  {
- 
-  position: absolute;
-  top: 620px;
-  left: 120px;
-}
-
-
-
 
 .like-btn {
   background: none;
@@ -70,153 +72,113 @@
   cursor: pointer;
 }
 
-.image{
-  width: 170px;
-  margin-right: 10px;
-}
-
-.image img{
-  width: 150px;
-  margin-left: 15px;
-  
-}
-
-.article-content h2{
-  font-size: 18px;
+.article-content h2 {
+  font-size: 16px;
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-style: normal;
-  color: #00263D;
+  color: #00263d;
 }
 
-.title p{
-  font-size: 13px;
+.title p {
+  font-size: 15px;
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-style: normal;
-  color:rgb(0, 38, 61, 50%);
+  color: rgba(0, 38, 61, 0.5);
 }
 
-.artikel_div a{
-    font-size: 15px;
-    font-weight: 400;
-    font-family: "neue-haas-grotesk-text", sans-serif;
-    font-style: normal;
-    text-decoration: none;
-    background-color: #CBB391;
-    color: #00263D;
-    padding: 10px 35px;
-    border-radius: 30px;
-    margin-right: 225px;
-  
-    
+.artikel_div a {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  background-color: #cbb391;
+  color: #00263d;
+  padding: 10px 35px;
+  border-radius: 30px;
+  margin-right: 25px;
 }
 
-@media(min-width:600px){
-  .image{
-    
-    margin-right: 90px;
-  }
+.bekijk {
+  display: flex;
+  align-items: center;
+}
 
-  .image img{
-    margin-top: 20px;
+@media (min-width: 600px) {
+  .artikel_foto  {
     width: 180px;
     margin-left: 50px;
   }
 
   .text p {
-   
     font-size: 14px;
-    
   }
 
-  .article-content h2{
+  .article-content h2 {
     font-size: 20px;
-    
   }
 
-  .like-button  {
- 
-    position: absolute;
+  .like-button {
     top: 420px;
     left: 150px;
   }
 
-  .like-button2  {
-   
-    position: absolute;
+  .like-button2 {
     top: 690px;
     left: 150px;
   }
-  
-  .like-button3  {
-   
-    position: absolute;
+
+  .like-button3 {
     top: 950px;
     left: 150px;
   }
-
 }
 
-@media(min-width: 1000px){
-  .image{
-    
-    margin-right: 340px;
+@media (min-width: 1000px) {
+  .image {
+    margin-right: 60px;
   }
 
-  .image img{
+  .artikel_foto {
     margin-top: 20px;
     width: 230px;
     margin-left: 240px;
   }
 
   .text p {
-   
     font-size: 15px;
-    
   }
 
-  .article-content h2{
+  .article-content h2 {
     font-size: 22px;
-    
   }
 
   .article-content div {
-  
     margin-right: 190px;
   }
 
-  .like-button  {
- 
-    position: absolute;
+  .like-button {
     top: 420px;
     left: 190px;
   }
 
-  .like-button2  {
-   
-    position: absolute;
+  .like-button2 {
     top: 740px;
     left: 190px;
   }
-  
-  .like-button3  {
-   
-    position: absolute;
+
+  .like-button3 {
     top: 1050px;
     left: 190px;
   }
 
-  .like-button img {
+  .like-button img, .like-button2 img, .like-button3 img {
     max-width: 25px;
   }
-  .like-button2 img {
-    max-width: 25px;
-  }
-  .like-button3 img {
-    max-width: 25px;
-  }
-  
 
+  .heart-icon{
+    top: 30px;
+  }
 }
-
