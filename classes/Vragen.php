@@ -3,7 +3,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "Db.php");
 
 class Vragen {
     private string $vraag;
-    private string $datum;
+    private $datum;
 
     public function getVraag() {
         return $this->vraag;
@@ -23,13 +23,12 @@ class Vragen {
         return $this;
     }
 
-    public function verwerkVraag($vraag) {
+    public function verwerkVraag() {
         try {
             $conn = Db::getConnection();
             $statement = $conn->prepare("INSERT INTO vragen (vraag, datum) VALUES (:vraag, :datum)");
-            $datum = date('Y-m-d H:i:s');
-            $statement->bindParam(':vraag', $vraag);
-            $statement->bindParam(':datum', $datum);
+            $statement->bindParam( ':vraag', $this->vraag);
+            $statement->bindParam(':datum', $this->datum->format('Y-m-d H:i:s'));
             return $statement->execute();
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();

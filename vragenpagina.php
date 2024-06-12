@@ -1,13 +1,12 @@
 <?php
-include_once(__DIR__ . DIRECTORY_SEPARATOR . "classes" . DIRECTORY_SEPARATOR . "Vragen.php");
+include_once(__DIR__ . DIRECTORY_SEPARATOR . "classes/Vragen.php");
 
 $verwerker = new Vragen();
 $vragen = $verwerker->haalVragenOp();
 if (!empty($_POST['vraag'])) {
     try {
         $nieuwevraag = new Vragen();
-        $vraag = $_POST['vraag']; // Haal de vraag op uit het POST-verzoek
-        $nieuwevraag->verwerkVraag($vraag);
+        $nieuwevraag->verwerkVraag($_POST['vraag']);
     } catch (Exception $e) {
         // Vang eventuele fouten op en toon ze
         $error = $e->getMessage();
@@ -42,7 +41,7 @@ if (!empty($_POST['vraag'])) {
     <h2>Vragen</h2>
     <ul id="vragenLijst">
     <?php foreach($vragen as $vraag): ?>
-        <li class="vraag-item"><?php echo htmlspecialchars($vraag['vraag']); ?></li>
+        <li class="vraag-item"><?php echo $vraag['vraag']; ?></li>
     <?php endforeach; ?>
     </ul>
 
@@ -52,7 +51,9 @@ if (!empty($_POST['vraag'])) {
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M22 12L3 20l3.563-8L3 4zM6.5 12H22" />
             </svg>
+            
         </button>
+        
     </form>
 
     <script>
@@ -64,7 +65,7 @@ if (!empty($_POST['vraag'])) {
             var vraag = document.getElementById('vraagInput').value;
             if (vraag) {
                 var xhr = new XMLHttpRequest();
-                xhr.open("POST", "verwerk_vraag.php", true);
+                xhr.open("POST", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -87,7 +88,7 @@ if (!empty($_POST['vraag'])) {
 
         function fetchQuestions() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "haal_vragen_op.php", true);
+            xhr.open("GET", true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var vragenLijst = document.getElementById('vragenLijst');
