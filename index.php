@@ -9,44 +9,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <style>
-        /* body {
-    font-family: Arial, sans-serif;
-}
-
-.slider {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    border: 2px solid #ddd;
-}
-
-.slide {
-    display: none;
-    text-align: center;
-}
-
-.slide img {
-    width: 100%;
-    height: auto;
-}
-
-.slide h2 {
-    margin: 10px 0;
-}
-
-.slide p {
-    margin: 10px 0;
-}
-
-button {
-    margin: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-} */
-    </style>
 </head>
 
 <body>
