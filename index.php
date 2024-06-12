@@ -61,13 +61,13 @@
     </div>
 
     <div class="container">
+    <div class="flex1">
         <a href="#">
-            <div class="flex1">
                 <img class="image3" src="images/image2.png" alt="">
                 <h3 class="title">Hoe wordt de pensioenhervorming gestemd?</h3>
                 <p>RSVZ en de Pensioendienst lanceren proactieve campagne voor pensioenbonus met slogan 'En jij, hoeveel doe jij erbij?'</p>
-            </div>
         </a>
+        </div>
         <div class="flex2">
             <a href="#">
                 <div>
