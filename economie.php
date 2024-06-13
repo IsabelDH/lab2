@@ -21,24 +21,21 @@
 
         include_once("classes/Artikel.php");
 
-    
         $artikel = new Artikel();
-
         $artikel->setThema("economie");
         $economie_artikelen = $artikel->searchByThema();
-      
+
         foreach ($economie_artikelen as $artikel) :
-            // Haal de benodigde gegevens op
+            $id = $artikel['id']; 
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
             $datum = $artikel['datum'];
             $fotoBestandsnaam = $artikel['foto'];
-            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
         ?>
             <div class="artikel_div">
                 <div class="image" style="position: relative;">
-                    <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                    <img class="artikel_foto" src="images/artikel_foto/<?= $fotoBestandsnaam ?>" alt="Afbeelding">
                     <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                 </div>
                 <div class="article-content">
@@ -51,7 +48,6 @@
                     </div>
                     <div class="bekijk">
                         <a href="<?= $link ?>">Bekijk</a>
-            
                     </div>
                 </div>
             </div>

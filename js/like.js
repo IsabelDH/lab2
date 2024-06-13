@@ -1,4 +1,13 @@
-let likedHearts = {};
+let likedHearts = JSON.parse(localStorage.getItem('likedHearts')) || {};
+
+document.addEventListener("DOMContentLoaded", () => {
+    for (const heartId in likedHearts) {
+        const heartIcon = document.getElementById(heartId);
+        if (heartIcon) {
+            heartIcon.src = likedHearts[heartId] ? 'images/likeheart.png' : 'images/unlikeheart.png';
+        }
+    }
+});
 
 function toggleLike(heartId) {
     const heartIcon = document.getElementById(heartId);
@@ -11,8 +20,6 @@ function toggleLike(heartId) {
     const unlikeHeart = 'images/unlikeheart.png';
     const likeHeart = 'images/likeheart.png';
 
-    console.log("Current isLiked status:", likedHearts[heartId]);
-
     if (likedHearts[heartId]) {
         heartIcon.src = unlikeHeart;
         likedHearts[heartId] = false;
@@ -21,5 +28,6 @@ function toggleLike(heartId) {
         likedHearts[heartId] = true;
     }
 
+    localStorage.setItem('likedHearts', JSON.stringify(likedHearts));
     console.log("New isLiked status:", likedHearts[heartId]);
 }

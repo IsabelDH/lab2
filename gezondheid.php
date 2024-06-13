@@ -28,7 +28,7 @@
         $gezondheid_artikelen = $artikel->searchByThema();
 
         foreach ($gezondheid_artikelen as $artikel) :
-            // Haal de benodigde gegevens op
+            $id = $artikel['id'];
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
             $datum = $artikel['datum'];

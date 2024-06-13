@@ -27,6 +27,7 @@
         $klimaat_artikelen = $artikel->searchByThema();
 
         foreach ($klimaat_artikelen as $artikel) :
+            $id = $artikel['id'];
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
             $datum = $artikel['datum'];
