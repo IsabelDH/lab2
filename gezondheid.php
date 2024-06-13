@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/detailpagina.css">
-    <link rel="stylesheet" href="styles/profiel.css">
-    <title>gezondheid</title>
+    <title>Gezondheid</title>
 </head>
 
 <body>

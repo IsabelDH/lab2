@@ -15,10 +15,9 @@
 
 .kader-header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px; /* Optioneel, voeg marges toe naar keuze */
+  margin-bottom: 10px;
 }
 
 .bewerken {
@@ -57,6 +56,12 @@ h3{
   flex-direction: row;
   align-items: center;
   margin: 10px;
+}
+.kader-artikels {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+  flex-direction: column
 }
 
 #profiel_foto {
@@ -100,6 +105,38 @@ h3{
   color: rgb(0, 38, 61, 50%);
   margin-bottom: 10px;
 }
+
+
+.image {
+  width: 190px; 
+  height: 190px; 
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.article-content {
+  flex: 1; 
+}
+
+.title h3 {
+  margin-top: 13px; 
+  font-size: 18px;
+  color:  #00263d;
+  flex-wrap: wrap;
+  margin-right: 180px;
+}
+
+
+
+
 
 @media(min-width:1000px){
 

@@ -214,20 +214,26 @@ class Artikel {
 
     public function searchByKeyword($keyword) {
         $conn = Db::getConnection();
-
-        // Prepare query (SELECT) to search for the keyword in the title or content
-        $query = "SELECT * FROM artikel WHERE naam LIKE :keyword OR inhoud LIKE :keyword";
+        $statement = $conn->prepare("SELECT * FROM artikel WHERE naam LIKE :keyword OR inhoud LIKE :keyword");
         $params = ['keyword' => '%' . $keyword . '%'];
-
-        // Prepare and execute the query
-        $statement = $conn->prepare($query);
         $statement->execute($params);
-
-        // Fetch results as associative array
         $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         return $results;
     }
+
+    public function getArtikelById($articleId) {
+        $conn = Db::getConnection();
+        $statement = $conn->prepare("SELECT * FROM artikel WHERE id = :id");
+        $params = [':id' => $articleId];
+        $statement->execute($params);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+    
+        return $result;
+    }
+    
+    
+    
 
 
 
