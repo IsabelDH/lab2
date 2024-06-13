@@ -14,9 +14,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
         </a>
         <div class='menu'>
-            <form id='searchBar' class='search-bar'>
+            <form id='searchBar' class='search-bar' action='zoekresultaten.php' method='GET'>
                 <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
-                <button type='button' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
+                <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
             </form>
             <a href='#' id='searchIcon'>
@@ -47,9 +47,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
         </a>
         <div class='menu'>
-            <form id='searchBar' class='search-bar'>
+            <form id='searchBar' class='search-bar' action='search.php' method='GET'>
                 <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
-                <button type='button' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
+                <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
             </form>
             <a href='#' id='searchIcon'>
@@ -69,8 +69,13 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
 ?>
 <script>
 document.getElementById('closeSearch').addEventListener('click', function(event) {
-    event.preventDefault(); // Voorkom standaard actie van het formulier
-    document.getElementById('searchInput').value = ''; // Leeg de zoektekst (optioneel)
-    // Voeg hier eventuele verdere acties toe, zoals het verbergen van de zoekbalk
+    event.preventDefault();
+    document.getElementById('searchInput').value = ''; 
 });
+
+document.getElementById('searchButton').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('searchBar').submit();
+});
+
 </script>
