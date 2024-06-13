@@ -51,7 +51,7 @@ p {
 }
 
 #searchIcon img {
-  margin-right: 25px;
+  margin-right: 23px;
 }
 
 .search-bar {
@@ -103,6 +103,12 @@ input {
 #searchBar.active #searchIconInBar img {
   transform: translateX(-20px);
 }
+
+#vragen{
+  margin-left: -5px;
+  margin-right: 25px;
+}
+
 
 .footer {
   background-color: rgba(147, 172, 194, 0.25);
