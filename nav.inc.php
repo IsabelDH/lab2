@@ -50,13 +50,19 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
         </a>
         <div class='menu'>
-            <div id='searchBar' class='search-bar'>
+        <form id='searchBar' class='search-bar' action="search.php" method="GET">
+        <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
+        <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>
+                
+                <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
+            </form>
+            <!-- <form id='searchBar' class='search-bar' >
                 <a href='#' id='searchIconInBar'>
                     <img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'>
                 </a>
                 <input type='text' placeholder='Zoeken...'>
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
-            </div>
+            </form> -->
             <a href='#' id='searchIcon'>
                 <img width='24px' src='images/zoekvergrootglas.png' alt='vergrootglas voor zoeken'>
             </a>

@@ -96,6 +96,12 @@ input {
   cursor: pointer;
 }
 
+#searchButton{
+  background-color: #93acc2;
+  border: #93acc2;
+  margin-left: 10px;
+}
+
 #searchIconInBar img {
   transition: transform 0.3s ease;
 }
@@ -140,4 +146,20 @@ p {
   font-weight: 400;
   font-family: "neue-haas-grotesk-text", sans-serif;
   font-style: normal;
+}
+
+#searchResults {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+.search-result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.search-result-item:last-child {
+  border-bottom: none;
 }
