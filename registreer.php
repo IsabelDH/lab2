@@ -79,6 +79,7 @@ if (!empty($_POST)) {
     </div>
 
     <?php include_once("footer.inc.php") ?>
+    <script src="js/zoekbalk.js"></script>
 </body>
 
 </html>

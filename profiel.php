@@ -1,26 +1,35 @@
 <?php
 session_start();
 
-
+// Check if the user is logged in
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: inlog.php"); // Redirect to login page if not logged in
+    exit;
+}
+
+// Include necessary files and classes
+require_once "classes/Db.php";
+require_once "classes/Artikel.php";
+
+// Check if the logout action is triggered
+if (isset($_GET['logout'])) {
+    // Unset all of the session variables
+    $_SESSION = array();
+
+    // Destroy the session
+    session_destroy();
+
+    // Redirect to login page or any other appropriate page after logout
     header("Location: inlog.php");
     exit;
 }
 
-if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
-    $user = $_SESSION['user'];
-} else {
-    echo "Gebruikersgegevens niet beschikbaar.";
-    exit;
-}
+// Continue with the rest of your code for displaying the profile page
+$user = $_SESSION['user'];
 
-require_once "classes/Db.php";
-require_once "classes/Artikel.php";
-
+// Example usage: fetching favorite articles
 $artikel = new Artikel();
-
 $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
-
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -111,7 +120,7 @@ $favoriete_artikelen = $artikel->getFavorieteArtikelen($user['id']);
     </div>
 
     <div class="uitloggen">
-        <div class="button"><a href="inlog.php">Uitloggen</a></div>
+        <div class="button"><a href="logout.php">Uitloggen</a></div>
     </div>
 
 

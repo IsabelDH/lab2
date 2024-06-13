@@ -76,6 +76,7 @@ $vragen = $verwerker->haalVragenOp();
     </form>
 
     <?php include_once("footer.inc.php") ?>
+    <script src="js/zoekbalk.js"></script>
 
     <script>
          document.addEventListener("DOMContentLoaded", function() {

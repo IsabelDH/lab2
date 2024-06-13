@@ -3,32 +3,19 @@ session_start();
 
 include_once(__DIR__ . "/classes/Users.php");
 
-function canLogin($pEmail, $pPassword)
-{
-    $conn = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
-    $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
-    $statement->bindValue(":email", $pEmail);
-    $statement->execute();
-    $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-    if ($user && password_verify($pPassword, $user['password'])) {
-        return $user; // Return user data
-    } else {
-        return false;
-    }
-}
-
 if (!empty($_POST)) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $user = canLogin($email, $password);
+    $inlog = new User();
+    $user = $inlog->canLogin($email, $password);
+
 
     if ($user) {
         $_SESSION['loggedin'] = true;
         $_SESSION['user'] = $user;
         header("location: profiel.php");
-        exit(); // Ensure script stops after redirect
+        exit(); 
     } else {
         $error = true;
     }

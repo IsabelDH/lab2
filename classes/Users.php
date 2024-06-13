@@ -78,7 +78,7 @@ class User
     //save
     public function save()
 {
-    $conn = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
+    $conn = Db::getConnection();
     $statement = $conn->prepare("INSERT INTO users (firstname, lastname, email, password, profiel_foto) 
                                  VALUES (:firstname, :lastname, :email, :password, :profiel_foto)");
 
@@ -98,7 +98,20 @@ class User
     return $statement->execute();
 }
 
+public function canLogin($pEmail, $pPassword)
+{
+    $conn = Db::getConnection();
+    $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $statement->bindValue(":email", $pEmail);
+    $statement->execute();
+    $user = $statement->fetch(PDO::FETCH_ASSOC);
 
+    if ($user && password_verify($pPassword, $user['password'])) {
+        return $user; // Return user data
+    } else {
+        return false;
+    }
+}
 
 
     // public static function getUserByEmail($email)
