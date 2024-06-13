@@ -4,7 +4,7 @@ include_once(__DIR__ . DIRECTORY_SEPARATOR . "classes/Vragen.php");
 $response = array();
 
 
-if (isset($_POST['vraag'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['vraag'])) {
     $vraag = $_POST['vraag'];
     $verwerker = new Vragen();
 
@@ -24,6 +24,13 @@ if (isset($_POST['vraag'])) {
     header('Content-Type: application/json');
     echo json_encode($response);
     exit;
+
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $vragen = $verwerker->haalVragenOp();
+        header('Content-Type: application/json');
+        echo json_encode($vragen);
+        exit;
+    }
 }
 
 // Ophalen van vragen
@@ -105,7 +112,7 @@ $vragen = $verwerker->haalVragenOp();
         }
         function fetchQuestions() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "<?php echo $vraag['vraag']; ?>", true); // Haal vragen op in haal_vragen_op.php
+            xhr.open("GET", "<?php echo $vraag['vraag']; ?>", true); 
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var vragenLijst = document.getElementById('vragenLijst');
