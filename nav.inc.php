@@ -1,5 +1,4 @@
 <?php
-
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Artikel.php");
 
@@ -15,20 +14,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
         </a>
         <div class='menu'>
-        <form id='searchBar' class='search-bar' action="search.php" method="GET">
+            <form id='searchBar' class='search-bar'>
                 <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
-                <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
+                <button type='button' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
             </form>
-            <!-- <div id='searchBar' class='search-bar'>
-                <form id="searchForm" action="zoekresultaten.php" method="GET">
-                    <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
-                    <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>
-                </form>
-                <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
-            </div> -->
-
-
             <a href='#' id='searchIcon'>
                 <img width='24px' src='images/zoekvergrootglas.png' alt='vergrootglas voor zoeken'>
             </a>
@@ -57,18 +47,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
         </a>
         <div class='menu'>
-            <form id='searchBar' class='search-bar' action="search.php" method="GET">
+            <form id='searchBar' class='search-bar'>
                 <input type='text' name='query' id='searchInput' placeholder='Zoeken...'>
-                <button type='submit' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
+                <button type='button' id='searchButton'><img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'></button>   
                 <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
             </form>
-            <!-- <form id='searchBar' class='search-bar' >
-                <a href='#' id='searchIconInBar'>
-                    <img width='24px' src='images/witvergrootgals.png' alt='vergrootglas voor zoeken'>
-                </a>
-                <input type='text' placeholder='Zoeken...'>
-                <button id='closeSearch'><img width='45px' src='images/sluitx.png' alt='sluiten'></button>
-            </form> -->
             <a href='#' id='searchIcon'>
                 <img width='24px' src='images/zoekvergrootglas.png' alt='vergrootglas voor zoeken'>
             </a>
@@ -84,3 +67,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
 <?php
 }
 ?>
+<script>
+document.getElementById('closeSearch').addEventListener('click', function(event) {
+    event.preventDefault(); // Voorkom standaard actie van het formulier
+    document.getElementById('searchInput').value = ''; // Leeg de zoektekst (optioneel)
+    // Voeg hier eventuele verdere acties toe, zoals het verbergen van de zoekbalk
+});
+</script>

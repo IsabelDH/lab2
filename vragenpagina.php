@@ -85,7 +85,7 @@ $vragen = $verwerker->haalVragenOp();
                 receiveMessage();
             });
 
-            fetchQuestions(); // Laad vragen bij het initiële laden van de pagina
+            fetchQuestions(); 
         });
 
         function receiveMessage() {
