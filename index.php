@@ -21,12 +21,12 @@
         <img id="next" src="images/next.png" alt="">
     </div>
     <div class="slider-container">
+
         <div class="slide" data-url="begroting.php">
             <div class="slide-content">
                 <img src="images/begroting.jpg" alt="Image 1">
-
                 <div class="slider-text">
-                    <h2>Hoe komt begroting tot stand?</h2>
+                    <h2>Wat is een begroting?</h2>
                     <p>België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.</p>
                 </div>
             </div>
@@ -36,8 +36,8 @@
             <div class="slide-content">
                 <img src="images/verkiezingen.jpg" alt="Image 2">
                 <div class="slider-text">
-                    <h2>Waarom moeten we dit jaar voor Europees en federaal stemmen?</h2>
-                    <p>Verkiezingen komen er weer aan. Maar hoe zijn deze allemaal aan elkaar verbonden.</p>
+                    <h2>Wat zijn de belangrijkste thema's en standpunten die spelen in de komende verkiezingen?</h2>
+                    <p>Wat zijn de belangrijkste thema's en standpunten van de partijen? Lees verder om te zien hoe ze jouw toekomst kunnen beïnvloeden!</p>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
 
                 <div class="slider-text">
                     <h2>Welke subsidies krijg ik bij het renoveren van mijn huis?</h2>
-                    <p>Maak van je (ver)bouwproject een klimaatvriendelijke missie met deze tips voor duurzame keuzes en praktische oplossingen.</p>
+                    <p>Wat zijn de belangrijkste thema's en standpunten van de partijen? Lees verder om te zien hoe ze jouw toekomst kunnen beïnvloeden!</p>
                 </div>
             </div>
         </div>
