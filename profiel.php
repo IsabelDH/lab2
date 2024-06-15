@@ -3,7 +3,7 @@ include_once(__DIR__ . "/classes/Artikel.php");
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: inlog.php"); 
+    header("Location: inlog.php");
     exit;
 }
 
@@ -31,7 +31,7 @@ $gelikete_artikelen = array();
 
 foreach ($liked_articles as $articleId) {
     try {
-        $artikel_details = $artikel->getArtikelById($articleId); 
+        $artikel_details = $artikel->getArtikelById($articleId);
         if ($artikel_details) {
             $gelikete_artikelen[] = $artikel_details;
         }
@@ -39,7 +39,8 @@ foreach ($liked_articles as $articleId) {
         echo "Error: " . $e->getMessage();
     }
 }
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -101,22 +102,24 @@ foreach ($liked_articles as $articleId) {
             <div>
                 <p>Like jouw artikel, die je wilt bijhouden door op het hartje te klikken.</p>
             </div>
-        <?php endif; ?>
-        
-        <?php foreach ($gelikete_artikelen as $artikel) : ?>
-            <div class="kader-artikels">
-                <div class="image">
-                    <img src="images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
-                </div>
-                <div class="article-content">
-                    <div class="title">
-                        <h3><?php echo $artikel['naam']; ?></h3>
+        <?php else : ?>
+            <div class="kader-artikels-container">
+                <?php foreach ($gelikete_artikelen as $artikel) : ?>
+                    <div class="kader-artikels">
+                        <div class="image">
+                            <img src="images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
+                        </div>
+                        <div class="article-content">
+                            <div class="title">
+                                <h3><?php echo $artikel['naam']; ?></h3>
+                            </div>
+                        </div>
                     </div>
-                    
-                </div>
+                <?php endforeach; ?>
             </div>
-        <?php endforeach; ?>
+        <?php endif; ?>
     </div>
+
 
     <div class="uitloggen">
         <div class="button"><a href="logout.php">Uitloggen</a></div>

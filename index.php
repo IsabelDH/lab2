@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>Home</title>
-    
+
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <div class="slide" data-url="begroting.php">
             <div class="slide-content">
                 <img src="images/begroting.jpg" alt="Image 1">
-            
+
                 <div class="slider-text">
                     <h2>Hoe komt begroting tot stand?</h2>
                     <p>België sluit 2023 af met een begrotingstekort dat 6,5 miljard euro kleiner is dan gevreesd, vooral dankzij een sterkere economische groei, maar het tekort blijft nog steeds oplopen in vergelijking met voorgaande jaren.</p>
@@ -45,7 +45,7 @@
         <div class="slide" data-url="renovatie.php">
             <div class="slide-content">
                 <img src="images/klimaatvriendelijk_wonen.jpg" alt="Image 3">
-        
+
                 <div class="slider-text">
                     <h2>Welke subsidies krijg ik bij het renoveren van mijn huis?</h2>
                     <p>Maak van je (ver)bouwproject een klimaatvriendelijke missie met deze tips voor duurzame keuzes en praktische oplossingen.</p>
@@ -54,6 +54,8 @@
         </div>
     </div>
 
+    <div id="slider-nav"></div>
+
 
     <div class="containerbalk">
         <div class="balk balkje1"></div>
@@ -61,12 +63,12 @@
     </div>
 
     <div class="container">
-    <div class="flex1">
-        <a href="#">
+        <div class="flex1">
+            <a href="#">
                 <img class="image3" src="images/image2.png" alt="">
                 <h3 class="title">Hoe wordt de pensioenhervorming gestemd?</h3>
                 <p>RSVZ en de Pensioendienst lanceren proactieve campagne voor pensioenbonus met slogan 'En jij, hoeveel doe jij erbij?'</p>
-        </a>
+            </a>
         </div>
         <div class="flex2">
             <a href="#">
@@ -121,10 +123,25 @@
         let currentIndex = 0;
         const slides = document.querySelectorAll('.slide');
         const slideInterval = 3000; // Change this value to set the interval (in milliseconds)
+        const sliderNav = document.getElementById('slider-nav');
+
+        // Load the slider navigation dots
+        slides.forEach((slide, index) => {
+            let dot = document.createElement('span');
+            dot.classList.add('slider-dot');
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            }
+            dot.setAttribute('data-slide', index);
+            sliderNav.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
 
         function showSlide(index) {
             slides.forEach((slide, i) => {
                 slide.style.display = (i === index) ? 'block' : 'none';
+                dots[i].classList.toggle('active', i === index);
             });
         }
 
@@ -158,6 +175,17 @@
 
         // Set up the automatic slide change
         let autoSlide = setInterval(() => navigateSlide(1), slideInterval);
+
+        // Event listener for slider navigation dots
+        sliderNav.addEventListener('click', event => {
+            if (event.target && event.target.classList.contains('slider-dot')) {
+                let index = parseInt(event.target.getAttribute('data-slide'));
+                currentIndex = index;
+                showSlide(currentIndex);
+                clearInterval(autoSlide);
+                autoSlide = setInterval(() => navigateSlide(1), slideInterval);
+            }
+        });
     </script>
 
     <script src="js/chatbot.js"></script>

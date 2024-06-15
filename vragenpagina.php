@@ -1,6 +1,7 @@
 <?php
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "classes/Vragen.php");
 
+
 $response = array();
 
 
@@ -39,6 +40,7 @@ $vragen = $verwerker->haalVragenOp();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,6 +49,7 @@ $vragen = $verwerker->haalVragenOp();
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/vragenpagina.css">
 </head>
+
 <body>
     <?php include_once("nav.inc.php") ?>
     <h1>Stel uw vraag</h1>
@@ -61,9 +64,9 @@ $vragen = $verwerker->haalVragenOp();
     </p>
     <h2>Vragen</h2>
     <ul id="vragenLijst">
-    <?php foreach ($vragen as $vraag): ?>
-        <li class="vraag-item"><?php echo $vraag['vraag']; ?></li>
-    <?php endforeach; ?>
+        <?php foreach ($vragen as $vraag) : ?>
+            <li class="vraag-item"><?php echo $vraag['vraag']; ?></li>
+        <?php endforeach; ?>
     </ul>
 
     <form action="" method="post" id="vraagForm">
@@ -79,13 +82,14 @@ $vragen = $verwerker->haalVragenOp();
     <script src="js/zoekbalk.js"></script>
 
     <script>
-         document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('vraagForm').addEventListener('submit', function(event) {
                 event.preventDefault();
                 receiveMessage();
             });
 
-            fetchQuestions(); 
+            fetchQuestions(); // Laad vragen bij het initiële laden van de pagina
+            fetchQuestions();
         });
 
         function receiveMessage() {
@@ -94,7 +98,7 @@ $vragen = $verwerker->haalVragenOp();
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", "<?php echo $_SERVER['PHP_SELF']; ?>", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                xhr.onreadystatechange = function () {
+                xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var response = JSON.parse(xhr.responseText);
                         if (response.success) {
@@ -111,10 +115,11 @@ $vragen = $verwerker->haalVragenOp();
                 alert("Vul een vraag in.");
             }
         }
+
         function fetchQuestions() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "<?php echo $vraag['vraag']; ?>", true); 
-            xhr.onreadystatechange = function () {
+            xhr.open("GET", "<?php echo $vraag['vraag']; ?>", true);
+            xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var vragenLijst = document.getElementById('vragenLijst');
                     vragenLijst.innerHTML = '';
@@ -131,4 +136,5 @@ $vragen = $verwerker->haalVragenOp();
         }
     </script>
 </body>
+
 </html>
