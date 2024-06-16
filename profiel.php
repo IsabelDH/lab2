@@ -10,16 +10,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 require_once "classes/Db.php";
 require_once "classes/Artikel.php";
 
-
 if (isset($_GET['logout'])) {
     $_SESSION = array();
-
     session_destroy();
-
     header("Location: inlog.php");
     exit;
 }
-
 
 $user = $_SESSION['user'];
 
@@ -49,7 +45,6 @@ foreach ($liked_articles as $articleId) {
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/profiel.css">
-
     <title>Profiel</title>
 </head>
 
@@ -74,10 +69,8 @@ foreach ($liked_articles as $articleId) {
                 <h4><?php echo $user['email']; ?></h4>
                 <div class="button"><a href="#">Wachtwoord veranderen</a></div>
             </div>
-
         </div>
     </div>
-
 
     <div class="kader">
         <div class="kader-header">
@@ -109,6 +102,7 @@ foreach ($liked_articles as $articleId) {
                         <div class="image">
                             <img src="images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
                         </div>
+                        <img id="heart-icon-<?php echo $artikel['id']; ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?php echo $artikel['id']; ?>')">
                         <div class="article-content">
                             <div class="title">
                                 <h3><?php echo $artikel['naam']; ?></h3>
@@ -120,17 +114,11 @@ foreach ($liked_articles as $articleId) {
         <?php endif; ?>
     </div>
 
-
     <div class="uitloggen">
         <div class="button"><a href="logout.php">Uitloggen</a></div>
     </div>
 
-
-
-
-
     <?php include_once("footer.inc.php") ?>
-
 
     <script src="js/zoekbalk.js"></script>
     <script src="js/like.js"></script>

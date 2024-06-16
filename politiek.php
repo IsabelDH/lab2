@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/detailpagina.css">
@@ -19,23 +19,22 @@
     <div class="artikels">
         <?php
         include_once("classes/Artikel.php");
-
         $artikel = new Artikel();
         $artikel->setThema("politiek");
         $politiek_artikelen = $artikel->searchByThema();
 
         foreach ($politiek_artikelen as $artikel) :
-            // Haal de benodigde gegevens op
-            $id = $artikel['id']; // Verondersteld dat elk artikel een unieke id heeft
+            $id = $artikel['id'];
             $naam = $artikel['naam'];
             $inhoud = $artikel['inhoud'];
             $datum = $artikel['datum'];
             $fotoBestandsnaam = $artikel['foto'];
+            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
         ?>
             <div class="artikel_div">
-                <div class="image">
-                    <img class="artikel_foto" src="images/artikel_foto/<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                <div class="image" style="position: relative;">
+                    <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
                     <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
                 </div>
                 <div class="article-content">

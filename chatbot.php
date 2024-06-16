@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Chatbot</title>
     <link rel="stylesheet" href="styles/chatbot.css">
-
 </head>
 
 <body>
-    <div class="chat-container">
+    <div class="jill" onclick="toggleChatbot()">
+        <h2>1</h2>
+        <img src="images/jill_75.png" alt="chatbot">
+    </div>
+    <div class="chat-container hidden">
         <div class="chat-header">
             <h3>Chatbot Jill 👋</h3>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36" onclick="resetChat()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36" id="close-chat">
                 <path fill="currentColor" stroke="currentColor" stroke-width="1" d="m19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29l-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29l8.29 8.29a1 1 0 0 0 1.41-1.41Z" class="clr-i-outline clr-i-outline-path-1" />
                 <path fill="none" stroke="none" d="M0 0h36v36H0z" />
             </svg>
-
         </div>
         <div class="chat-messages" id="chat-messages"></div>
         <div class="chat-input-container">
@@ -33,6 +35,9 @@
     <script>
         const chatMessages = document.querySelector('#chat-messages');
         const userInput = document.querySelector('#user-input');
+        const chatContainer = document.querySelector('.chat-container');
+        const jillButton = document.querySelector('.jill');
+        const closeChatBtn = document.querySelector('#close-chat');
 
         function sendMessage(message, sender) {
             const chatMessage = document.createElement('div');
@@ -70,7 +75,17 @@
         function resetChat() {
             chatMessages.innerHTML = ''; // Verwijder alle berichten
             userInput.value = ''; // Reset het invoerveld
+            chatContainer.classList.add('hidden');
+            jillButton.classList.remove('hidden');
         }
+
+        function toggleChatbot() {
+            jillButton.classList.add('hidden');
+            chatContainer.classList.remove('hidden');
+            chatContainer.style.display = 'block';
+        }
+
+        closeChatBtn.addEventListener('click', resetChat);
 
         userInput.addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {

@@ -18,11 +18,8 @@
 
     <div class="artikels">
         <?php
-
         include_once("classes/Artikel.php");
-
         $artikel = new Artikel();
-
         $artikel->setThema("gezondheid");
         $gezondheid_artikelen = $artikel->searchByThema();
 
