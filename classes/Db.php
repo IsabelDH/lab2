@@ -1,8 +1,10 @@
 <?php
-abstract class Db {
+abstract class Db
+{
     private static $db;
 
-    public static function getConnection() {
+    public static function getConnection()
+    {
         if (self::$db === null) {
             self::$db = new PDO('mysql:host=localhost;dbname=lab2', "root", "root");
             self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -10,4 +12,3 @@ abstract class Db {
         return self::$db;
     }
 }
-?>

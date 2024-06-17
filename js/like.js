@@ -1,40 +1,31 @@
-let likedHearts = JSON.parse(localStorage.getItem('likedHearts')) || {};
-
+// Event listener voor laden van DOM
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Script geladen en DOM is klaar");
-    console.log("Inhoud van likedHearts bij laden:", likedHearts);
+    let likedHearts = JSON.parse(localStorage.getItem('likedHearts')) || {};
+
     for (const heartId in likedHearts) {
         const heartIcon = document.getElementById(heartId);
         if (heartIcon) {
             heartIcon.src = likedHearts[heartId] ? 'images/likeheart.png' : 'images/unlikeheart.png';
         } else {
-            console.warn("Hart icoon niet gevonden bij laden:", heartId);
+            console.warn("Heart icon not found:", heartId);
         }
     }
 });
 
-
-function toggleLike(heartId) {
+function toggleLike(heartId, articleId) {
     const heartIcon = document.getElementById(heartId);
     if (!heartIcon) {
         console.error("Heart icon not found:", heartId);
         return;
     }
-    console.log("Heart icon clicked:", heartId);
 
-    const unlikeHeart = 'images/unlikeheart.png';
-    const likeHeart = 'images/likeheart.png';
-    // Artikel ID ophalen uit heartId
-    let articleId = heartId.split('-')[2]; // Aannemend dat heartId formaat 'heart-icon-{id}'
-
-    // Toggle de like status in likedHearts
+    let likedHearts = JSON.parse(localStorage.getItem('likedHearts')) || {};
     likedHearts[heartId] = !likedHearts[heartId];
+    localStorage.setItem('likedHearts', JSON.stringify(likedHearts));
 
-    // Verander de afbeelding van het hartje op basis van de like status
-    heartIcon.src = likedHearts[heartId] ? likeHeart : unlikeHeart;
+    heartIcon.src = likedHearts[heartId] ? 'images/likeheart.png' : 'images/unlikeheart.png';
 
-    // Nu een AJAX-verzoek naar de server om de like op te slaan in de sessie
-    fetch('save_like.php?article_id=' + articleId + '&liked=' + likedHearts[heartId])
+    fetch(`save_like.php?article_id=${articleId}&liked=${likedHearts[heartId] ? 1 : 0}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -42,15 +33,15 @@ function toggleLike(heartId) {
             return response.text();
         })
         .then(data => {
-            console.log('Like opgeslagen in sessie:', data);
-            // Hier kun je verdere acties ondernemen als nodig
+            console.log('Like status updated:', data);
+            if (!likedHearts[heartId]) {
+                const artikelDiv = document.getElementById(`artikel-${articleId}`);
+                if (artikelDiv) {
+                    artikelDiv.remove();
+                }
+            }
         })
         .catch(error => {
-            console.error('Fout bij opslaan van like:', error);
-            // Hier kun je foutafhandeling toevoegen
+            console.error('Error updating like status:', error);
         });
-
-    // Opslaan in localStorage (voor weergave na paginavernieuwing)
-    localStorage.setItem('likedHearts', JSON.stringify(likedHearts));
 }
-

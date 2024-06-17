@@ -19,22 +19,8 @@ if (isset($_GET['logout'])) {
 
 $user = $_SESSION['user'];
 
-$liked_articles = isset($_SESSION['liked_articles']) ? $_SESSION['liked_articles'] : array();
-
 $artikel = new Artikel();
-
-$gelikete_artikelen = array();
-
-foreach ($liked_articles as $articleId) {
-    try {
-        $artikel_details = $artikel->getArtikelById($articleId);
-        if ($artikel_details) {
-            $gelikete_artikelen[] = $artikel_details;
-        }
-    } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
-    }
-}
+$gelikete_artikelen = $artikel->getFavorieteArtikelen();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +28,7 @@ foreach ($liked_articles as $articleId) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/profiel.css">
@@ -49,7 +36,7 @@ foreach ($liked_articles as $articleId) {
 </head>
 
 <body>
-    <?php include_once("nav.inc.php") ?>
+    <?php include_once("nav.inc.php"); ?>
     <h1>Mijn profiel</h1>
     <div class="kader">
         <div class="kader-header">
@@ -97,14 +84,15 @@ foreach ($liked_articles as $articleId) {
             </div>
         <?php else : ?>
             <div class="kader-artikels-container">
-                <?php foreach ($gelikete_artikelen as $artikel) : ?>
-                    <div class="kader-artikels">
+                <?php foreach ($gelikete_artikelen as $artikel) {
+                ?>
+                    <div class="kader-artikels" id="artikel-<?php echo $artikel['id']; ?>">
                         <div class="image">
                             <a href="<?php echo $artikel['link']; ?>">
                                 <img src="images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
                             </a>
                         </div>
-                        <img id="heart-icon-<?php echo $artikel['id']; ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?php echo $artikel['id']; ?>')">
+                        <img id="heart-icon-<?php echo $artikel['id']; ?>" class="heart-icon" src="images/likeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?php echo $artikel['id']; ?>', <?php echo $artikel['id']; ?>)">
                         <div class="article-content">
                             <div class="title">
                                 <a href="<?php echo $artikel['link']; ?>">
@@ -113,7 +101,9 @@ foreach ($liked_articles as $articleId) {
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php
+                }
+                ?>
             </div>
         <?php endif; ?>
     </div>
@@ -122,8 +112,7 @@ foreach ($liked_articles as $articleId) {
         <div class="button"><a href="logout.php">Uitloggen</a></div>
     </div>
 
-    <?php include_once("footer.inc.php") ?>
-
+    <?php include_once("footer.inc.php"); ?>
     <script src="js/zoekbalk.js"></script>
     <script src="js/like.js"></script>
 </body>

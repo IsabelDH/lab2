@@ -15,7 +15,7 @@ if (!empty($_POST)) {
         $_SESSION['loggedin'] = true;
         $_SESSION['user'] = $user;
         header("location: profiel.php");
-        exit(); 
+        exit();
     } else {
         $error = true;
     }
@@ -29,6 +29,7 @@ if (!empty($_POST)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inlog</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/inlog.css">
@@ -43,18 +44,20 @@ if (!empty($_POST)) {
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" name="email">
-            </div>
-            <div class="form-group">
+                <!-- </div> -->
+                <!-- <div class="form-group"> -->
                 <label for="password">Password</label>
                 <input type="password" name="password">
+                <a class="forgot-password-link" href="">Wachtwoord vergeten?</a>
+
+                <?php if (isset($error)) : ?>
+                    <div class="error">
+                        <p>Sorry, we can't log you in with that email address and password. Can you try again?</p>
+                    </div>
+                <?php endif; ?>
+                <button type="submit" class="button">Login</button>
+                <a href="registreer.php" class="registreer">Heb je nog geen account? <strong>Registreer hier</strong></a>
             </div>
-            <?php if (isset($error)) : ?>
-                <div class="error">
-                    <p>Sorry, we can't log you in with that email address and password. Can you try again?</p>
-                </div>
-            <?php endif; ?>
-            <button type="submit" class="button">Login</button>
-            <a href="registreer.php" class="registreer">Heb je nog geen account? <strong>Registreer hier</strong></a>
         </form>
     </div>
 

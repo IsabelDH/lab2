@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/detailpagina.css">
-    <title>politiek</title>
+    <title>Politiek</title>
 </head>
 
 <body>
@@ -18,9 +19,7 @@
 
     <div class="artikels">
         <?php
-
         include_once("classes/Artikel.php");
-
         $artikel = new Artikel();
         $artikel->setThema("politiek");
         $politiek_artikelen = $artikel->searchByThema();
@@ -31,14 +30,14 @@
             $inhoud = $artikel['inhoud'];
             $datum = $artikel['datum'];
             $fotoBestandsnaam = $artikel['foto'];
+            $fotoPad = 'images\artikel_foto\ ' . $fotoBestandsnaam;
             $link = $artikel['link'];
         ?>
             <div class="artikel_div">
                 <div class="image" style="position: relative;">
-                    <img class="artikel_foto" src="images/artikel_foto/<?= $fotoBestandsnaam ?>" alt="Afbeelding">
-                    <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>')">
+                    <img class="artikel_foto" src="images\artikel_foto\<?= $fotoBestandsnaam ?>" alt="Afbeelding">
+                    <img id="heart-icon-<?= $id ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?= $id ?>', <?= $id ?>)">
                 </div>
-
                 <div class="article-content">
                     <div class="title">
                         <h2><?= $naam ?></h2>

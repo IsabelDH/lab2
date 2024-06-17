@@ -2,7 +2,8 @@
 * {
   font-family: "neue-haas-grotesk-text", sans-serif;
 }
-h1{
+
+h1 {
   text-align: left;
   color: #b95927;
   font-weight: 400;
@@ -40,7 +41,7 @@ h2 {
   margin-bottom: 235px;
 }
 
-.registreer-form{
+.registreer-form {
   background-color: #93acc2;
   width: 95%;
   margin: 0 auto;
@@ -49,9 +50,9 @@ h2 {
   margin-bottom: 81px;
 }
 
-
 .form-group {
   margin: 15px 0;
+  overflow: hidden;
 }
 
 .form-group label {
@@ -73,7 +74,7 @@ form p {
 .button {
   text-decoration: none;
   color: #00263d;
-  margin-top: 15px;
+  margin-top: 50px;
   border: none;
 }
 
@@ -90,29 +91,34 @@ form {
   display: block;
 }
 
-.registreer-form a{
+.registreer-form a {
   color: #00263d;
   text-decoration: none;
 }
 
-input{
+input {
   color: #00263d;
+}
+
+.forgot-password-link {
+  float: right;
+  margin-top: 10px;
+  margin-right: 7%;
 }
 
 @media (min-width: 600px) {
   .login-form {
     width: 75%;
   }
-  .kader-header{
-    margin-left: 40px; 
-   }
+  .kader-header {
+    margin-left: 40px;
+  }
 
-   .registreer-form{
+  .registreer-form {
     width: 75%;
-   }
+  }
 
-   h1{
- 
+  h1 {
     margin-left: 110px;
   }
 }
@@ -122,19 +128,15 @@ input{
     width: 50%;
   }
 
-  .registreer-form{
+  .registreer-form {
     width: 50%;
-   }
-  
-  .kader-inhoud{
+  }
+
+  .kader-inhoud {
     margin-left: 50px;
   }
 
-  h1{
- 
+  h1 {
     margin-left: 430px;
   }
 }
-
-
-  

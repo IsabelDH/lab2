@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>verkiezingen</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/verkiezingen.css">
-    
+
 </head>
 
 <body>
@@ -22,8 +23,8 @@
         <div>
             <h2>Europees niveau</h2>
             <p>Het Europese Parlement heeft een cruciale rol in de vaststelling van EU-wetgeving en de EU-begroting, die de komende jaren de basis vormt voor belangrijke investeringen in verschillende sectoren zoals duurzaamheid, digitale transformatie en sociaal-economische cohesie. Bij de Europese verkiezingen kunnen we onze vertegenwoordigers kiezen die zullen meebeslissen over deze zaken, en die onze belangen op het Europese toneel zullen verdedigen.</p> <br>
-            <p>  Daarnaast behandelt het Europees Parlement belangrijke kwesties zoals de klimaatverandering, grensoverschrijdende criminaliteit en de versterking van de interne markt. Door te stemmen voor het Europees Parlement kunnen we bijdragen aan beslissingen die een directe impact hebben op onze veiligheid, economie en levenskwaliteit. Het Parlement speelt ook een essentiële rol in de bescherming van democratische waarden en mensenrechten binnen de EU.</p>
-            
+            <p> Daarnaast behandelt het Europees Parlement belangrijke kwesties zoals de klimaatverandering, grensoverschrijdende criminaliteit en de versterking van de interne markt. Door te stemmen voor het Europees Parlement kunnen we bijdragen aan beslissingen die een directe impact hebben op onze veiligheid, economie en levenskwaliteit. Het Parlement speelt ook een essentiële rol in de bescherming van democratische waarden en mensenrechten binnen de EU.</p>
+
         </div>
 
         <div>
@@ -151,96 +152,96 @@
                     </ul>
                 </div>
                 <div class="partij">
-                        <h3>Groen</h3>
-                        <img class="partij_logo" src="images/groen.png" alt="Partij Logo">
-                        <ul class="niveau">
-                            <li>Europees:
-                                <ul class="top">
-                                    <li>Bevorderen van duurzame ontwikkeling en milieubescherming.</li>
-                                    <li>Streven naar een groene en eerlijke economie.</li>
-                                    <li>Bestrijden van sociale ongelijkheid en armoede.</li>
-                                </ul>
-                            </li>
-                            <li>Federaal:
-                                <ul class="top">
-                                    <li>Investeren in hernieuwbare energie en klimaatbeleid.</li>
-                                    <li>Verhogen van de minimumlonen en sociale uitkeringen.</li>
-                                    <li>Verbeteren van de gezondheidszorg en het onderwijs.</li>
-                                </ul>
-                            </li>
-                            <li>Regionaal:
-                                <ul class="top">
-                                    <li>Bevorderen van duurzame mobiliteit en ruimtelijke ordening.</li>
-                                    <li>Ondersteunen van lokale voedselproductie en biodiversiteit.</li>
-                                    <li>Uitbreiden van groene ruimtes en natuurgebieden.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="partij">
-                        <h3>PVDA (Partij van de arbeid)</h3>
-                        <img class="partij_logo" src="images/pvda.webp" alt="Partij Logo">
-                        <ul class="niveau">
-                
-                                <li>Europees:
-                                    <ul class="top">
-                                        <li>Streven naar een eerlijkere verdeling van welvaart binnen de Europese Unie.</li>
-                                        <li>Bestrijden van belastingontwijking en -ontduiking door grote bedrijven.</li>
-                                        <li>Bevorderen van sociale rechtvaardigheid en arbeidersrechten op Europees niveau.</li>
-                                    </ul>
-                                </li>
-                                <li>Federaal:
-                                    <ul class="top">
-                                        <li>Verhogen van de minimumlonen en pensioenen.</li>
-                                        <li>Garanderen van betaalbare huisvesting en gezondheidszorg voor iedereen.</li>
-                                        <li>Investeren in openbaar vervoer en duurzame energie.</li>
-                                    </ul>
-                                </li>
-                                <li>Regionaal:
-                                    <ul class="top">
-                                        <li>Stimuleren van lokale werkgelegenheid en kleine bedrijven.</li>
-                                        <li>Verbeteren van het onderwijs en de toegang tot cultuur voor alle inwoners.</li>
-                                        <li>Beschermen van het milieu en investeren in groene projecten.</li>
-                                    </ul>
-                                </li>
-                  
-                        </ul>
-                    </div>
+                    <h3>Groen</h3>
+                    <img class="partij_logo" src="images/groen.png" alt="Partij Logo">
+                    <ul class="niveau">
+                        <li>Europees:
+                            <ul class="top">
+                                <li>Bevorderen van duurzame ontwikkeling en milieubescherming.</li>
+                                <li>Streven naar een groene en eerlijke economie.</li>
+                                <li>Bestrijden van sociale ongelijkheid en armoede.</li>
+                            </ul>
+                        </li>
+                        <li>Federaal:
+                            <ul class="top">
+                                <li>Investeren in hernieuwbare energie en klimaatbeleid.</li>
+                                <li>Verhogen van de minimumlonen en sociale uitkeringen.</li>
+                                <li>Verbeteren van de gezondheidszorg en het onderwijs.</li>
+                            </ul>
+                        </li>
+                        <li>Regionaal:
+                            <ul class="top">
+                                <li>Bevorderen van duurzame mobiliteit en ruimtelijke ordening.</li>
+                                <li>Ondersteunen van lokale voedselproductie en biodiversiteit.</li>
+                                <li>Uitbreiden van groene ruimtes en natuurgebieden.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="partij">
+                    <h3>PVDA (Partij van de arbeid)</h3>
+                    <img class="partij_logo" src="images/pvda.webp" alt="Partij Logo">
+                    <ul class="niveau">
+
+                        <li>Europees:
+                            <ul class="top">
+                                <li>Streven naar een eerlijkere verdeling van welvaart binnen de Europese Unie.</li>
+                                <li>Bestrijden van belastingontwijking en -ontduiking door grote bedrijven.</li>
+                                <li>Bevorderen van sociale rechtvaardigheid en arbeidersrechten op Europees niveau.</li>
+                            </ul>
+                        </li>
+                        <li>Federaal:
+                            <ul class="top">
+                                <li>Verhogen van de minimumlonen en pensioenen.</li>
+                                <li>Garanderen van betaalbare huisvesting en gezondheidszorg voor iedereen.</li>
+                                <li>Investeren in openbaar vervoer en duurzame energie.</li>
+                            </ul>
+                        </li>
+                        <li>Regionaal:
+                            <ul class="top">
+                                <li>Stimuleren van lokale werkgelegenheid en kleine bedrijven.</li>
+                                <li>Verbeteren van het onderwijs en de toegang tot cultuur voor alle inwoners.</li>
+                                <li>Beschermen van het milieu en investeren in groene projecten.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div>
-            <h2>Video</h2>
-            <img class="video" src="images/video_verkiezingen.png" alt="">
+    <div>
+        <h2>Video</h2>
+        <img class="video" src="images/video_verkiezingen.png" alt="">
+    </div>
+
+    <div class="totstand">
+        <h2>Wil je weten voor wie je kan stemmen?</h2>
+        <a href="#">Klik dan hier!</a>
+        <div class="stemmen">
+            <img src="images/voor_wie_stemmen.png" alt="">
         </div>
 
-        <div class="totstand">
-            <h2>Wil je weten voor wie je kan stemmen?</h2>
-            <a href="#">Klik dan hier!</a>
-            <div class="stemmen">
-                <img src="images/voor_wie_stemmen.png" alt="">
+    </div>
+
+    <div>
+        <h2>Hier zijn nog enkele links, die u misschien interessant vindt!</h2>
+        <div class="flex">
+            <div class="item">
+                <img class="imgverkiezingen" src="images/eu_verkiezingen_afgerond.png" alt="">
+                <a href="https://www.vlaanderen.be/verkiezingen-voor-het-europees-parlement">Europese verkiezingen</a>
             </div>
-
-        </div>
-
-        <div>
-            <h2>Hier zijn nog enkele links, die u misschien interessant vindt!</h2>
-            <div class="flex">
-                <div class="item">
-                    <img class="imgverkiezingen" src="images/eu_verkiezingen_afgerond.png" alt="">
-                    <a href="https://www.vlaanderen.be/verkiezingen-voor-het-europees-parlement">Europese verkiezingen</a>
-                </div>
-                <div class="item">
-                    <img class="imgverkiezingen" src="images/federale_verkiezingen_afgerond.png" alt="">
-                    <a href="https://www.vlaanderen.be/verkiezingen-voor-de-federale-kamer-van-volksvertegenwoordigers">Federale verkiezingen</a>
-                </div>
-                <div class="item">
-                    <img class="imgverkiezingen" src="images/regionale_verkiezingen_afgerond.png" alt="">
-                    <a href="https://www.vlaanderen.be/verkiezingen-voor-het-vlaams-parlement">Regionale verkiezingen</a>
-                </div>
+            <div class="item">
+                <img class="imgverkiezingen" src="images/federale_verkiezingen_afgerond.png" alt="">
+                <a href="https://www.vlaanderen.be/verkiezingen-voor-de-federale-kamer-van-volksvertegenwoordigers">Federale verkiezingen</a>
+            </div>
+            <div class="item">
+                <img class="imgverkiezingen" src="images/regionale_verkiezingen_afgerond.png" alt="">
+                <a href="https://www.vlaanderen.be/verkiezingen-voor-het-vlaams-parlement">Regionale verkiezingen</a>
             </div>
         </div>
+    </div>
     </div>
     <?php include_once("footer.inc.php") ?>
 

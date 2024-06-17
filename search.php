@@ -4,9 +4,9 @@
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Db.php");
 include_once(__DIR__ . DIRECTORY_SEPARATOR . "/classes/Artikel.php");
 
-if(isset($_GET['query'])) {
+if (isset($_GET['query'])) {
     $keyword = $_GET['query'];
-    
+
     $artikel = new Artikel();
     $results = $artikel->searchByKeyword($keyword);
 }
@@ -14,23 +14,26 @@ if(isset($_GET['query'])) {
 
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoekresultaten</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/search.css">
- 
+
 </head>
+
 <body>
-<?php include_once("nav.inc.php") ?>
+    <?php include_once("nav.inc.php") ?>
     <h1>Zoekresultaten voor "<?php echo htmlspecialchars($keyword); ?>"</h1>
-    
+
     <div class="artikelen">
-        <?php if(isset($results) && !empty($results)) { ?>
-            <?php foreach($results as $result) { ?>
+        <?php if (isset($results) && !empty($results)) { ?>
+            <?php foreach ($results as $result) { ?>
                 <div class="artikel-item">
                     <h2><?php echo htmlspecialchars($result['naam']); ?></h2>
                     <p><?php echo htmlspecialchars($result['inhoud']); ?></p>
@@ -46,4 +49,5 @@ if(isset($_GET['query'])) {
     <script src="js/zoekbalk.js"></script>
     <?php include_once("footer.inc.php") ?>
 </body>
+
 </html>
