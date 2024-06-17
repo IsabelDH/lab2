@@ -110,7 +110,7 @@ h3 {
   height: 200px; /* Stelt een vaste hoogte in zodat alle afbeeldingen dezelfde grootte hebben */
   overflow: hidden;
   border-radius: 5px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   background-color: #00263d;
@@ -152,6 +152,9 @@ h3 {
   z-index: 1;
 }
 
+a {
+  text-decoration: none;
+}
 @media (min-width: 660px) {
   .kader-artikels {
     width: 46.5%;

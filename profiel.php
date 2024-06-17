@@ -100,16 +100,19 @@ foreach ($liked_articles as $articleId) {
                 <?php foreach ($gelikete_artikelen as $artikel) : ?>
                     <div class="kader-artikels">
                         <div class="image">
-                            <img src="images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
+                            <a href="<?php echo $artikel['link']; ?>">
+                                <img src="images/artikel_foto/<?php echo $artikel['foto']; ?>" alt="Afbeelding">
+                            </a>
                         </div>
                         <img id="heart-icon-<?php echo $artikel['id']; ?>" class="heart-icon" src="images/unlikeheart.png" alt="Like" onclick="toggleLike('heart-icon-<?php echo $artikel['id']; ?>')">
                         <div class="article-content">
                             <div class="title">
-                                <h3><?php echo $artikel['naam']; ?></h3>
+                                <a href="<?php echo $artikel['link']; ?>">
+                                    <h3><?php echo $artikel['naam']; ?></h3>
+                                </a>
                             </div>
                         </div>
                     </div>
-
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
