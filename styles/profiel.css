@@ -58,6 +58,7 @@ h3 {
   margin: 10px;
 }
 .kader-artikels {
+  position: relative;
   background-color: #f1f1f1;
   width: 100%;
   margin: 10px;
@@ -139,6 +140,16 @@ h3 {
 .kader-artikels-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1;
 }
 
 @media (min-width: 660px) {

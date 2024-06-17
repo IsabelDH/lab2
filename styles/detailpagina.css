@@ -16,7 +16,7 @@ body {
 
 .artikel_div {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   position: relative;
   margin-bottom: 20px;
   margin-top: 60px;
@@ -24,7 +24,7 @@ body {
 }
 
 .image {
-  position: relative; 
+  position: relative;
   margin-right: 20px;
 }
 
@@ -37,10 +37,10 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 25px; 
+  width: 25px;
   height: auto;
   cursor: pointer;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .article-content {
@@ -58,11 +58,15 @@ body {
   color: #00263d;
 }
 
-.like-button, .like-button2, .like-button3 {
+.like-button,
+.like-button2,
+.like-button3 {
   position: absolute;
 }
 
-.like-button img, .like-button2 img, .like-button3 img {
+.like-button img,
+.like-button2 img,
+.like-button3 img {
   max-width: 20px;
 }
 
@@ -107,7 +111,7 @@ body {
 }
 
 @media (min-width: 600px) {
-  .artikel_foto  {
+  .artikel_foto {
     width: 180px;
     margin-left: 50px;
   }
@@ -134,6 +138,9 @@ body {
     top: 950px;
     left: 150px;
   }
+  /* .artikel_div {
+  align-items: center;
+} */
 }
 
 @media (min-width: 1000px) {
@@ -174,11 +181,13 @@ body {
     left: 190px;
   }
 
-  .like-button img, .like-button2 img, .like-button3 img {
+  .like-button img,
+  .like-button2 img,
+  .like-button3 img {
     max-width: 25px;
   }
 
-  .heart-icon{
+  .heart-icon {
     top: 30px;
   }
 }

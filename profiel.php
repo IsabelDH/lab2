@@ -109,6 +109,7 @@ foreach ($liked_articles as $articleId) {
                             </div>
                         </div>
                     </div>
+
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
