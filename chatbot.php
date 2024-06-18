@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government Chatbot</title>
+    <title>Chatbot</title>
     <link rel="stylesheet" href="styles/chatbot.css">
 </head>
 
@@ -33,86 +33,85 @@
     </div>
 
     <script>
-const chatMessages = document.querySelector('#chat-messages');
-const userInput = document.querySelector('#user-input');
-const chatContainer = document.querySelector('.chat-container');
-const jillButton = document.querySelector('.jill');
-const closeChatBtn = document.querySelector('#close-chat');
+        const chatMessages = document.querySelector('#chat-messages');
+        const userInput = document.querySelector('#user-input');
+        const chatContainer = document.querySelector('.chat-container');
+        const jillButton = document.querySelector('.jill');
+        const closeChatBtn = document.querySelector('#close-chat');
 
-function sendMessage(message, sender) {
-    const chatMessage = document.createElement('div');
-    chatMessage.classList.add('message');
-    chatMessage.innerText = message;
-    chatMessage.classList.add(sender + '-message');
-    chatMessages.appendChild(chatMessage);
-    chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll naar beneden
-}
-
-function receiveMessage() {
-    const question = userInput.value.trim().toLowerCase();
-    if (question !== '') {
-        chatMessages.innerHTML = ''; // Verwijder alle berichten
-        sendMessage(question, 'user');
-        // Voeg hier de logica toe om te reageren op verschillende vragen
-        switch (question) {
-            case 'hallo':
-                sendMessage('Hallo, ik ben Jill, waarmee kan ik je helpen?', 'Jill');
-                break;
-            case 'wat is een begroting?':
-                sendMessage('Een begroting is een plan van de verwachte inkomsten en uitgaven van een organisatie voor een bepaalde periode, meestal een jaar.', 'Jill');
-                break;
-            case 'hoe werkt belastingheffing?':
-                sendMessage('Belastingheffing is het proces waarbij de overheid belastingen oplegt aan individuen en bedrijven om inkomsten te genereren voor openbare voorzieningen en diensten.', 'Jill');
-                break;
-            default:
-                sendMessage('Sorry, ik begrijp niet wat je bedoelt.', 'Jill');
-                break;
+        function sendMessage(message, sender) {
+            const chatMessage = document.createElement('div');
+            chatMessage.classList.add('message');
+            chatMessage.innerText = message;
+            chatMessage.classList.add(sender + '-message');
+            chatMessages.appendChild(chatMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll naar beneden
         }
-        userInput.value = ''; // Reset het invoerveld
-    }
-}
 
-function resetChat() {
-    chatMessages.innerHTML = ''; // Verwijder alle berichten
-    userInput.value = ''; // Reset het invoerveld
-    if (window.innerWidth < 1000) { // Alleen voor mobiele apparaten en tablets
-        chatContainer.classList.add('hidden');
-        chatContainer.style.display = 'none'; // Verberg de chatcontainer
-        jillButton.classList.remove('hidden');
-        jillButton.style.display = 'block'; // Maak de knop weer zichtbaar
-    } else { // Voor desktop
-        chatContainer.style.display = 'none'; // Verberg de chatcontainer
-        jillButton.style.display = 'block'; // Maak de knop weer zichtbaar
-    }
-}
+        function receiveMessage() {
+            const question = userInput.value.trim().toLowerCase();
+            if (question !== '') {
+                chatMessages.innerHTML = ''; // Verwijder alle berichten
+                sendMessage(question, 'user');
+                // Voeg hier de logica toe om te reageren op verschillende vragen
+                switch (question) {
+                    case 'hallo':
+                        sendMessage('Hallo, ik ben Jill, waarmee kan ik je helpen?', 'Jill');
+                        break;
+                    case 'wat is een begroting?':
+                        sendMessage('Een begroting is een plan van de verwachte inkomsten en uitgaven van een organisatie voor een bepaalde periode, meestal een jaar.', 'Jill');
+                        break;
+                    case 'hoe werkt belastingheffing?':
+                        sendMessage('Belastingheffing is het proces waarbij de overheid belastingen oplegt aan individuen en bedrijven om inkomsten te genereren voor openbare voorzieningen en diensten.', 'Jill');
+                        break;
+                    default:
+                        sendMessage('Sorry, ik begrijp niet wat je bedoelt.', 'Jill');
+                        break;
+                }
+                userInput.value = ''; // Reset het invoerveld
+            }
+        }
 
-function toggleChatbot() {
-    if (window.innerWidth < 1000) { // Alleen voor mobiele apparaten en tablets
-        jillButton.classList.add('hidden');
-        chatContainer.classList.remove('hidden');
-        chatContainer.style.display = 'block';
-    } else { // Voor desktop
-        jillButton.style.display = 'none';
-        chatContainer.style.display = 'block';
-    }
-}
+        function resetChat() {
+            chatMessages.innerHTML = ''; // Verwijder alle berichten
+            userInput.value = ''; // Reset het invoerveld
+            if (window.innerWidth < 1000) { // Alleen voor mobiele apparaten en tablets
+                chatContainer.classList.add('hidden');
+                chatContainer.style.display = 'none'; // Verberg de chatcontainer
+                jillButton.classList.remove('hidden');
+                jillButton.style.display = 'block'; // Maak de knop weer zichtbaar
+            } else { // Voor desktop
+                chatContainer.style.display = 'none'; // Verberg de chatcontainer
+                jillButton.style.display = 'block'; // Maak de knop weer zichtbaar
+            }
+        }
 
-closeChatBtn.addEventListener('click', resetChat);
+        function toggleChatbot() {
+            if (window.innerWidth < 1000) { // Alleen voor mobiele apparaten en tablets
+                jillButton.classList.add('hidden');
+                chatContainer.classList.remove('hidden');
+                chatContainer.style.display = 'block';
+            } else { // Voor desktop
+                jillButton.style.display = 'none';
+                chatContainer.style.display = 'block';
+            }
+        }
 
-userInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        receiveMessage();
-    }
-});
+        closeChatBtn.addEventListener('click', resetChat);
 
-// Zorg ervoor dat de chatcontainer standaard zichtbaar is op desktop
-if (window.innerWidth >= 1000) {
-    chatContainer.classList.remove('hidden');
-    chatContainer.style.display = 'block';
-    jillButton.classList.add('hidden');
-    jillButton.style.display = 'none';
-}
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                receiveMessage();
+            }
+        });
 
+        // Zorg ervoor dat de chatcontainer standaard zichtbaar is op desktop
+        if (window.innerWidth >= 1000) {
+            chatContainer.classList.remove('hidden');
+            chatContainer.style.display = 'block';
+            jillButton.classList.add('hidden');
+            jillButton.style.display = 'none';
+        }
     </script>
 </body>
 
