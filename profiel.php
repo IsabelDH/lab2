@@ -79,7 +79,7 @@ $gelikete_artikelen = $artikel->getFavorieteArtikelen();
             <h2>Gelikete artikelen</h2>
         </div>
         <?php if (empty($gelikete_artikelen)) : ?>
-            <div>
+            <div class="kader-inhoud"> 
                 <p>Like jouw artikel, die je wilt bijhouden door op het hartje te klikken.</p>
             </div>
         <?php else : ?>

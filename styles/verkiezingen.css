@@ -161,6 +161,18 @@ a {
   p {
     margin-right: 60px;
   }
+  .video{
+    margin-left: 30px;
+  }
+
+  .totstand{
+    margin-left: 30px;
+  
+  }
+
+  .extra{
+    margin-left: 30px;
+  }
 }
 
 @media (min-width: 1000px) {

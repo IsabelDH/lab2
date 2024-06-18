@@ -11,7 +11,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
 ?>
     <nav class='navbar'>
         <a href='index.php' class='logo'>
-            <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
+            <img src='images/logo_lab_2-07.png' alt='' height='70px' width='auto'>
         </a>
         <div class='menu'>
             <form id='searchBar' class='search-bar' action='search.php' method='GET'>
@@ -32,7 +32,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
             </a>
             <a href='profiel.php' style='background-color: rgba(147, 172, 194, 0); padding: 0px;'>
                 <?php if (isset($user['profiel_foto'])) { ?>
-                    <img src='images/profiel_foto/profile_picture_leeg.png' alt='Profielfoto' class='profiel_foto' style='height: 50px; width: auto; border-radius:100%;'>
+                    <img src='images/profiel_foto/profile_picture_leeg.png' alt='Profielfoto' class='profiel_foto' style='height: 40px; width: auto; border-radius:100%;'>
                 <?php } else { ?>
                     Profiel
                 <?php } ?>
@@ -44,7 +44,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SE
 ?>
     <nav class='navbar'>
         <a href='index.php' class='logo'>
-            <img src='images/logo_lab_2-07.png' alt='' height='60px' width='auto'>
+            <img src='images/logo_lab_2-07.png' alt='' height='70px' width='auto'>
         </a>
         <div class='menu'>
             <form id='searchBar' class='search-bar' action='search.php' method='GET'>

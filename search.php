@@ -38,7 +38,7 @@ if (isset($_GET['query'])) {
                     <h2><?php echo htmlspecialchars($result['naam']); ?></h2>
                     <p><?php echo htmlspecialchars($result['inhoud']); ?></p>
                     <p>Datum: <?php echo htmlspecialchars($result['datum']); ?></p>
-                    <a class="link" href="<?php echo htmlspecialchars($result['link']); ?>">Lees meer</a>
+                    <a class="link" href="<?php echo htmlspecialchars($result['link']); ?>">Bekijk</a>
                 </div>
                 <div class="lijn"></div>
             <?php } ?>

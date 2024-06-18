@@ -211,7 +211,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="video">
         <h2>Video</h2>
         <img class="video" src="images/video_verkiezingen.png" alt="">
     </div>
@@ -225,7 +225,7 @@
 
     </div>
 
-    <div>
+    <div class="extra">
         <h2>Hier zijn nog enkele links, die u misschien interessant vindt!</h2>
         <div class="flex">
             <div class="item">

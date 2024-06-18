@@ -19,6 +19,15 @@ body {
   z-index: 1000;
   cursor: pointer;
 }
+.chat-container {
+  display: none; 
+}
+
+.jill.hidden {
+  display: none; 
+}
+
+
 
 .jill h2 {
   background-color: #b95927;
@@ -118,10 +127,28 @@ h3 {
 }
 
 @media (min-width: 600px) {
+  /* .chat-container {
+    display: block;
+    margin-top: 120px;
+  }
+  .jill img {
+    display: none;
+  }
+
+  .jill h2 {
+    display: none;
+  } */
+}
+
+
+@media (min-width: 1000px) {
   .chat-container {
     display: block;
+    margin-top: 140px;
   }
   .jill {
     display: none;
   }
+
+
 }
